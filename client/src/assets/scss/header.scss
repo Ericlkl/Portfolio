@@ -6,6 +6,7 @@
     color: white;
     height: 90vh;
     background-color: $primary-color;
+    padding: 0 2rem;
 
     &__description{
         flex: 1;
@@ -17,6 +18,7 @@
             color: $secondary-color;
         }
         &_fullname{
+            margin-top: 2rem;
             font-family: 'Josefin Slab', serif;
         }
     }

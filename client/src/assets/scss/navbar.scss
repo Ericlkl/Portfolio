@@ -1,9 +1,12 @@
 nav{
     display: flex;
     justify-content: space-between;
+    position: sticky;
+    top: 0;
     padding: 0.5rem;
     background-color: $primary-color;
     color: $grey-color;
+    z-index: 2;
     >.navlinks{
         display: flex;
         justify-content: space-between;

@@ -20,6 +20,14 @@ body{
     margin: 0 auto;
 }
 
+.section-title{
+    font-family: 'Josefin Slab', serif;
+    font-size: 2rem;
+    color: $secondary-color;
+}
+
 @import './animations.scss';
 @import './navbar.scss';
 @import './header.scss';
+@import './skills.scss';
+@import './aboutme.scss';
