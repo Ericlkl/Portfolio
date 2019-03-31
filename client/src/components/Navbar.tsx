@@ -5,7 +5,7 @@ export default class Navbar extends Component {
     return (
         <nav>
             <div className="navlinks">
-                <h3>KA LONG LEE</h3>
+                <h3>Eric</h3>
                 <h3>Awards</h3>
                 <h3>Projects</h3>
                 <h3>Contact</h3>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Slab|Lato');
 
 $primary-color: rgb(13,37,56);
 $secondary-color: rgb(59,186,149);
@@ -11,7 +11,8 @@ $grey-color: rgb(182,190,195);
 }
 
 body{
-    font-family: 'Roboto';
+    font-family: 'Lato';
+    background-color: $primary-color;
 }
 
 .container{
@@ -21,3 +22,4 @@ body{
 
 @import './animations.scss';
 @import './navbar.scss';
+@import './header.scss';

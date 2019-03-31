@@ -1,17 +1,49 @@
-@keyframes typing-text{
-    from{
-      width: 0;
-    }
-    70%{
-      width: 338px;
-    }
-  }
+@keyframes typing-se{
+    from{ width: 0;}
+    to{ width: 16ch;}
+}
+
+@keyframes typing-fullstack{
+  from{ width: 0;}
+  to{ width: 23ch;}
+}
+
+@keyframes typing-mobile{
+  from{ width: 0;}
+  to{ width: 19ch;}
+}
   
-  @keyframes blink{
-    from {
-      border-color: transparent;
-    }
-    to {
-      border-color: #000;
-    }
+@keyframes blink{
+  from {
+    border-color: transparent;
   }
+  to {
+    border-color: $secondary-color;
+  }
+}
+
+.se-text-animation{
+  overflow: hidden;
+  display: inline-block;
+  white-space: nowrap;
+  animation: typing-se 1.5s steps(16), blink 0.5s infinite alternate;
+  border-right: 3px solid #000;
+}
+
+.fullstack-text-animation{
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+  animation: typing-fullstack 1.5s steps(23), blink 0.5s infinite alternate;
+  border-right: 3px solid #000;
+}
+
+.mobile-text-animation{
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+  animation: typing-mobile 1.5s steps(19), blink 0.5s infinite alternate;
+  border-right: 3px solid #000;
+}
