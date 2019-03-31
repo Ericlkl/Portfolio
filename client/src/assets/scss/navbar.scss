@@ -3,7 +3,7 @@ nav{
     justify-content: space-between;
     position: sticky;
     top: 0;
-    padding: 0.5rem;
+    padding: 0 3rem;
     background-color: $primary-color;
     color: $grey-color;
     z-index: 2;
@@ -18,7 +18,11 @@ nav{
     >.social-links{
         display: flex;
         justify-content: space-between;
-        >i{
+        >a:active,
+        >a:hover,
+        >a
+        {
+            color: $grey-color;
             margin: 0 0.5rem;
         }
     }

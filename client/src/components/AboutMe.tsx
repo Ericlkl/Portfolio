@@ -37,7 +37,7 @@ export default class AboutMe extends Component {
           <div className="aboutme__profile">
             <img className="aboutme__profile_profile-img" src={profile_img} alt="eric_profile"/>
             <div className="aboutme__profile__award">
-              <h3>Award & Metions</h3>
+              <h3><i className="fas fa-award"></i> Award & Metions</h3>
               <p>- Griffith College High Destination</p>
               <p>- Griffith College High Destination</p>
               <p>- Griffith College High Destination</p>
@@ -45,7 +45,7 @@ export default class AboutMe extends Component {
             </div>
             
             <div className="aboutme__profile__exp">
-              <h3>Experience</h3>
+              <h3><i className="fas fa-laptop-code"></i> Experience</h3>
               <p>- Working in CSIRO</p>
               <p>- Working in QUT Geo App Team</p>
             </div>

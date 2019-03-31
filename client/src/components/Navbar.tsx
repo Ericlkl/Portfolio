@@ -12,9 +12,9 @@ export default class Navbar extends Component {
             </div>
 
             <div className="social-links">
-                <i className="fab fa-2x fa-instagram"></i>
-                <i className="fab fa-2x fa-facebook"></i>
-                <i className="fab fa-2x fa-github"></i>
+              <a href="https://www.instagram.com/ericlkl3333/"><i className="fab fa-2x fa-instagram"></i></a>
+              <a href="https://www.facebook.com/long.ka.980"><i className="fab fa-2x fa-facebook"></i></a>
+              <a href="https://github.com/Ericlkl"><i className="fab fa-2x fa-github"></i></a>
             </div>
         </nav>
     )
