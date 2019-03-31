@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+$primary-color: rgb(13,37,56);
+$secondary-color: rgb(59,186,149);
+$grey-color: rgb(182,190,195);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto';
+}
+
+.container{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+@import './animations.scss';
+@import './navbar.scss';

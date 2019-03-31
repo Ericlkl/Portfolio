@@ -1,0 +1,22 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    background-color: $primary-color;
+    color: $grey-color;
+    >.navlinks{
+        display: flex;
+        justify-content: space-between;
+        >h3{
+            margin: 0 0.5rem;
+        }
+    }
+
+    >.social-links{
+        display: flex;
+        justify-content: space-between;
+        >i{
+            margin: 0 0.5rem;
+        }
+    }
+}

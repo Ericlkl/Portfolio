@@ -1,0 +1,17 @@
+@keyframes typing-text{
+    from{
+      width: 0;
+    }
+    70%{
+      width: 338px;
+    }
+  }
+  
+  @keyframes blink{
+    from {
+      border-color: transparent;
+    }
+    to {
+      border-color: #000;
+    }
+  }
