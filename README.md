@@ -7,8 +7,10 @@ A Portfolio Website for talking about myself
 ExpressJS
 NodeJS
 ReactJS
+React Context
 Sass
 TypeScript
+D3.JS
 ```
 
 ## Client Side Package Include
