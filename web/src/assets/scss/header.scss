@@ -1,16 +1,18 @@
 .header {
   color: white;
   height: 90vh;
-  background-color: $primary-color;
+  background: linear-gradient(rgba(33, 33, 33, 0.9), rgba(33, 33, 33, 0.9)),
+    url('../img/code_bg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 
-  &__description {
-    &_greeting {
-      color: $secondary-color;
-      margin: 3rem;
-    }
-    &_fullname {
-      margin-top: 2rem;
-    }
+  &_greeting {
+    color: $secondary-color;
+    padding: 1.25rem 0;
+  }
+  &_fullname {
+    margin-top: 2rem;
   }
 
   &__profile {

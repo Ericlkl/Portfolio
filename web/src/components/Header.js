@@ -30,25 +30,32 @@ export default class Header extends Component {
     ];
 
     return (
-      <Container>
-        <Grid container justify='center' alignItems='center' className='header'>
-          <Grid item xs={12} md={6}>
-            <Typography variant='h2' className='header__description_greeting'>
-              <Box fontWeight='fontWeightBold'>Hi, I'm Eric.</Box>
-            </Typography>
+      <header className='header'>
+        <Container>
+          <Grid
+            style={{ height: '90vh' }}
+            container
+            justify='center'
+            alignItems='center'
+          >
+            <Grid item xs={12} md={6}>
+              <Typography variant='h2' className='header_greeting'>
+                <Box fontWeight='fontWeightBold'>Hi, I'm Eric.</Box>
+              </Typography>
 
-            {jobTitle[this.state.jobIndex]}
-            <Typography variant='h4'>
-              from Brisbane , AU. I create websites that help businesses address
-              their problem.{' '}
-            </Typography>
-          </Grid>
+              {jobTitle[this.state.jobIndex]}
+              <Typography variant='h4'>
+                from Brisbane. I create websites that help businesses address
+                their problem.
+              </Typography>
+            </Grid>
 
-          <Grid item xs={12} md={6} className='header__profile'>
-            <img src={profile_img} alt='eric_profile' />
+            <Grid item xs={12} md={6} className='header__profile'>
+              <img src={profile_img} alt='eric_profile' />
+            </Grid>
           </Grid>
-        </Grid>
-      </Container>
+        </Container>
+      </header>
     );
   }
 }
