@@ -1,0 +1,28 @@
+.header {
+  color: white;
+  height: 90vh;
+  background-color: $primary-color;
+
+  &__description {
+    &_greeting {
+      color: $secondary-color;
+      margin: 3rem;
+    }
+    &_fullname {
+      margin-top: 2rem;
+    }
+  }
+
+  &__profile {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-content: center;
+    > img {
+      border-radius: 50%;
+      height: 20rem;
+    }
+  }
+}
+
+// linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('../img/profile1.JPG') center center/cover;

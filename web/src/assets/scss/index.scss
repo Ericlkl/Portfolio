@@ -1,0 +1,26 @@
+$primary-color: rgb(13, 37, 56);
+$secondary-color: rgb(59, 186, 149);
+$grey-color: rgb(182, 190, 195);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $primary-color;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: $secondary-color;
+}
+
+@import './animations.scss';
+@import './header.scss';
