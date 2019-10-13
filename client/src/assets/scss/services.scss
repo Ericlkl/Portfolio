@@ -1,23 +1,33 @@
 .services {
   &_cards {
-    border-top: 10px solid $secondary-color;
-    height: 30rem;
+    border-top: 0.5rem solid $secondary-color;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
 
     &_icons {
       font-size: 4rem;
       color: $secondary-color;
+      margin: 3.5rem auto 1.5rem auto;
       &:after {
         display: block;
         height: 4px;
         background-color: $secondary-color;
         content: '';
-        width: 3rem;
+        width: 2.5rem;
         margin: 1rem auto;
       }
+    }
+
+    &_title {
+      font-weight: 500;
+      text-align: center;
+    }
+
+    &_subtitle {
+      font-weight: 400;
+      text-align: center;
     }
   }
 }
