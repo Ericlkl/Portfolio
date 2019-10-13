@@ -1,5 +1,5 @@
 /*eslint-disable*/
-import React from 'react';
+import React, { Fragment } from 'react';
 // nodejs library that concatenates classes
 import classNames from 'classnames';
 // @material-ui/core components
@@ -11,10 +11,12 @@ import ListItem from '@material-ui/core/ListItem';
 import Favorite from '@material-ui/icons/Favorite';
 // core components
 import Header from 'components/Header/Header.js';
+import Navbar from './Navbar';
 import Footer from 'components/Footer/Footer.js';
 import HeaderLinks from 'components/Header/HeaderLinks.js';
 import Parallax from 'components/Parallax/Parallax.js';
 import Hero from './Hero';
+import Services from './Services';
 
 import profilePageStyle from 'assets/jss/material-kit-pro-react/views/profilePageStyle.js';
 
@@ -28,19 +30,10 @@ export default function ProfilePage({ ...rest }) {
   const classes = useStyles();
 
   return (
-    <div>
-      <Header
-        color='transparent'
-        brand='Eric lee'
-        links={<HeaderLinks dropdownHoverColor='info' />}
-        fixed
-        changeColorOnScroll={{
-          height: 200,
-          color: 'info'
-        }}
-        {...rest}
-      />
+    <Fragment>
+      <Navbar />
       <Hero />
+      <Services />
 
       <Footer
         content={
@@ -95,6 +88,6 @@ export default function ProfilePage({ ...rest }) {
           </div>
         }
       />
-    </div>
+    </Fragment>
   );
 }

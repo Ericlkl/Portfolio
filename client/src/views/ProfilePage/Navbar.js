@@ -1,51 +1,62 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import {
-  AppBar,
-  Toolbar,
-  Typography,
-  Button,
-  IconButton
-} from '@material-ui/core';
-import MenuIcon from '@material-ui/icons/Menu';
+import { Grid, Container } from '@material-ui/core';
+import Button from 'components/CustomButtons/Button.js';
 
-const useStyles = makeStyles(theme => ({
-  root: {
-    flexGrow: 1
-  },
-  menuButton: {
-    marginRight: theme.spacing(2)
-  },
-  title: {
-    flexGrow: 1
-  }
-}));
+// @material-ui/icons
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import RecentActorsIcon from '@material-ui/icons/RecentActors';
+import ViewCompactIcon from '@material-ui/icons/ViewCompact';
 
 const Navbar = () => {
-  const classes = useStyles();
   return (
-    <div className={classes.root}>
-      <AppBar position='static'>
-        <Toolbar>
-          <IconButton
-            edge='start'
-            className={classes.menuButton}
-            color='inherit'
-            aria-label='menu'
-          >
-            <MenuIcon />
-          </IconButton>
+    <nav id='transfromNavbar' className='navbar'>
+      <div className='navbar_container'>
+        <Container>
+          <Grid container justify='space-between' alignItems='center'>
+            <Grid item>
+              <h5 className='navbar_band'>Eric lee</h5>
+            </Grid>
+            <Grid item>
+              <Grid
+                className='navbar_links'
+                container
+                justify='flex-end'
+                alignItems='center'
+              >
+                <Grid item>
+                  {/* Button 1 */}
+                  <Button size='lg' simple type='button'>
+                    <AccountCircleIcon /> About
+                  </Button>
+                </Grid>
 
-          <Typography variant='h6' className={classes.title}>
-            Eric lee
-          </Typography>
+                <Grid item>
+                  {/* Button 1 */}
+                  <Button size='lg' simple type='button'>
+                    <ViewCompactIcon />
+                    Projects
+                  </Button>
+                </Grid>
 
-          <Button color='inherit'>Projects</Button>
-          <Button color='inherit'>About</Button>
-          <Button color='inherit'>Contact</Button>
-        </Toolbar>
-      </AppBar>
-    </div>
+                <Grid item>
+                  {/* Button 1 */}
+                  <Button size='lg' simple type='button'>
+                    <RecentActorsIcon />
+                    Contact
+                  </Button>
+                </Grid>
+
+                <Grid item>
+                  <Button justIcon round color='transparent'>
+                    <i className={'navbar_icons fab fa-github'} />
+                  </Button>
+                </Grid>
+              </Grid>
+            </Grid>
+          </Grid>
+        </Container>
+      </div>
+    </nav>
   );
 };
 

@@ -9,7 +9,6 @@ import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import { Typography } from '@material-ui/core';
 import Icon from '@material-ui/core/Icon';
 
 // @material-ui/icons
@@ -72,8 +71,10 @@ export default function HeaderLinks(props) {
       <ListItem className={classes.listItem}>
         {/* Button 1 */}
         <Button size='lg' simple type='button'>
-          <AccountCircleIcon />
-          About
+          <h5>
+            <AccountCircleIcon />
+            About
+          </h5>
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
@@ -91,7 +92,7 @@ export default function HeaderLinks(props) {
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Button justIcon round color='github'>
+        <Button justIcon round color='transparent'>
           <i className={' fab fa-github'} />
         </Button>
       </ListItem>
