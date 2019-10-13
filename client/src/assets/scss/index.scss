@@ -1,0 +1,11 @@
+$primary-color: rgb(13, 37, 56);
+$secondary-color: rgb(59, 186, 149);
+$grey-color: rgb(182, 190, 195);
+
+.section-title {
+  font-size: 2rem;
+  color: $secondary-color;
+}
+
+@import './animations.scss';
+@import './header.scss';
