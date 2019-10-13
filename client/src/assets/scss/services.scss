@@ -1,0 +1,23 @@
+.services {
+  &_cards {
+    border-top: 10px solid $secondary-color;
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    &_icons {
+      font-size: 4rem;
+      color: $secondary-color;
+      &:after {
+        display: block;
+        height: 4px;
+        background-color: $secondary-color;
+        content: '';
+        width: 3rem;
+        margin: 1rem auto;
+      }
+    }
+  }
+}
