@@ -1,0 +1,26 @@
+.feature_project {
+  padding: 2rem 0;
+  background-color: rgb(255, 255, 255);
+
+  &_imgbox {
+    height: 100%;
+    padding: 1rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.103), rgba(0, 0, 0, 0.103));
+    &_img {
+      width: 100%;
+    }
+  }
+
+  &_description {
+    height: 100%;
+    padding: 1.5rem;
+  }
+
+  &_icons {
+    font-size: 3rem;
+  }
+
+  &_viewbtn {
+    margin: 2rem auto;
+  }
+}

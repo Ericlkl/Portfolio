@@ -8,13 +8,10 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 // @material-ui/icons
 
-import Favorite from '@material-ui/icons/Favorite';
 // core components
-import Header from 'components/Header/Header.js';
 import Navbar from './Navbar';
+import FeatureProject from './FeatureProject';
 import Footer from 'components/Footer/Footer.js';
-import HeaderLinks from 'components/Header/HeaderLinks.js';
-import Parallax from 'components/Parallax/Parallax.js';
 import Hero from './Hero';
 import Services from './Services';
 
@@ -34,6 +31,7 @@ export default function ProfilePage({ ...rest }) {
       <Navbar />
       <Hero />
       <Services />
+      <FeatureProject />
 
       <Footer
         content={

@@ -7,14 +7,14 @@ const Hero = () => {
   const [jobIndex, setJobIndex] = useState(0);
 
   useEffect(() => {
-    setInterval(() => {
+    setTimeout(() => {
       if (jobIndex === 2) setJobIndex(0);
       else setJobIndex(jobIndex + 1);
     }, 4000);
 
     return () => {};
     //eslint-disable-next-line
-  }, []);
+  }, [jobIndex]);
 
   const jobTitle = [
     <Typography variant='h4' className='se-text-animation'>

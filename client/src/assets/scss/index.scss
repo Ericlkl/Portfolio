@@ -7,7 +7,7 @@ $grey-color: rgb(182, 190, 195);
   font-weight: 500;
   text-align: center;
   color: $primary-color;
-  margin: 3rem;
+  margin: 1rem;
 }
 
 .p-1 {
@@ -19,11 +19,15 @@ $grey-color: rgb(182, 190, 195);
 }
 
 .white {
-  color: rgb(233, 233, 233);
+  color: rgb(255, 255, 255);
 }
 
 .bold {
   font-weight: 500;
+}
+
+.text-primary {
+  color: $primary-color;
 }
 
 .text_secondary {
@@ -34,3 +38,4 @@ $grey-color: rgb(182, 190, 195);
 @import './header.scss';
 @import './navbar.scss';
 @import './services.scss';
+@import './feature_project.scss';
