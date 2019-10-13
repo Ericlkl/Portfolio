@@ -4,8 +4,8 @@ import Button from 'components/CustomButtons/Button.js';
 
 // @material-ui/icons
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
-import RecentActorsIcon from '@material-ui/icons/RecentActors';
 import ViewCompactIcon from '@material-ui/icons/ViewCompact';
+import MailOutlineIcon from '@material-ui/icons/MailOutline';
 
 const Navbar = () => {
   return (
@@ -41,7 +41,7 @@ const Navbar = () => {
                 <Grid item>
                   {/* Button 1 */}
                   <Button size='lg' simple type='button'>
-                    <RecentActorsIcon />
+                    <MailOutlineIcon />
                     Contact
                   </Button>
                 </Grid>

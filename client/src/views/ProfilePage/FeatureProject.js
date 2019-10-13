@@ -14,8 +14,12 @@ const features = [
     icon: <i className='fab fa-react fa-2x'></i>
   },
   {
-    name: 'AWS Hosting | Load Balancing',
+    name: 'AWS Hosting',
     icon: <StorageIcon fontSize='large' />
+  },
+  {
+    name: 'Load Balancing',
+    icon: <i className='fas fa-sitemap fa-2x'></i>
   }
 ];
 

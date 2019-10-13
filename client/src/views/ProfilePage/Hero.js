@@ -44,8 +44,8 @@ const Hero = () => {
 
             {jobTitle[jobIndex]}
             <Typography variant='h4'>
-              from Brisbane. I create websites that help businesses address
-              their problem.
+              from Brisbane. I create applications that solve customer's problem
+              , and I love what I do.
             </Typography>
           </Grid>
 
