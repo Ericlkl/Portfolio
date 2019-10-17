@@ -15,7 +15,16 @@ const services = [
     desc: `Every website should be built with two primary goals: Firstly, 
     it needs to work across all devices. Secondly, it needs to be
     fast as possible.`,
-    stack: ['HTML5', 'SCSS', 'JavaScript ES6+', 'React', 'Redux']
+    skills: [
+      'HTML',
+      'SCSS',
+      'JavaScript ES6+',
+      'React',
+      'Redux',
+      'Semantic UI',
+      'Bootstrap 4',
+      'Axios'
+    ]
   },
   {
     icon: 'fa-server',
@@ -24,7 +33,18 @@ const services = [
     desc: `Every website should be built with two primary goals: Firstly, 
     it needs to work across all devices. Secondly, it needs to be
     fast as possible.`,
-    stack: ['NodeJS', 'ExpressJS', 'MongoDB', 'MySQL', 'Redis', 'AWS', 'Docker']
+    skills: [
+      'NodeJS',
+      'ExpressJS',
+      'Redis',
+      'JsonWebToken',
+      'MongoDB',
+      'Mongoose',
+      'MySQL',
+      'Sequalize',
+      'AWS',
+      'Docker'
+    ]
   },
   {
     icon: 'fa-mobile-alt',
@@ -33,12 +53,19 @@ const services = [
     desc: `Every website should be built with two primary goals: Firstly, 
     it needs to work across all devices. Secondly, it needs to be
     fast as possible.`,
-    stack: ['C#', 'Xamarin Forms']
+    skills: [
+      'C#',
+      'Xamarin Forms',
+      'Xamarin Forms Essential',
+      'Xamarin Forms Google Map',
+      'SQLite'
+    ]
   }
 ];
 
 const ServiceCard = ({ service }) => {
-  const { name, icon, features, desc, stack } = service;
+  const { name, icon, features, desc, skills } = service;
+
   return (
     <Grid xs={12} sm={6} md={4} item>
       <Card className='services_cards'>
@@ -49,12 +76,12 @@ const ServiceCard = ({ service }) => {
           <p> {desc} </p>
         </CardContent>
 
-        <Grid container direction='column' justify='center' alignItems='center'>
-          <h4 className='text_secondary bold'>Languages :</h4>
-          {stack.map(techName => (
-            <p>{techName}</p>
+        <div className='services_cards_techbox'>
+          <h4 className='text_secondary bold'> Skills :</h4>
+          {skills.map(name => (
+            <p>{name}</p>
           ))}
-        </Grid>
+        </div>
       </Card>
     </Grid>
   );

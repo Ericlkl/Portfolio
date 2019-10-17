@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Container, Fab, Icon } from '@material-ui/core';
+import { Grid, Container, Fab, Paper } from '@material-ui/core';
 import tweetery_img from 'assets/img/tweetery_UI.jpg';
 import WebIcon from '@material-ui/icons/Web';
 import StorageIcon from '@material-ui/icons/Storage';
@@ -42,7 +42,7 @@ const ProjectDescription = () => {
     features.map(feature => <ProjectFeatures feature={feature} />);
 
   return (
-    <Grid xs={12} md={4} item>
+    <Grid xs={12} md={5} item>
       <Grid
         className='feature_project_description'
         style={{ height: '100%' }}
@@ -81,17 +81,16 @@ const FeatureProject = () => {
           alignItems='center'
           spacing={2}
         >
-          <Grid xs={12} md={8} item>
-            <div className='feature_project_imgbox'>
+          <ProjectDescription />
+          <Grid item xs={12} md={7}>
+            <Paper className='feature_project_imgbox'>
               <img
                 className='feature_project_imgbox_img'
                 src={tweetery_img}
                 alt='tweetery'
               />
-            </div>
+            </Paper>
           </Grid>
-
-          <ProjectDescription />
         </Grid>
       </Container>
     </section>

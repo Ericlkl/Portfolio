@@ -25,14 +25,14 @@ const Navbar = () => {
               >
                 <Grid item>
                   {/* Button 1 */}
-                  <Button size='lg' simple type='button'>
+                  <Button simple type='button'>
                     <AccountCircleIcon /> About
                   </Button>
                 </Grid>
 
                 <Grid item>
                   {/* Button 1 */}
-                  <Button size='lg' simple type='button'>
+                  <Button simple type='button'>
                     <ViewCompactIcon />
                     Projects
                   </Button>
@@ -40,7 +40,7 @@ const Navbar = () => {
 
                 <Grid item>
                   {/* Button 1 */}
-                  <Button size='lg' simple type='button'>
+                  <Button simple type='button'>
                     <MailOutlineIcon />
                     Contact
                   </Button>

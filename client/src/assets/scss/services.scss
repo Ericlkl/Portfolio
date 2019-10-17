@@ -31,5 +31,13 @@
       font-weight: 400;
       text-align: center;
     }
+
+    &_techbox {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
   }
 }

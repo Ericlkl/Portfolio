@@ -1,0 +1,55 @@
+.projects {
+  padding: 2rem;
+  &_showcase {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 275px;
+    grid-gap: 1rem;
+  }
+}
+
+.project_card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid rgba(233, 233, 233, 0.9);
+  border-radius: 1rem;
+  padding: 0.5rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+
+  &_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  &_logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    > i {
+      font-size: 4rem;
+    }
+  }
+}
+
+// Tablet
+@media (min-width: 750px) {
+  .projects {
+    &_showcase {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+// Laptop
+@media (min-width: 1250px) {
+  .projects {
+    &_showcase {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

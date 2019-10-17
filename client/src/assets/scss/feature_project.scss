@@ -4,10 +4,12 @@
 
   &_imgbox {
     height: 100%;
-    padding: 1rem;
-    background: linear-gradient(rgba(0, 0, 0, 0.103), rgba(0, 0, 0, 0.103));
+    // background: linear-gradient(rgba(13, 37, 56, 0.2), rgba(13, 37, 56, 0.2));
     &_img {
+      border-radius: 1%;
       width: 100%;
+      position: relative;
+      top: 5;
     }
   }
 

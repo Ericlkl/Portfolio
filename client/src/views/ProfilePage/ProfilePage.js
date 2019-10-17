@@ -14,6 +14,7 @@ import FeatureProject from './FeatureProject';
 import Footer from 'components/Footer/Footer.js';
 import Hero from './Hero';
 import Services from './Services';
+import RecentProjects from './RecentProjects';
 
 import profilePageStyle from 'assets/jss/material-kit-pro-react/views/profilePageStyle.js';
 
@@ -32,6 +33,7 @@ export default function ProfilePage({ ...rest }) {
       <Hero />
       <Services />
       <FeatureProject />
+      <RecentProjects />
 
       <Footer
         content={
