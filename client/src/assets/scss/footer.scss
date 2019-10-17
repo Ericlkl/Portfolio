@@ -1,0 +1,53 @@
+.footer {
+  background-color: $primary-color;
+  color: white;
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  &_socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    > i {
+      margin: 2rem;
+    }
+  }
+
+  &_copyright {
+    display: flex;
+    justify-content: space-evenly;
+    > h4 {
+      font-weight: 500;
+      margin: 1rem;
+    }
+
+    &_links {
+      display: flex;
+      > h4 {
+        font-weight: 500;
+        margin: 1rem;
+      }
+    }
+  }
+}
+
+// Tablet
+@media (min-width: 750px) {
+  .footer {
+    &_socials {
+      font-size: 1.75rem;
+    }
+  }
+}
+
+// Laptop
+@media (min-width: 1250px) {
+  .footer {
+    &_socials {
+      font-size: 2.25rem;
+    }
+  }
+}

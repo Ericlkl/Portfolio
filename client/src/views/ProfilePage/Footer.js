@@ -1,22 +1,31 @@
-import React, {Component} from 'react';
+import React, { Fragment } from 'react';
+import { Container } from '@material-ui/core';
 
-class Footer extends Component{
-    render(){
-        return(
-          <div className="footer">
-              <div className="social-medias">
-                <i className="fab fa-facebook-square fa-3x"></i>
-                <i className="fab fa-instagram fa-3x"></i>
-                <i className="fab fa-twitter-square fa-3x"></i>
-                <i className="fab fa-google-plus-square fa-3x"></i>
-              </div>
+const Footer = () => {
+  return (
+    <Fragment>
+      <div className='footer'>
+        <h2 className='footer_title bold'>Contact Me</h2>
 
-              <div className="copyright">
-                <h1>Developed By KA LONG LEE &copy; All Right Reserved</h1>
-              </div>
+        <div className='footer_socials'>
+          <i className='fab fa-facebook-square fa-3x' />
+          <i className='fab fa-instagram fa-3x' />
+          <i className='fab fa-linkedin fa-3x' />
+          <i className='fab fa-github-square fa-3x' />
+        </div>
+
+        <div className='footer_copyright'>
+          <div className='footer_copyright_links'>
+            <h4>Eric lee</h4>
+            <h4>About</h4>
+            <h4>Projects</h4>
+            <h4>Contact</h4>
           </div>
-        )
-    }
-}
+          <h4>Developed By Eric LEE &copy; All Right Reserved</h4>
+        </div>
+      </div>
+    </Fragment>
+  );
+};
 
 export default Footer;

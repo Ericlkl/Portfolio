@@ -93,7 +93,7 @@ const Services = () => {
 
   return (
     <section className='services'>
-      <h3 className='section_title'>My Jobs</h3>
+      <h3 className='section_title'>My Services</h3>
       <Container>
         <Grid className='p-1' container spacing={3} justify='center'>
           {renderServices()}
