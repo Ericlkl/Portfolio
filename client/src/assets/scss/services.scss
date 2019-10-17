@@ -11,14 +11,14 @@
     &_icons {
       font-size: 4rem;
       color: $secondary-color;
-      margin: 3.5rem auto 1.5rem auto;
+      margin: 2rem auto 0rem auto;
       &:after {
         display: block;
         height: 4px;
         background-color: $secondary-color;
         content: '';
         width: 2.5rem;
-        margin: 1rem auto;
+        margin: 1rem auto 0 auto;
       }
     }
 
@@ -38,6 +38,9 @@
       justify-content: center;
       align-items: center;
       margin-bottom: 1rem;
+      > p {
+        font-size: 1rem;
+      }
     }
   }
 }

@@ -33,16 +33,17 @@ const ProjectCard = ({ title, bg_url }) => {
       </div>
 
       <div className='project_card_logo'>
-        <i class='devicon-react-original' />
+        <i className='devicon-react-original' />
       </div>
     </div>
   );
 };
 
-const RecentProjects = () => {
+const Projects = ({ title, children }) => {
   return (
     <section className='projects'>
-      <h3 className='section_title'>My Recent Projects</h3>
+      <h3 className='section_title'>{title}</h3>
+      {children}
       <div className='projects_showcase'>
         <ProjectCard title='Tweetery' bg_url={imgURL} />
         <ProjectCard title='Groundsman' bg_url={geoAppImg} />
@@ -69,4 +70,4 @@ const RecentProjects = () => {
   );
 };
 
-export default RecentProjects;
+export default Projects;

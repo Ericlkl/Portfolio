@@ -77,7 +77,7 @@ const ServiceCard = ({ service }) => {
         </CardContent>
 
         <div className='services_cards_techbox'>
-          <h4 className='text_secondary bold'> Skills :</h4>
+          <h3 className='text_secondary bold'> Skills :</h3>
           {skills.map(name => (
             <p>{name}</p>
           ))}

@@ -1,6 +1,7 @@
 .projects {
   padding: 2rem;
   &_showcase {
+    margin: 3rem 0;
     display: grid;
     grid-template-columns: 1fr;
     grid-auto-rows: 20rem;
@@ -53,7 +54,7 @@
 }
 
 // Tablet
-@media (min-width: 750px) {
+@media (min-width: 957px) {
   .projects {
     &_showcase {
       grid-template-columns: repeat(2, 1fr);

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link as RouterLink } from 'react-router-dom';
 import { Grid, Container } from '@material-ui/core';
 import Button from 'components/CustomButtons/Button.js';
 
@@ -6,6 +7,10 @@ import Button from 'components/CustomButtons/Button.js';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import ViewCompactIcon from '@material-ui/icons/ViewCompact';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
+
+const Link = React.forwardRef((props, ref) => (
+  <RouterLink innerRef={ref} {...props} />
+));
 
 const Navbar = () => {
   return (
@@ -25,14 +30,14 @@ const Navbar = () => {
               >
                 <Grid item>
                   {/* Button 1 */}
-                  <Button simple type='button'>
+                  <Button to='/' component={Link} simple type='button'>
                     <AccountCircleIcon /> About
                   </Button>
                 </Grid>
 
                 <Grid item>
                   {/* Button 1 */}
-                  <Button simple type='button'>
+                  <Button to='/projects' component={Link} simple type='button'>
                     <ViewCompactIcon />
                     Projects
                   </Button>
@@ -40,14 +45,20 @@ const Navbar = () => {
 
                 <Grid item>
                   {/* Button 1 */}
-                  <Button simple type='button'>
+                  <Button to='/contacts' component={Link} simple type='button'>
                     <MailOutlineIcon />
                     Contact
                   </Button>
                 </Grid>
 
                 <Grid item>
-                  <Button justIcon round color='transparent'>
+                  <Button
+                    target='_blank'
+                    href='https://github.com/Ericlkl/'
+                    justIcon
+                    round
+                    color='transparent'
+                  >
                     <i className={'navbar_icons fab fa-github'} />
                   </Button>
                 </Grid>
