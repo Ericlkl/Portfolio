@@ -1,0 +1,38 @@
+#transfromNavbar {
+  background-color: $primary-color;
+  transform: background;
+  transition-duration: 2s;
+}
+
+#normalNavbar {
+  background-color: transparent;
+  transform: background;
+  transition-duration: 2s;
+}
+
+.navbar {
+  overflow: auto;
+  background-color: transparent;
+  position: fixed;
+  width: 100%;
+  top: 0; /* required */
+  z-index: 2;
+
+  &_container {
+    position: relative;
+  }
+
+  &_link {
+    color: white;
+  }
+
+  &_band {
+    color: white;
+    font-weight: 600;
+    font-size: 1.25rem;
+  }
+
+  &_icons {
+    color: white;
+  }
+}
