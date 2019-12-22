@@ -1,39 +1,46 @@
-#transfromNavbar {
-  background-color: $primary-color;
-  transform: background;
-  transition-duration: 2s;
-}
+// #transfromNavbar {
+//   background-color: $primary-color;
+//   transform: background;
+//   transition-duration: 2s;
+// }
 
-#normalNavbar {
-  background-color: transparent;
-  transform: background;
-  transition-duration: 2s;
-}
+// #normalNavbar {
+//   background-color: transparent;
+//   transform: background;
+//   transition-duration: 2s;
+// }
 
 .navbar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  overflow: auto;
-  background-color: transparent;
   position: fixed;
-  width: 100%;
+  overflow: auto;
   top: 0; /* required */
+  width: 100%;
   z-index: 2;
-  color: white;
+  background-color: $primary-color;
 
-  &_band {
-    color: white;
-    font-weight: 600;
-    font-size: 1.25rem;
+  &_main {
+    width: 100%;
+    margin: 1rem;
+    padding: 0rem 1.5rem;
+
+    &_band {
+      color: white;
+      font-weight: 600;
+      font-size: 1.25rem;
+    }
+
+    &_expand_btn {
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      > i {
+        font-size: 2rem;
+        color: white;
+      }
+    }
   }
 
   &_links {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: baseline;
     &_link {
       display: flex;
       padding: 0.75rem;
@@ -55,5 +62,32 @@
         color: $secondary-color;
       }
     }
+  }
+}
+
+.horizontal {
+  display: flex;
+  flex-direction: row;
+  &.space-around {
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &.space-between {
+    justify-content: space-between;
+  }
+
+  &.center {
+    justify-content: center;
+    align-items: baseline;
+  }
+}
+
+.vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &.space-around {
+    justify-content: space-around;
   }
 }
