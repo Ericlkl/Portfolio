@@ -8,11 +8,20 @@ const geoAppImg = `https://images.unsplash.com/photo-1548345680-f5475ea5df84?ixl
 const movieImg = `https://images.unsplash.com/photo-1569701813229-33284b643e3c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60`;
 const collegeImg = `https://images.unsplash.com/photo-1492538368677-f6e0afe31dcc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60`;
 
-const StackLabel = ({ name }) => {
-  return <div className='stacklbl'>{name}</div>;
+type StackLabelProps = {
+  name: string;
 };
 
-const ProjectCard = ({ title, bg_url }) => {
+const StackLabel: React.FC<StackLabelProps> = ({ name }) => (
+  <div className='stacklbl'>{name}</div>
+);
+
+type ProjectCardProps = {
+  title: string;
+  bg_url: string;
+};
+
+const ProjectCard: React.FC<ProjectCardProps> = ({ title, bg_url }) => {
   return (
     <div
       style={{
@@ -39,7 +48,11 @@ const ProjectCard = ({ title, bg_url }) => {
   );
 };
 
-const Projects = ({ title, children }) => {
+type Projects = {
+  title: string;
+};
+
+const Projects: React.FC<Projects> = ({ title, children }) => {
   return (
     <section className='projects'>
       <h3 className='section_title'>{title}</h3>

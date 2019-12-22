@@ -3,7 +3,7 @@ import { Typography, Box, Container, Grid } from '@material-ui/core';
 
 import profile_img from '../../assets/img/profile_small.jpg';
 
-const Hero = () => {
+const Hero: React.FC = () => {
   const [jobIndex, setJobIndex] = useState(0);
 
   useEffect(() => {

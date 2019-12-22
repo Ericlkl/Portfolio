@@ -57,7 +57,19 @@ const services = [
   }
 ];
 
-const ServiceCard = ({ service }) => {
+type Service = {
+  icon: string;
+  name: string;
+  features: string;
+  desc: string;
+  skills: string[];
+};
+
+type ServiceCardProps = {
+  service: Service;
+};
+
+const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
   const { name, icon, features, desc, skills } = service;
 
   const renderSkills = () => skills.map(name => <p className='py-1'>{name}</p>);

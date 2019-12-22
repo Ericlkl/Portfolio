@@ -23,7 +23,14 @@ const features = [
   }
 ];
 
-const ProjectFeatures = ({ feature }) => {
+type ProjectFeaturesProps = {
+  feature: {
+    icon: JSX.Element;
+    name: string;
+  };
+};
+
+const ProjectFeatures: React.FC<ProjectFeaturesProps> = ({ feature }) => {
   const { icon, name } = feature;
   return (
     <Grid item>
@@ -37,7 +44,7 @@ const ProjectFeatures = ({ feature }) => {
   );
 };
 
-const ProjectDescription = () => {
+const ProjectDescription: React.FC = () => {
   const renderFeatures = () =>
     features.map(feature => <ProjectFeatures feature={feature} />);
 
@@ -69,7 +76,7 @@ const ProjectDescription = () => {
   );
 };
 
-const FeatureProject = () => {
+const FeatureProject: React.FC = () => {
   return (
     <section className='feature_project'>
       <h3 className='section_title'>Feature Project</h3>

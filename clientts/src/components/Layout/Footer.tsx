@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
     <Fragment>
       <div className='footer'>

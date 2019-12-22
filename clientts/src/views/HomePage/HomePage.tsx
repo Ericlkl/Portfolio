@@ -7,7 +7,7 @@ import Services from './Services';
 import Projects from '../../components/Layout/Projects';
 import Footer from '../../components/Layout/Footer';
 
-const HomePage = ({ ...rest }) => {
+const HomePage: React.FC = ({ ...rest }) => {
   return (
     <Fragment>
       <Hero />

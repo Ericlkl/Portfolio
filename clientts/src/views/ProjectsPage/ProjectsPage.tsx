@@ -4,7 +4,7 @@ import React, { Fragment } from 'react';
 import Projects from '../../components/Layout/Projects';
 import Footer from '../../components/Layout/Footer';
 
-const ProfilePage = ({ ...rest }) => {
+const ProfilePage: React.FC = ({ ...rest }) => {
   return (
     <Fragment>
       <Projects title='My Projects'>
