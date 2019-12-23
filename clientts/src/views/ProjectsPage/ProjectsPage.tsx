@@ -1,18 +1,40 @@
 import React, { Fragment } from 'react';
 
-// core components
-import Hero from '../../components/Layout/Hero';
+// Assests
 import HeroBG from '../../assets/img/project_hero.jpg';
+
+// Public Components
+import Hero from '../../components/Layout/Hero';
 import Projects from '../../components/Layout/Projects';
 import Footer from '../../components/Layout/Footer';
+
+// Page Specific Compnents
+import DevToolsBar from './DevToolsBar';
+
+const devTools = [
+  'html',
+  'css',
+  'javascript',
+  'typescript',
+  'react',
+  'vuejs',
+  'sass',
+  'nodejs',
+  'mysql',
+  'mongodb',
+  'sequelize',
+  'redis',
+  'csharp',
+  'python'
+];
 
 const ProfilePage: React.FC = ({ ...rest }) => {
   return (
     <Fragment>
       <Hero img={HeroBG} title='My Projects' />
-      <Projects title='My Projects'>
-        <h1>Hello World</h1>
-      </Projects>
+      <DevToolsBar devTools={devTools} />
+
+      <Projects title='My Projects'></Projects>
       <Footer />
     </Fragment>
   );
