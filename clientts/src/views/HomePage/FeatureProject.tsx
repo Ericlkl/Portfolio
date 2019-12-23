@@ -88,7 +88,6 @@ const FeatureProject: React.FC = () => {
           alignItems='center'
           spacing={2}
         >
-          <ProjectDescription />
           <Grid item xs={12} md={7}>
             <Paper className='feature_project_imgbox'>
               <img
@@ -98,6 +97,7 @@ const FeatureProject: React.FC = () => {
               />
             </Paper>
           </Grid>
+          <ProjectDescription />
         </Grid>
       </Container>
     </section>

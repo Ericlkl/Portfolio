@@ -42,12 +42,12 @@ const Navbar: React.FC = () => {
 
   if (navState.direction === 'horizontal') {
     return (
-      <nav className='navbar horizontal'>
-        <div className='navbar_main '>
+      <nav className='navbar horizontal space-around'>
+        <div className='navbar_main'>
           <h5 className='navbar_main_band'>Eric lee</h5>
         </div>
 
-        <div className='navbar_links horizontal center'>
+        <div className='navbar_links horizontal'>
           <Link to='/' className='navbar_links_link'>
             <AccountCircleIcon />
             &nbsp;About

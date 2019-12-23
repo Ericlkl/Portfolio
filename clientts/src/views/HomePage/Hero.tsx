@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Typography, Box, Container, Grid } from '@material-ui/core';
+import Typed from 'react-typed';
 
 import profile_img from '../../assets/img/profile_small.jpg';
 
@@ -17,15 +18,9 @@ const Hero: React.FC = () => {
   }, [jobIndex]);
 
   const jobTitle = [
-    <Typography variant='h4' className='se-text-animation'>
-      A Software Engineer
-    </Typography>,
-    <Typography variant='h4' className='fullstack-text-animation'>
-      A Full Stack Web Developer
-    </Typography>,
-    <Typography variant='h4' className='mobile-text-animation'>
-      A Mobile App Developer
-    </Typography>
+    'A Software Engineer',
+    'A Full Stack Web Developer',
+    'A Mobile App Developer'
   ];
 
   return (
@@ -37,20 +32,23 @@ const Hero: React.FC = () => {
           justify='center'
           alignItems='center'
         >
-          <Grid item xs={12} md={6}>
-            <Typography variant='h2' className='header_greeting'>
-              <Box fontWeight='fontWeightBold'>Hi, I'm Eric.</Box>
-            </Typography>
-
-            {jobTitle[jobIndex]}
-            <Typography variant='h5'>
-              from Brisbane. I create applications that solve customer's problem
-              , and I love what I do.
-            </Typography>
-          </Grid>
-
           <Grid item xs={12} md={6} className='header__profile'>
             <img src={profile_img} alt='eric_profile' />
+          </Grid>
+
+          <Grid item xs={12} md={6}>
+            <h2 className='header_greeting'>
+              <Box fontWeight='fontWeightBold'>Hi, I'm Eric.</Box>
+              <Box fontWeight='fontWeightBold'>
+                <Typed strings={jobTitle} typeSpeed={65} backSpeed={65} loop />
+              </Box>
+            </h2>
+
+            {/* {jobTitle[jobIndex]} */}
+            <Typography variant='h5'>
+              I create applications that solve customer's problem , and I love
+              what I do.
+            </Typography>
           </Grid>
         </Grid>
       </Container>
