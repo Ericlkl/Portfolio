@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 
 // core components
 import FeatureProject from './FeatureProject';
-import Hero from './Hero';
+import Header from './Header';
 import Services from './Services';
 import Projects from '../../components/Layout/Projects';
 import Footer from '../../components/Layout/Footer';
@@ -10,7 +10,7 @@ import Footer from '../../components/Layout/Footer';
 const HomePage: React.FC = ({ ...rest }) => {
   return (
     <Fragment>
-      <Hero />
+      <Header />
       <Services />
       <FeatureProject />
       <Projects title='My Recent Work' />

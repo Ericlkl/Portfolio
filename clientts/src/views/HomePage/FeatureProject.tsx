@@ -56,9 +56,9 @@ const ProjectDescription: React.FC = () => {
         container
         direction='column'
       >
-        <h2 className='bold text-primary py-1'>Tweetery</h2>
+        <h2 className='feature_project_description_title py-1'>Tweetery</h2>
 
-        <h3 className='py-1'>
+        <h3 className='feature_project_description_description py-1'>
           Tweetery is a Web Application that allows user compare tweets in a
           real time enviornment.
         </h3>

@@ -18,15 +18,14 @@ type NavState = {
 
 const Navbar: React.FC = () => {
   const handleResize = () => {
-    console.log(`Current Width : ${window.innerWidth}`);
     if (window.innerWidth > 650)
-      setNavState({ direction: 'horizontal', expend: false });
+      setNavState({ direction: 'horizontal', expend: true });
     else setNavState({ direction: 'vertical', expend: false });
   };
 
   const [navState, setNavState] = useState<NavState>({
-    direction: 'vertical',
-    expend: false
+    direction: window.innerWidth > 650 ? 'horizontal' : 'vertical',
+    expend: window.innerWidth > 650 ? true : false
   });
 
   const toggleMenu = () =>
@@ -40,65 +39,51 @@ const Navbar: React.FC = () => {
     };
   }, []);
 
-  if (navState.direction === 'horizontal') {
-    return (
-      <nav className='navbar horizontal space-around'>
-        <div className='navbar_main'>
-          <h5 className='navbar_main_band'>Eric lee</h5>
-        </div>
-
-        <div className='navbar_links horizontal'>
-          <Link to='/' className='navbar_links_link'>
-            <AccountCircleIcon />
-            &nbsp;About
-          </Link>
-          <Link to='/' className='navbar_links_link'>
-            <ViewCompactIcon />
-            &nbsp;Projects
-          </Link>
-          <Link to='/' className='navbar_links_link'>
-            <MailOutlineIcon />
-            &nbsp;Contact
-          </Link>
-          <Link to='/' className='navbar_links_link'>
-            <i className={'navbar_links_icons fab fa-github'} />
-          </Link>
-        </div>
-      </nav>
-    );
-  } else {
-    return (
-      <nav className='navbar vertical'>
-        <div className='navbar_main horizontal space-between'>
-          <h5 className='navbar_main_band'>Eric lee</h5>
-          <div onClick={toggleMenu} className='navbar_main_expand_btn'>
-            <i className='fas fa-bars' />
-          </div>
-        </div>
-
+  return (
+    <nav
+      className={`navbar ${
+        navState.direction === 'vertical'
+          ? 'vertical'
+          : 'horizontal space-around'
+      }`}
+    >
+      <div className='navbar_main horizontal space-between'>
+        <Link to='/' className='navbar_main_band'>
+          Eric lee
+        </Link>
         <div
-          style={navState.expend ? {} : { display: 'none' }}
-          className='navbar_links'
+          style={navState.direction === 'vertical' ? {} : { display: 'none' }}
+          onClick={toggleMenu}
+          className='navbar_main_expand_btn'
         >
-          <Link to='/' className='navbar_links_link'>
-            <AccountCircleIcon />
-            &nbsp;About
-          </Link>
-          <Link to='/' className='navbar_links_link'>
-            <ViewCompactIcon />
-            &nbsp;Projects
-          </Link>
-          <Link to='/' className='navbar_links_link'>
-            <MailOutlineIcon />
-            &nbsp;Contact
-          </Link>
-          <Link to='/' className='navbar_links_link'>
-            <i className={'navbar_links_icons fab fa-github'} />
-          </Link>
+          <i className='fas fa-bars' />
         </div>
-      </nav>
-    );
-  }
+      </div>
+
+      <div
+        style={navState.expend ? {} : { display: 'none' }}
+        className={`navbar_links ${
+          navState.direction === 'vertical' ? 'vertical' : 'horizontal'
+        }`}
+      >
+        <Link to='/about' className='navbar_links_link'>
+          <AccountCircleIcon />
+          &nbsp;About
+        </Link>
+        <Link to='/projects' className='navbar_links_link'>
+          <ViewCompactIcon />
+          &nbsp;Projects
+        </Link>
+        <Link to='/contact' className='navbar_links_link'>
+          <MailOutlineIcon />
+          &nbsp;Contact
+        </Link>
+        <Link to='/' className='navbar_links_link'>
+          <i className={'navbar_links_icons fab fa-github'} />
+        </Link>
+      </div>
+    </nav>
+  );
 };
 
 export default Navbar;
