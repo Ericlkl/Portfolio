@@ -8,14 +8,6 @@ const geoAppImg = `https://images.unsplash.com/photo-1548345680-f5475ea5df84?ixl
 const movieImg = `https://images.unsplash.com/photo-1569701813229-33284b643e3c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60`;
 const collegeImg = `https://images.unsplash.com/photo-1492538368677-f6e0afe31dcc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60`;
 
-type StackLabelProps = {
-  name: string;
-};
-
-const StackLabel: React.FC<StackLabelProps> = ({ name }) => (
-  <div className='stacklbl'>{name}</div>
-);
-
 type ProjectCardProps = {
   title: string;
   bg_url: string;
@@ -35,9 +27,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, bg_url }) => {
       <div className='project_card_content'>
         <h3 className='project_card_content_title bold'>{title}</h3>
         <div className='project_card_content_stack'>
-          <StackLabel name='react' />
-          <StackLabel name='mongoDB' />
-          <StackLabel name='Web app' />
+          <p className='project_card_content_stack_lbl'>React</p>
+          <p className='project_card_content_stack_lbl'>React</p>
+          <p className='project_card_content_stack_lbl'>React</p>
+          <p className='project_card_content_stack_lbl'>React</p>
+          <p className='project_card_content_stack_lbl'>React</p>
+          <p className='project_card_content_stack_lbl'>React</p>
+          <p className='project_card_content_stack_lbl'>React</p>
+          <p className='project_card_content_stack_lbl'>React</p>
         </div>
       </div>
 
