@@ -15,6 +15,15 @@ $grey-color: rgb(182, 190, 195);
   text-align: center;
   color: $primary-color;
   margin: 1rem;
+
+  &:after {
+    display: block;
+    height: 3.5px;
+    background-color: $primary-color;
+    content: '';
+    width: 6rem;
+    margin: 1rem auto;
+  }
 }
 
 .p-1 {

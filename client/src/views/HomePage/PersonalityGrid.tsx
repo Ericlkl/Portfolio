@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Flip from 'react-reveal';
 const personalities: Personality[] = [
   {
     icon: <i className='fas fa-puzzle-piece' />,
@@ -52,12 +52,14 @@ type PersonalityBoxProps = {
 const PersonalityBox: React.FC<PersonalityBoxProps> = ({ personality }) => {
   const { icon, title, description } = personality;
   return (
-    <div className='personality_grid_box'>
-      <div className='personality_grid_box_hexagon'>{icon}</div>
+    <Flip>
+      <div className='personality_grid_box'>
+        <div className='personality_grid_box_hexagon'>{icon}</div>
 
-      <h2 className='personality_grid_box_title'>{title}</h2>
-      <p className='personality_grid_box_desc'>{description}</p>
-    </div>
+        <h2 className='personality_grid_box_title'>{title}</h2>
+        <p className='personality_grid_box_desc'>{description}</p>
+      </div>
+    </Flip>
   );
 };
 
@@ -67,7 +69,7 @@ const PersonalityGrid: React.FC = () => {
   ));
   return (
     <section className='personality'>
-      <h1 className='personality_title'>About</h1>
+      <h1 className='section_title'>Working Style</h1>
       <div className='personality_grid'>{personalityBoxs}</div>
     </section>
   );
