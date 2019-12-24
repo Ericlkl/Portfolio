@@ -1,14 +1,16 @@
 .header {
   color: white;
-  background: linear-gradient(rgba(13, 37, 56, 0.9), rgba(13, 37, 56, 0.9)),
+  background: linear-gradient(rgba(13, 37, 56, 0.85), rgba(13, 37, 56, 0.85)),
     url('../img/code_bg.png');
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center center;
   background-size: cover;
-  padding: 2rem 0;
+
+  // padding: 2rem 0;
 
   &_greeting {
     color: $secondary-color;
+    font-size: 3.052rem;
     padding: 1.5rem 0;
   }
   &_fullname {

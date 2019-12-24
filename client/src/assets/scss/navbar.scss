@@ -1,38 +1,98 @@
-#transfromNavbar {
-  background-color: $primary-color;
-  transform: background;
-  transition-duration: 2s;
-}
+// #transfromNavbar {
+//   background-color: $primary-color;
+//   transform: background;
+//   transition-duration: 2s;
+// }
 
-#normalNavbar {
-  background-color: transparent;
-  transform: background;
-  transition-duration: 2s;
-}
+// #normalNavbar {
+//   background-color: transparent;
+//   transform: background;
+//   transition-duration: 2s;
+// }
 
 .navbar {
+  position: sticky;
   overflow: auto;
-  background-color: transparent;
-  position: fixed;
-  width: 100%;
   top: 0; /* required */
+  width: 100%;
   z-index: 2;
+  background-color: $primary-color;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 6px 20px;
 
-  &_container {
-    position: relative;
+  &_main {
+    width: 100%;
+    margin: 1rem;
+    padding: 0rem 1.5rem;
+
+    &_band {
+      color: white;
+      font-weight: 600;
+      font-size: 1.25rem;
+      text-decoration: none;
+    }
+
+    &_expand_btn {
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      > i {
+        font-size: 2rem;
+        color: white;
+      }
+    }
   }
 
-  &_link {
-    color: white;
+  &_links {
+    padding: 0rem 1.5rem;
+
+    &_link {
+      display: flex;
+      padding: 0.75rem;
+      font-size: 1.2rem;
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+
+    > a {
+      color: white;
+      text-decoration: none;
+    }
+
+    &_icons {
+      color: white;
+      font-size: 2rem;
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+  }
+}
+
+.horizontal {
+  display: flex;
+  flex-direction: row;
+  &.space-around {
+    justify-content: space-around;
+    align-items: center;
   }
 
-  &_band {
-    color: white;
-    font-weight: 600;
-    font-size: 1.25rem;
+  &.space-between {
+    justify-content: space-between;
+    align-items: center;
   }
 
-  &_icons {
-    color: white;
+  &.center {
+    justify-content: center;
+    align-items: baseline;
+  }
+}
+
+.vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &.space-around {
+    justify-content: space-around;
   }
 }

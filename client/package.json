@@ -1,53 +1,34 @@
 {
-  "name": "material-kit-pro-react",
-  "version": "1.8.0",
+  "name": "clientts",
+  "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "4.3.2",
-    "@material-ui/icons": "4.2.1",
-    "animate.css": "3.7.2",
-    "classnames": "2.2.6",
-    "history": "4.9.0",
-    "moment": "2.24.0",
-    "node-sass": "4.12.0",
-    "nouislider": "14.0.2",
-    "prop-types": "15.7.2",
-    "react": "16.9.0",
-    "react-animate-on-scroll": "2.1.5",
-    "react-datetime": "2.16.3",
-    "react-dom": "16.9.0",
-    "react-google-maps": "9.4.5",
-    "react-image-gallery": "0.8.18",
-    "react-router-dom": "5.0.1",
-    "react-scripts": "3.1.0",
-    "react-slick": "0.25.2",
-    "react-swipeable-views": "0.13.3",
-    "react-tagsinput": "3.19.0"
+    "@material-ui/core": "^4.8.0",
+    "@material-ui/icons": "^4.5.1",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.4.0",
+    "@testing-library/user-event": "^7.2.1",
+    "axios": "^0.19.0",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
+    "node-sass": "^4.13.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-reveal": "^1.2.2",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.3.0",
+    "react-typed": "^1.2.0",
+    "typed.js": "^2.0.11",
+    "typescript": "^3.7.4"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && gulp licenses",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "lint:check": "eslint . --ext=js,jsx;  exit 0",
-    "lint:fix": "eslint . --ext=js,jsx --fix;  exit 0",
-    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
-    "compile-sass": "node-sass src/assets/scss/material-kit-pro-react.scss src/assets/css/material-kit-pro-react.css",
-    "minify-sass": "node-sass src/assets/scss/material-kit-pro-react.scss src/assets/css/material-kit-pro-react.min.css --output-style compressed",
-    "map-sass": "node-sass src/assets/scss/material-kit-pro-react.scss src/assets/css/material-kit-pro-react.css --source-map true"
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "devDependencies": {
-    "gulp": "4.0.2",
-    "gulp-append-prepend": "1.0.8"
-  },
-  "optionalDependencies": {
-    "@types/googlemaps": "3.37.3",
-    "@types/markerclustererplus": "2.1.33",
-    "eslint-config-prettier": "6.0.0",
-    "eslint-plugin-prettier": "3.1.0",
-    "eslint-plugin-react": "7.14.3",
-    "prettier": "1.18.2",
-    "typescript": "3.5.3"
+  "eslintConfig": {
+    "extends": "react-app"
   },
   "browserslist": {
     "production": [
@@ -55,6 +36,15 @@
       "not dead",
       "not op_mini all"
     ],
-    "development": []
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/history": "^4.7.3",
+    "@types/lodash": "^4.14.149",
+    "@types/react-router-dom": "^5.1.3"
   }
 }

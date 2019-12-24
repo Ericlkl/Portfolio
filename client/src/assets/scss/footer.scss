@@ -1,10 +1,43 @@
 .footer {
-  background-color: $primary-color;
+  background-color: rgb(33, 33, 33);
   color: white;
   padding: 3rem 0;
+
   display: flex;
   flex-direction: column;
-  text-align: center;
+  justify-content: space-around;
+
+  &_content {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    align-items: center;
+    &_contactbox {
+      padding: 2rem;
+      &_title {
+        font-size: 2.5rem;
+        margin: 0.5rem 0;
+      }
+      &_subtitle {
+        font-size: 2rem;
+        font-weight: 300;
+        margin: 0.5rem 0;
+        color: rgba(255, 255, 255, 0.5);
+      }
+    }
+
+    &_methods {
+      padding: 2rem;
+      &_method {
+        font-size: 1.5rem;
+        margin: 1rem 0;
+        color: rgba(255, 255, 255, 0.5);
+        > i {
+          color: #4b6cc1;
+        }
+      }
+    }
+  }
 
   &_socials {
     display: flex;
@@ -37,8 +70,9 @@
 // Tablet
 @media (min-width: 750px) {
   .footer {
-    &_socials {
-      font-size: 1.75rem;
+    &_content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 }
