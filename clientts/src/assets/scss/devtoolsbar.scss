@@ -3,7 +3,7 @@
   align-items: center;
   overflow-x: auto;
   overflow-y: hidden;
-  background-color: rgb(233, 233, 233);
+  background-color: rgb(255, 255, 255);
   height: 11rem;
 
   &_btn {
@@ -13,11 +13,21 @@
     align-items: center;
     padding: 1rem;
     cursor: pointer;
+
+    &.active {
+      transform: scale(1.25);
+    }
+
+    &.deactivate {
+      opacity: 0.5;
+    }
+
     > i {
       font-size: 5rem;
     }
 
     &:hover {
+      transition: transform 0.5s;
       transform: scale(1.25);
     }
     &_name {

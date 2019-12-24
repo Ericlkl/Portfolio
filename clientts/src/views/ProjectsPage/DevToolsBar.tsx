@@ -75,7 +75,7 @@ const DevToolsBar: React.FC<DevToolsBarProps> = ({ devTools }) => {
   const renderIcons = () =>
     devTools.map(toolName => {
       return (
-        <div className='devtoolsbar_btn'>
+        <div className='devtoolsbar_btn deactivate'>
           <DevToolBtn toolName={toolName} fillColor />
           <h3 className='devtoolsbar_btn_name'>{toolName}</h3>
         </div>

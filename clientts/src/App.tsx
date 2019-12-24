@@ -3,6 +3,7 @@ import { createBrowserHistory } from 'history';
 import { Router, Route, Switch } from 'react-router-dom';
 
 import './assets/scss/index.scss';
+import 'animate.css';
 
 // pages for this product
 

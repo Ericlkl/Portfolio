@@ -22,7 +22,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, bg_url }) => {
           bg_url +
           ')'
       }}
-      className='project_card'
+      className={`project_card`}
     >
       <div className='project_card_content'>
         <h3 className='project_card_content_title bold'>{title}</h3>
@@ -49,10 +49,9 @@ type Projects = {
   title: string;
 };
 
-const Projects: React.FC<Projects> = ({ title, children }) => {
+const Projects: React.FC<Projects> = ({ children }) => {
   return (
     <section className='projects'>
-      <h3 className='section_title'>{title}</h3>
       {children}
       <div className='projects_showcase'>
         <ProjectCard title='Tweetery' bg_url={imgURL} />
