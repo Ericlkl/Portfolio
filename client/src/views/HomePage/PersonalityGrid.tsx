@@ -53,7 +53,8 @@ const PersonalityBox: React.FC<PersonalityBoxProps> = ({ personality }) => {
   const { icon, title, description } = personality;
   return (
     <div className='personality_grid_box'>
-      {icon}
+      <div className='personality_grid_box_hexagon'>{icon}</div>
+
       <h2 className='personality_grid_box_title'>{title}</h2>
       <p className='personality_grid_box_desc'>{description}</p>
     </div>

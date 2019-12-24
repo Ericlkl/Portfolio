@@ -9,7 +9,6 @@
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 2rem;
-    text-align: center;
     margin: 3rem 0;
 
     &_box {
@@ -17,8 +16,43 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      > i {
-        font-size: 2rem;
+
+      &_hexagon {
+        width: 100px;
+        height: 55px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $secondary-color;
+        position: relative;
+        margin: 3rem 0;
+        > i {
+          font-size: 2.5rem;
+          color: white;
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: -25px;
+          left: 0;
+          width: 0;
+          height: 0;
+          border-left: 50px solid transparent;
+          border-right: 50px solid transparent;
+          border-bottom: 25px solid $secondary-color;
+        }
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: -25px;
+          left: 0;
+          width: 0;
+          height: 0;
+          border-left: 50px solid transparent;
+          border-right: 50px solid transparent;
+          border-top: 25px solid $secondary-color;
+        }
       }
     }
   }
