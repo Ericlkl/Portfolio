@@ -6,14 +6,15 @@ import Header from './Header';
 import Services from './Services';
 import Projects from '../../components/Layout/Projects';
 import Footer from '../../components/Layout/Footer';
+import PersonalityGrid from './PersonalityGrid';
 
 const HomePage: React.FC = ({ ...rest }) => {
   return (
     <Fragment>
       <Header />
+      <PersonalityGrid />
       <Services />
       <FeatureProject />
-      <Projects title='My Recent Work' />
       <Footer />
     </Fragment>
   );

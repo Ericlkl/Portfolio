@@ -1,0 +1,47 @@
+.personality {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+
+  &_grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 2rem;
+    text-align: center;
+    margin: 3rem 0;
+
+    &_box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      > i {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+// Tablet
+@media (min-width: 750px) {
+  .personality {
+    &_grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 2rem;
+    }
+  }
+}
+
+// Tablet
+@media (min-width: 1250px) {
+  .personality {
+    &_grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 2rem;
+    }
+  }
+}
