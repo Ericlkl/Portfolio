@@ -2,20 +2,30 @@ import React from 'react';
 
 type HeroProps = {
   img: string;
-  title?: string;
+  title: string;
   subtitle?: string;
+  desc?: string;
 };
 
-const Hero: React.FC<HeroProps> = ({ img, title, subtitle }) => {
+const Hero: React.FC<HeroProps> = ({
+  img,
+  title,
+  subtitle,
+  desc,
+  children
+}) => {
   return (
-    <div
-      style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
-      url('${img}')`
-      }}
-      className='hero'
-    >
-      <h1 className='hero_title'>{title}</h1>
+    <div className='hero'>
+      <div className='hero_content'>
+        <div className='hero_content_description'>
+          <h1 className='hero_content_description_title'>{title}</h1>
+          <p className='hero_content_description_subtitle'>{subtitle}</p>
+          <p className='hero_content_description_desc'>{desc}</p>
+        </div>
+
+        <img className='hero_content_img' src={img} alt='hero_img' />
+      </div>
+      {children}
     </div>
   );
 };

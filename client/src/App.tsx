@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import { createBrowserHistory } from 'history';
 import { Router, Route, Switch } from 'react-router-dom';
 
+// Import css files
 import './assets/scss/index.scss';
 
 // pages for this product
