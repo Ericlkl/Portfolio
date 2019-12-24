@@ -1,10 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import _ from 'lodash';
-
-type DevToolBtnProps = {
-  toolName: string;
-  fillColor: boolean;
-};
+import DevToolsContext from '../../context/DevToolsContext/DevToolsContext';
 
 const getDevicon = (toolName: string) => {
   switch (_.trim(toolName)) {
@@ -63,26 +59,28 @@ const getDevicon = (toolName: string) => {
   }
 };
 
-const DevToolBtn: React.FC<DevToolBtnProps> = ({ toolName, fillColor }) => {
-  return <i className={`${getDevicon(toolName)} colored`}></i>;
-};
-
 type DevToolsBarProps = {
   devTools: string[];
 };
 
 const DevToolsBar: React.FC<DevToolsBarProps> = ({ devTools }) => {
-  const renderIcons = () =>
-    devTools.map(toolName => {
-      return (
-        <div className='devtoolsbar_btn deactivate'>
-          <DevToolBtn toolName={toolName} fillColor />
+  const { active, setSelector } = useContext(DevToolsContext);
+
+  return (
+    <div className='devtoolsbar'>
+      {devTools.map(toolName => (
+        <div
+          onClick={() => setSelector(toolName)}
+          className={`devtoolsbar_btn ${
+            _.isEqual(active, toolName) ? 'activate' : 'deactivate'
+          }`}
+        >
+          <i className={`${getDevicon(toolName)} colored`}></i>
           <h3 className='devtoolsbar_btn_name'>{toolName}</h3>
         </div>
-      );
-    });
-
-  return <div className='devtoolsbar'>{renderIcons()}</div>;
+      ))}
+    </div>
+  );
 };
 
 export default DevToolsBar;

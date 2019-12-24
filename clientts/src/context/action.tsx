@@ -1,0 +1,4 @@
+export enum DevToolsAction {
+  SET_SELECTOR = 'SET_SELECTOR',
+  CLEAR_SELECTOR = 'CLEAR_SELECTOR'
+}

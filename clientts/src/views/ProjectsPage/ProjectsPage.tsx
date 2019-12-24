@@ -11,6 +11,9 @@ import Footer from '../../components/Layout/Footer';
 // Page Specific Compnents
 import DevToolsBar from './DevToolsBar';
 
+// Provider
+import DevToolsProvider from '../../context/DevToolsContext/DevToolsProvider';
+
 const devTools = [
   'html',
   'css',
@@ -30,13 +33,13 @@ const devTools = [
 
 const ProfilePage: React.FC = ({ ...rest }) => {
   return (
-    <Fragment>
+    <DevToolsProvider>
       <Hero img={HeroBG} title='My Projects' />
       <DevToolsBar devTools={devTools} />
 
       <Projects title='My Projects'></Projects>
       <Footer />
-    </Fragment>
+    </DevToolsProvider>
   );
 };
 
