@@ -1,16 +1,15 @@
 .myHistory {
   background-color: rgb(233, 233, 233);
-  padding: 3rem 0;
+  padding: 3rem 1rem;
   &_content {
-    padding: 3rem 0;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr;
     grid-gap: 2rem;
-
+    overflow: hidden;
     &_intro {
       display: flex;
       flex-direction: column;
-      padding: 0rem 3rem;
+      width: 100%;
       &_name {
         color: $secondary-color;
         font-size: 2.5rem;
@@ -19,12 +18,20 @@
 
       &_p {
         padding: 1rem 0;
+        font-size: 1rem;
+        font-weight: 300;
+        white-space: pre-line;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-word;
+        hyphens: auto;
       }
     }
 
     &_achievement {
       display: flex;
       flex-direction: column;
+      // margin: 0 auto;
       &_profile_img {
         width: 400px;
         padding: 0.5rem 0;
@@ -43,4 +50,27 @@
       }
     }
   }
+}
+
+// Tablet
+@media (min-width: 650px) {
+  .myHistory {
+    &_content {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      &_intro {
+        padding: 0 2rem;
+      }
+    }
+  }
+}
+
+// Laptop
+@media (min-width: 1050px) {
+  // .myHistory {
+  //   &_content {
+  //     display: grid;
+  //     grid-template-columns: 50% 50%;
+  //   }
+  // }
 }

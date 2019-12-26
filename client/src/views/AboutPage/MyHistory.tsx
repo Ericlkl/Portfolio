@@ -19,6 +19,13 @@ const AchievementBox: React.FC<AchievementBoxProps> = ({ title, items }) => {
 
 const achievements = [
   {
+    title: 'Education',
+    items: [
+      'Griffith University - Bachelor of IT | 2016 - 2017',
+      'Queensland University of Technology - Bachelor of Computer Science | 2017 - 2019'
+    ]
+  },
+  {
     title: 'Awards and Mentions',
     items: ['Griffith University - Awards', 'Griffith University - Awards']
   },
