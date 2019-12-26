@@ -1,0 +1,20 @@
+.work {
+  margin: 2rem;
+
+  &_content {
+    justify-content: center;
+    align-items: center;
+
+    &_chart {
+      margin: 0 auto;
+    }
+  }
+}
+
+// Laptop
+@media (min-width: 1050px) {
+  .work {
+    &_content {
+    }
+  }
+}
