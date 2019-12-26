@@ -1,12 +1,48 @@
 import React from 'react';
 import ProfileImg from '../../assets/img/hero2.jpg';
 
-const MyHistory: React.FC = () => {
+type AchievementBoxProps = {
+  title: string;
+  items: string[];
+};
+
+const AchievementBox: React.FC<AchievementBoxProps> = ({ title, items }) => {
   return (
-    <section className='myHistory container'>
+    <div className='myHistory_content_achievement_box'>
+      <h4 className='myHistory_content_achievement_box_title'>{title}</h4>
+      {items.map(i => (
+        <p className='myHistory_content_achievement_box_item'>- {i}</p>
+      ))}
+    </div>
+  );
+};
+
+const achievements = [
+  {
+    title: 'Awards and Mentions',
+    items: ['Griffith University - Awards', 'Griffith University - Awards']
+  },
+  {
+    title: 'Experience',
+    items: [
+      'AAS Education - IT Tutors',
+      'QUT - Mobile Application Developer Internship',
+      'CSIRO - Medicial Search Engine Developer'
+    ]
+  }
+];
+
+const MyHistory: React.FC = () => {
+  const renderAchievementBoxs = () =>
+    achievements.map(achieve => (
+      <AchievementBox title={achieve.title} items={achieve.items} />
+    ));
+
+  return (
+    <section className='myHistory'>
       <h1 className='section_title'>Intro</h1>
 
-      <div className='myHistory_content'>
+      <div className='myHistory_content container'>
         {/* Section Left */}
         <div className='myHistory_content_intro'>
           <h2 className='myHistory_content_intro_name'>Eric Lee</h2>
@@ -32,17 +68,7 @@ const MyHistory: React.FC = () => {
             src={ProfileImg}
             alt='my_pic'
           />
-          <ul className='myHistory_content_achievement_awards'>
-            <li>Griffith University - Awards</li>
-            <li>Griffith University - Awards</li>
-            <li>Griffith University - Awards</li>
-            <li>Griffith University - Awards</li>
-          </ul>
-          <ul className='myHistory_content_achievement_exp'>
-            <li>AAS Education - IT Tutors</li>
-            <li>QUT - Mobile Application Developer Internship</li>
-            <li>CSIRO - Medicial Search Engine Developer</li>
-          </ul>
+          {renderAchievementBoxs()}
         </div>
         {/* Section Right End*/}
       </div>
