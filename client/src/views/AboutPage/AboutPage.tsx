@@ -7,6 +7,7 @@ import Footer from '../../components/Layout/Footer';
 
 import MyWork from './MyWork';
 import MySkills from './MySkills';
+import Personality from './Personality';
 
 const AboutPage: React.FC = () => {
   return (
@@ -40,6 +41,7 @@ const AboutPage: React.FC = () => {
       </Hero>
       {/* <MyWork /> */}
       <MySkills />
+      <Personality />
       <Footer />
     </Fragment>
   );

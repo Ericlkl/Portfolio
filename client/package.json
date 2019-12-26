@@ -7,6 +7,7 @@
     "@material-ui/icons": "^4.5.1",
     "@nivo/bar": "^0.61.1",
     "@nivo/pie": "^0.61.1",
+    "@nivo/radar": "^0.61.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
     "@testing-library/user-event": "^7.2.1",

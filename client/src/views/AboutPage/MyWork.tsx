@@ -1,5 +1,4 @@
 import React from 'react';
-import MyChart from './MyChart';
 const data = [
   { name: 'Coding', value: 400 },
   { name: 'Eating Pizza', value: 50 },
@@ -27,9 +26,7 @@ const MyWork: React.FC = () => {
           <h1>Part Project Managment</h1>
         </div>
 
-        <div className='work_content_chart'>
-          <MyChart />
-        </div>
+        <div className='work_content_chart'></div>
 
         <div className='work_content_coding'>
           <h1>Part Coding</h1>
