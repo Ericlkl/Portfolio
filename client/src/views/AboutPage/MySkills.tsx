@@ -40,7 +40,7 @@ const myFills = [
 
 const myData = [
   {
-    fields: 'Front End',
+    Fields: 'Front End',
     HTML: 95,
     HTMLColor: '#2a4d69',
     CSS: 80,
@@ -55,7 +55,7 @@ const myData = [
     Bootstrap4Color: '#adcbe3'
   },
   {
-    fields: 'Back End',
+    Fields: 'Back End',
     NodeJS: 90,
     NodeJSColor: '#0e9aa7',
     ExpressJS: 95,
@@ -68,7 +68,7 @@ const myData = [
     SequalizeColor: '#83d0c9'
   },
   {
-    fields: 'Mobile',
+    Fields: 'Mobile',
     'C#': 70,
     'C#Color': '#ee4035',
     Flutter: 65,
@@ -79,7 +79,7 @@ const myData = [
     XamarinColor: '#851e3e'
   },
   {
-    fields: 'Deployment',
+    Fields: 'Deployment',
     AWS: 75,
     AWSColor: '#4b3832',
     Redis: 80,
@@ -91,15 +91,18 @@ const myData = [
 
 const MySkills: React.FC = () => {
   return (
-    <div style={{ width: '800px', height: '500px' }}>
-      <StackedBar
-        data={myData}
-        fills={myFills}
-        keys={myKeys}
-        xlabel='fields'
-        ylabel='confidence'
-      />
-    </div>
+    <section className='mySkills'>
+      <h1 className='section_title'>My Skills</h1>
+      <div className='mySkills_content container'>
+        <StackedBar
+          data={myData}
+          fills={myFills}
+          keys={myKeys}
+          xlabel='Fields'
+          ylabel='Confidence'
+        />
+      </div>
+    </section>
   );
 };
 
