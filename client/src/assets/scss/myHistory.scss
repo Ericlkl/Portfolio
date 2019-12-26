@@ -1,0 +1,17 @@
+.myHistory {
+  &_content {
+    display: grid;
+    grid-template-columns: 40% 60%;
+
+    &_achievement {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      &_profile_img {
+        width: 100%;
+        height: 400px;
+      }
+    }
+  }
+}

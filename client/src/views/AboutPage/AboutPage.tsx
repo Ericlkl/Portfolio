@@ -5,8 +5,8 @@ import Hero from '../../components/Layout/Hero';
 import AboutBG from '../../assets/img/about_hero2.jpg';
 import Footer from '../../components/Layout/Footer';
 
-import MyWork from './MyWork';
 import MySkills from './MySkills';
+import MyHistory from './MyHistory';
 import Personality from './Personality';
 
 const AboutPage: React.FC = () => {
@@ -39,7 +39,7 @@ const AboutPage: React.FC = () => {
           </div>
         </div>
       </Hero>
-      {/* <MyWork /> */}
+      <MyHistory />
       <MySkills />
       <Personality />
       <Footer />

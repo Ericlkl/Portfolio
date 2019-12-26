@@ -30,8 +30,8 @@ const Radar: React.FC<RadarProps> = ({ data, keys, index }) => {
       enableDotLabel={true}
       dotLabel='value'
       dotLabelYOffset={-12}
-      colors={{ scheme: 'nivo' }}
-      fillOpacity={0.25}
+      colors={{ scheme: 'category10' }}
+      fillOpacity={0.4}
       blendMode='multiply'
       animate={true}
       motionStiffness={90}
@@ -39,7 +39,7 @@ const Radar: React.FC<RadarProps> = ({ data, keys, index }) => {
       isInteractive={true}
       legends={[
         {
-          anchor: 'top-left',
+          anchor: 'bottom',
           direction: 'column',
           translateX: -50,
           translateY: -40,
