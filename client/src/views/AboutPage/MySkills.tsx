@@ -28,21 +28,25 @@ const SkillBox: React.FC<SkillBoxProps> = ({ fieldName, skills }) => {
 const MySkills: React.FC = () => {
   const renderSkillBoxs = () =>
     skillBoxData.map((boxData, i) => (
-      <SkillBox fieldName={boxData.fieldName} skills={boxData.skills} />
+      <Fade bottom delay={i * 500} duration={500}>
+        <SkillBox fieldName={boxData.fieldName} skills={boxData.skills} />
+      </Fade>
     ));
   return (
     <section className='mySkills'>
       <h1 className='section_title'>My Skills</h1>
       <div className='mySkills_content container'>
         <div className='mySkills_content_desc'>{renderSkillBoxs()}</div>
-        <div className='mySkills_content_chart'>
-          <StackedBar
-            data={skillChartData}
-            keys={skillChartKeys}
-            xlabel='Fields'
-            ylabel='Confidence'
-          />
-        </div>
+        <Fade bottom delay={skillBoxData.length * 500} duration={500}>
+          <div className='mySkills_content_chart'>
+            <StackedBar
+              data={skillChartData}
+              keys={skillChartKeys}
+              xlabel='Fields'
+              ylabel='Confidence'
+            />
+          </div>
+        </Fade>
       </div>
     </section>
   );

@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-// import { Grid, Container, Button } from '@material-ui/core';
 
 // @material-ui/icons
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import ViewCompactIcon from '@material-ui/icons/ViewCompact';
-import MailOutlineIcon from '@material-ui/icons/MailOutline';
 
 // const Link = React.forwardRef((props, ref) => (
 //   <RouterLink innerRef={ref} {...props} />

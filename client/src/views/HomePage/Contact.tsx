@@ -1,5 +1,6 @@
 import React from 'react';
 import { TextField, Fab } from '@material-ui/core';
+import { LightSpeed } from 'react-reveal';
 
 const Contact: React.FC = () => {
   return (
@@ -8,11 +9,15 @@ const Contact: React.FC = () => {
       <div className='contact_content container'>
         {/* Top Part */}
         <div className='contact_content_box'>
-          <h3 className='contact_content_box_status'>Available </h3>
-          <p className='contact_content_box_desc'>
-            I’m currently looking for new opportunity from{' '}
-            <span> January 2020.</span>
-          </p>
+          <LightSpeed right>
+            <h3 className='contact_content_box_status'>Available </h3>
+          </LightSpeed>
+          <LightSpeed left>
+            <p className='contact_content_box_desc'>
+              I’m currently looking for new opportunity from{' '}
+              <span> January 2020.</span>
+            </p>
+          </LightSpeed>
         </div>
         {/* Bottom Part */}
         <form className='contact_content_form'>
