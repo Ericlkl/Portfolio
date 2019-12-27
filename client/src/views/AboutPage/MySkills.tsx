@@ -89,6 +89,19 @@ const myData = [
   }
 ];
 
+type SkillsBoxProps = {
+  title: string;
+  skills: string[];
+};
+
+const SkillsBox: React.FC = () => {
+  return (
+    <div className='mySkills_content_skillbox'>
+      <h1 className='mySkills_content_skillbox_title'></h1>
+    </div>
+  );
+};
+
 const MySkills: React.FC = () => {
   return (
     <section className='mySkills'>

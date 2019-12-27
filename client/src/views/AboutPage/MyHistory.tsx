@@ -11,7 +11,7 @@ const AchievementBox: React.FC<AchievementBoxProps> = ({ title, items }) => {
     <div className='myHistory_content_achievement_box'>
       <h4 className='myHistory_content_achievement_box_title'>{title}</h4>
       {items.map(i => (
-        <p className='myHistory_content_achievement_box_item'>- {i}</p>
+        <h6 className='myHistory_content_achievement_box_item'>- {i}</h6>
       ))}
     </div>
   );
@@ -21,7 +21,7 @@ const achievements = [
   {
     title: 'Education',
     items: [
-      'Griffith University - Bachelor of IT | 2016 - 2017',
+      'Griffith Uni - Bachelor of IT | 2016 - 2017',
       'Queensland University of Technology - Bachelor of Computer Science | 2017 - 2019'
     ]
   },

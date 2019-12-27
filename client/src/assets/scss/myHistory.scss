@@ -5,6 +5,7 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 2rem;
+    padding: 3rem 0;
     overflow: hidden;
     &_intro {
       display: flex;
@@ -29,9 +30,7 @@
     }
 
     &_achievement {
-      display: flex;
-      flex-direction: column;
-      // margin: 0 auto;
+      margin: 0 auto;
       &_profile_img {
         width: 400px;
         padding: 0.5rem 0;
@@ -46,6 +45,8 @@
           padding: 0.25rem 0;
           font-weight: 300;
           font-size: 0.85rem;
+          word-wrap: break-word;
+          white-space: initial;
         }
       }
     }

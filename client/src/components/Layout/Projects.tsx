@@ -1,5 +1,7 @@
 import React from 'react';
 import { Fab, Grid } from '@material-ui/core';
+import ProgrammingIcon from '../ProgrammingIcon';
+
 // `https://magora-systems.com/uploads/ReRGf0pfKf-L6G0KW4gpr3bEbx3viF5p.jpeg`
 const imgURL = `https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80`;
 const musicSchoolimg = `https://images.unsplash.com/photo-1526142684086-7ebd69df27a5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60`;
@@ -39,7 +41,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, bg_url }) => {
       </div>
 
       <div className='project_card_logo'>
-        <i className='devicon-react-original colored' />
+        <ProgrammingIcon name='react' color />
       </div>
     </div>
   );
