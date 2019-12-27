@@ -74,10 +74,6 @@ const Navbar: React.FC = () => {
           <ViewCompactIcon />
           &nbsp;Projects
         </Link>
-        <Link to='/contact' className='navbar_links_link'>
-          <MailOutlineIcon />
-          &nbsp;Contact
-        </Link>
         <Link to='/' className='navbar_links_link'>
           <i className={'navbar_links_icons fab fa-github'} />
         </Link>

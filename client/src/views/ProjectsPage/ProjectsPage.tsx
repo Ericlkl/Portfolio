@@ -34,7 +34,7 @@ const devTools = [
 const ProfilePage: React.FC = ({ ...rest }) => {
   return (
     <DevToolsProvider>
-      <Hero img={HeroBG} title='My Projects' />
+      <Hero img={HeroBG} title='My Projects' subtitle='' />
       <DevToolsBar devTools={devTools} />
 
       <Projects title='My Projects'></Projects>

@@ -97,3 +97,30 @@ export const skillChartData = [
     DockerColor: '#be9b7b'
   }
 ];
+
+export const personalityData = [
+  {
+    personality: 'Responsibility',
+    Eric: 90
+  },
+  {
+    personality: 'Talkative',
+    Eric: 60
+  },
+  {
+    personality: 'Passionate',
+    Eric: 85
+  },
+  {
+    personality: 'Cautious',
+    Eric: 75
+  },
+  {
+    personality: 'Concentration',
+    Eric: 90
+  },
+  {
+    personality: 'Persistent',
+    Eric: 80
+  }
+];

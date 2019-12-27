@@ -4,7 +4,7 @@ const Footer: React.FC = () => {
   return (
     <Fragment>
       <div className='footer'>
-        <div className='footer_content'>
+        <div className='footer_content container'>
           <div className='footer_content_contactbox'>
             <h2 className='footer_content_contactbox_title bold'>
               Let's Work Together

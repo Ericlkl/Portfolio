@@ -4,7 +4,7 @@ import React, { Fragment } from 'react';
 import FeatureProject from './FeatureProject';
 import Header from './Header';
 import Services from './Services';
-import Projects from '../../components/Layout/Projects';
+import Contact from './Contact';
 import Footer from '../../components/Layout/Footer';
 import PersonalityGrid from './PersonalityGrid';
 
@@ -15,6 +15,7 @@ const HomePage: React.FC = ({ ...rest }) => {
       <PersonalityGrid />
       <Services />
       <FeatureProject />
+      <Contact />
       <Footer />
     </Fragment>
   );

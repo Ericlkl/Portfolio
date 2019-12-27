@@ -40,8 +40,8 @@ const AboutPage: React.FC = () => {
         </div>
       </Hero>
       <MyHistory />
-      <MySkills />
       <Personality />
+      <MySkills />
       <Footer />
     </Fragment>
   );
