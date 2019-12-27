@@ -11,7 +11,7 @@ type Fill = {
 type StackBarProps = {
   data: object[];
   keys: string[];
-  fills: Fill[];
+  fills?: Fill[];
   xlabel: string;
   ylabel: string;
 };

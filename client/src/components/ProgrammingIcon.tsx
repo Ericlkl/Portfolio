@@ -2,12 +2,19 @@ import React from 'react';
 import _ from 'lodash';
 
 const getDeviconName = (toolName: string) => {
-  switch (_.trim(toolName)) {
+  switch (_.trim(toolName).toLowerCase()) {
+    case 'ios':
+      return 'devicon-apple-original';
+    case 'aws':
+      return 'devicon-amazonwebservices-original';
+    case 'vs code':
+      return 'devicon-visualstudio-plain';
     case 'bootstrap':
       return 'devicon-bootstrap-plain';
     case 'android':
       return 'devicon-android-plain';
-    case 'C#':
+    case 'c#':
+      return 'devicon-csharp-plain';
     case 'csharp':
       return 'devicon-csharp-plain';
     case 'css':
@@ -43,7 +50,7 @@ const getDeviconName = (toolName: string) => {
       return 'devicon-react-original';
     case 'redis':
       return 'devicon-redis-plain';
-    case 'sass':
+    case 'scss':
       return 'devicon-sass-original';
     case 'sequelize':
       return 'devicon-sequelize-plain';

@@ -1,7 +1,52 @@
 .mySkills {
   margin: 5rem 0;
+  background: #e2e1e0;
   &_content {
-    width: 100%;
-    height: 500px;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    padding: 3rem 0;
+
+    &_desc {
+      margin: 1rem;
+      display: grid;
+      grid-gap: 1rem;
+      &_skillbox {
+        padding: 0.5rem 0;
+        background: #fff;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
+          0 6px 6px rgba(0, 0, 0, 0.23);
+        border-radius: 2px;
+
+        &_title {
+          border-bottom: 1px solid rgb(233, 233, 233);
+          padding: 0.5rem 0;
+          margin: 0 1rem;
+          font-weight: 400;
+        }
+
+        &_icons {
+          display: grid;
+          grid-template-columns: repeat(5, 1fr);
+          padding: 0.2rem 0;
+          grid-gap: 0.2rem;
+          &_icon {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            > i {
+              font-size: 2.5rem;
+              padding: 0.5rem 0;
+            }
+            font-size: 0.8rem;
+            font-weight: 300;
+          }
+        }
+      }
+    }
+
+    &_chart {
+      max-height: 580px;
+    }
   }
 }
