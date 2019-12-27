@@ -1,4 +1,5 @@
 import React from 'react';
+import { Fade } from 'react-reveal';
 import ProfileImg from '../../assets/img/hero2.jpg';
 
 type AchievementBoxProps = {
@@ -39,7 +40,7 @@ const achievements = [
   }
 ];
 
-const MyHistory: React.FC = () => {
+const Intro: React.FC = () => {
   const renderAchievementBoxs = () =>
     achievements.map(achieve => (
       <AchievementBox title={achieve.title} items={achieve.items} />
@@ -51,36 +52,42 @@ const MyHistory: React.FC = () => {
 
       <div className='myHistory_content container'>
         {/* Section Left */}
-        <div className='myHistory_content_intro'>
-          <h2 className='myHistory_content_intro_name'>Eric Lee</h2>
-          <p className='myHistory_content_intro_p'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
-            enim atque soluta eum. At quos est voluptates eum voluptatem qui
-            facere enim eaque dolorum fugiat. Minima culpa reiciendis quasi
-            esse.
-          </p>
-          <p className='myHistory_content_intro_p'>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit at
-            voluptatem similique, maiores mollitia ipsam voluptate hic.
-            Exercitationem eveniet enim accusantium totam a quos consequatur
-            maiores numquam! Sed, officiis ducimus.
-          </p>
-        </div>
+        <Fade bottom>
+          <div className='myHistory_content_intro'>
+            <h2 className='myHistory_content_intro_name'>Eric Lee</h2>
+            <p className='myHistory_content_intro_p'>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
+              enim atque soluta eum. At quos est voluptates eum voluptatem qui
+              facere enim eaque dolorum fugiat. Minima culpa reiciendis quasi
+              esse.
+            </p>
+            <p className='myHistory_content_intro_p'>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit at
+              voluptatem similique, maiores mollitia ipsam voluptate hic.
+              Exercitationem eveniet enim accusantium totam a quos consequatur
+              maiores numquam! Sed, officiis ducimus.
+            </p>
+          </div>
+        </Fade>
+
         {/* Left Section end */}
 
         {/* Section Right */}
-        <div className='myHistory_content_achievement'>
-          <img
-            className='myHistory_content_achievement_profile_img'
-            src={ProfileImg}
-            alt='my_pic'
-          />
-          {renderAchievementBoxs()}
-        </div>
+        <Fade bottom>
+          <div className='myHistory_content_achievement'>
+            <img
+              className='myHistory_content_achievement_profile_img'
+              src={ProfileImg}
+              alt='my_pic'
+            />
+            {renderAchievementBoxs()}
+          </div>
+        </Fade>
+
         {/* Section Right End*/}
       </div>
     </section>
   );
 };
 
-export default MyHistory;
+export default Intro;

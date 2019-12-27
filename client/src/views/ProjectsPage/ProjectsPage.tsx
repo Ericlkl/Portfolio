@@ -17,17 +17,17 @@ import DevToolsProvider from '../../context/DevToolsContext/DevToolsProvider';
 const devTools = [
   'html',
   'css',
-  'javascript',
-  'typescript',
+  'javaScript',
+  'typeScript',
   'react',
   'vuejs',
-  'sass',
+  'scss',
   'nodejs',
   'mysql',
   'mongodb',
   'sequelize',
   'redis',
-  'csharp',
+  'c#',
   'python'
 ];
 

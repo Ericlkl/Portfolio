@@ -76,23 +76,21 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
   const renderSkills = () => skills.map(name => <p className='py-1'>{name}</p>);
 
   return (
-    <Grid xs={12} sm={6} md={4} item>
-      <Slide bottom>
-        <Card className='services_cards'>
-          <i className={`services_cards_icons fas ${icon} py-1`} />
-          <CardContent>
-            <h2 className='services_cards_title py-1'>{name}</h2>
-            <h3 className='services_cards_subtitle py-2'>{features}</h3>
-            <p className='px-1'> {desc} </p>
-          </CardContent>
+    <Slide bottom>
+      <Card className='services_content_cards'>
+        <i className={`services_content_cards_icons fas ${icon} py-1`} />
+        <CardContent>
+          <h2 className='services_content_cards_title py-1'>{name}</h2>
+          <h3 className='services_content_cards_subtitle py-2'>{features}</h3>
+          <p className='px-1'> {desc} </p>
+        </CardContent>
 
-          <div className='services_cards_techbox'>
-            <h3 className='text_secondary bold py-2'> Skills :</h3>
-            {renderSkills()}
-          </div>
-        </Card>
-      </Slide>
-    </Grid>
+        <div className='services_content_cards_techbox'>
+          <h3 className='text_secondary bold py-2'> Skills :</h3>
+          {renderSkills()}
+        </div>
+      </Card>
+    </Slide>
   );
 };
 
@@ -103,11 +101,7 @@ const Services: React.FC = () => {
   return (
     <section className='services'>
       <h3 className='section_title'>My Services</h3>
-      <Container>
-        <Grid className='p-1' container spacing={3} justify='center'>
-          {renderServices()}
-        </Grid>
-      </Container>
+      <div className='services_content container'>{renderServices()}</div>
     </section>
   );
 };

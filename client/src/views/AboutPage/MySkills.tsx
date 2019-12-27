@@ -1,7 +1,7 @@
 import React from 'react';
 import StackedBar from '../../components/Chart/StackedBar';
 import ProgrammingIcon from '../../components/ProgrammingIcon';
-import { Paper } from '@material-ui/core';
+import { Fade } from 'react-reveal';
 import { skillChartKeys, skillChartData, skillBoxData } from './Data';
 
 type SkillBoxProps = {
@@ -27,7 +27,7 @@ const SkillBox: React.FC<SkillBoxProps> = ({ fieldName, skills }) => {
 
 const MySkills: React.FC = () => {
   const renderSkillBoxs = () =>
-    skillBoxData.map(boxData => (
+    skillBoxData.map((boxData, i) => (
       <SkillBox fieldName={boxData.fieldName} skills={boxData.skills} />
     ));
   return (

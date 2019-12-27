@@ -22,9 +22,12 @@
     flex: 1;
     justify-content: center;
     align-content: center;
+
     > img {
       border-radius: 50%;
       height: 20rem;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+      border: 4.5px solid #555;
     }
   }
 }
