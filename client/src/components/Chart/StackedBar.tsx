@@ -28,9 +28,16 @@ const StackBar: React.FC<StackBarProps> = ({
       data={data}
       keys={keys}
       indexBy={xlabel}
-      margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
+      margin={{ top: 20, right: 130, bottom: 50, left: 60 }}
       padding={0.3}
       colors={({ id, data }) => data[`${id}Color`]}
+      theme={{
+        grid: {
+          line: {
+            stroke: 'rgb(133,133,133)'
+          }
+        }
+      }}
       defs={[
         {
           id: 'dots',

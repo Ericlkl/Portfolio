@@ -1,9 +1,10 @@
 .mySkills {
-  margin: 5rem 0;
+  padding: 3rem 0;
   background: #e2e1e0;
   &_content {
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 580px;
     padding: 3rem 0;
 
     &_desc {
@@ -26,7 +27,7 @@
 
         &_icons {
           display: grid;
-          grid-template-columns: repeat(5, 1fr);
+          grid-template-columns: repeat(3, 1fr);
           padding: 0.2rem 0;
           grid-gap: 0.2rem;
           &_icon {
@@ -46,7 +47,34 @@
     }
 
     &_chart {
+      width: 100%;
       max-height: 580px;
+    }
+  }
+}
+
+// Tablet
+@media (min-width: 800px) {
+  .mySkills {
+    &_content {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-rows: 1fr;
+      &_desc {
+        &_skillbox {
+          &_icons {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            padding: 0.2rem 0;
+            grid-gap: 0.2rem;
+          }
+        }
+      }
+
+      &_chart {
+        width: 100%;
+        max-height: 780px;
+      }
     }
   }
 }
