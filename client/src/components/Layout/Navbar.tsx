@@ -1,33 +1,42 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import Fade from 'react-reveal';
 
 // @material-ui/icons
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import ViewCompactIcon from '@material-ui/icons/ViewCompact';
 
-// const Link = React.forwardRef((props, ref) => (
-//   <RouterLink innerRef={ref} {...props} />
-// ));
+import Logo from '../Logo';
 
 type NavState = {
   direction: 'vertical' | 'horizontal';
+  showName: boolean;
   expend: boolean;
 };
 
 const Navbar: React.FC = () => {
-  const handleResize = () => {
-    if (window.innerWidth > 650)
-      setNavState({ direction: 'horizontal', expend: true });
-    else setNavState({ direction: 'vertical', expend: false });
-  };
+  console.log(window.location.pathname);
 
   const [navState, setNavState] = useState<NavState>({
     direction: window.innerWidth > 650 ? 'horizontal' : 'vertical',
+    showName: false,
     expend: window.innerWidth > 650 ? true : false
   });
 
+  const handleResize = () => {
+    if (window.innerWidth > 650)
+      setNavState({ direction: 'horizontal', showName: false, expend: true });
+    else setNavState({ direction: 'vertical', showName: false, expend: false });
+  };
+
+  // Expend the menu
   const toggleMenu = () =>
     setNavState({ ...navState, expend: !navState.expend });
+
+  // Reveal Name
+  const revealName = () => setNavState({ ...navState, showName: true });
+  // hide Name
+  const hideName = () => setNavState({ ...navState, showName: false });
 
   useEffect(() => {
     window.addEventListener('resize', handleResize);
@@ -46,9 +55,14 @@ const Navbar: React.FC = () => {
       }`}
     >
       <div className='navbar_main horizontal space-between'>
-        <Link to='/' className='navbar_main_band'>
-          Eric lee
-        </Link>
+        <div className='navbar_main_band'>
+          <Link onMouseOut={hideName} onMouseOver={revealName} to='/'>
+            <Logo className='navbar_main_band_logo' />
+          </Link>
+          <Fade left when={navState.showName}>
+            <h1 className='navbar_main_band_name'>ERIC LEE</h1>
+          </Fade>
+        </div>
         <div
           style={navState.direction === 'vertical' ? {} : { display: 'none' }}
           onClick={toggleMenu}

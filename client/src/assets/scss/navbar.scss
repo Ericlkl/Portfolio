@@ -25,10 +25,23 @@
     padding: 0rem 1.5rem;
 
     &_band {
-      color: white;
-      font-weight: 600;
-      font-size: 1.25rem;
-      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &_logo {
+        width: 50px;
+        height: 50px;
+      }
+
+      &_name {
+        text-decoration: none;
+        font-weight: 800;
+        font-size: 1.6rem;
+        letter-spacing: 0.4rem;
+        padding: 0 2rem;
+        color: #fff;
+        z-index: -10;
+      }
     }
 
     &_expand_btn {
