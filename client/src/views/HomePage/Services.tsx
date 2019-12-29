@@ -79,8 +79,8 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
     <Slide bottom>
       <div className='services_content_cards'>
         <i className={`services_content_cards_icons fas ${icon}`} />
-        <h2 className='services_content_cards_title'>{name}</h2>
-        <h3 className='services_content_cards_subtitle'>{features}</h3>
+        <h1 className='services_content_cards_title'>{name}</h1>
+        <h2 className='services_content_cards_subtitle'>{features}</h2>
         <p className='services_content_cards_desc'> {desc} </p>
 
         <div className='services_content_cards_techbox'>
