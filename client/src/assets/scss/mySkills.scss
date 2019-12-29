@@ -4,7 +4,7 @@
   &_content {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 1fr 580px;
+    grid-template-rows: 1fr 650px;
     padding: 3rem 0;
 
     &_desc {
@@ -50,7 +50,7 @@
 
     &_chart {
       width: 100%;
-      max-height: 580px;
+      height: 650px;
     }
   }
 }
@@ -61,7 +61,7 @@
     &_content {
       display: grid;
       grid-template-columns: 100%;
-      grid-template-rows: 1fr 580px;
+      grid-template-rows: 1fr 760px;
 
       &_desc {
         &_skillbox {
@@ -81,7 +81,7 @@
 
       &_chart {
         width: 100%;
-        max-height: 630px;
+        height: 750px;
       }
     }
   }
@@ -113,7 +113,7 @@
 
       &_chart {
         width: 100%;
-        max-height: 670px;
+        height: 850px;
       }
     }
   }

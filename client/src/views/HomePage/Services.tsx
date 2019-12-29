@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardContent, Grid, Container } from '@material-ui/core';
+import { Card, CardContent } from '@material-ui/core';
 import { Slide } from 'react-reveal';
 
 const services = [
@@ -73,23 +73,21 @@ type ServiceCardProps = {
 const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
   const { name, icon, features, desc, skills } = service;
 
-  const renderSkills = () => skills.map(name => <p className='py-1'>{name}</p>);
+  const renderSkills = () => skills.map(name => <p>{name}</p>);
 
   return (
     <Slide bottom>
-      <Card className='services_content_cards'>
-        <i className={`services_content_cards_icons fas ${icon} py-1`} />
-        <CardContent>
-          <h2 className='services_content_cards_title py-1'>{name}</h2>
-          <h3 className='services_content_cards_subtitle py-2'>{features}</h3>
-          <p className='px-1'> {desc} </p>
-        </CardContent>
+      <div className='services_content_cards'>
+        <i className={`services_content_cards_icons fas ${icon}`} />
+        <h2 className='services_content_cards_title'>{name}</h2>
+        <h3 className='services_content_cards_subtitle'>{features}</h3>
+        <p className='services_content_cards_desc'> {desc} </p>
 
         <div className='services_content_cards_techbox'>
-          <h3 className='text_secondary bold py-2'> Skills :</h3>
+          <h3>Skills :</h3>
           {renderSkills()}
         </div>
-      </Card>
+      </div>
     </Slide>
   );
 };

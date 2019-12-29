@@ -46,8 +46,7 @@ const Header: React.FC = () => {
 
             {/* {jobTitle[jobIndex]} */}
             <Typography variant='h5'>
-              I create applications that solve customer's problem , and I love
-              what I do.
+              I create applications that solve customer's problem.
             </Typography>
           </Grid>
         </Grid>

@@ -13,11 +13,14 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      border-radius: 0.25rem;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 
       &_icons {
-        font-size: 4rem;
+        font-size: 3.5rem;
         color: $secondary-color;
-        margin: 2rem auto 0rem auto;
+        padding-top: 1.75rem;
+        padding-bottom: 0.75rem;
         &:after {
           display: block;
           height: 4px;
@@ -30,12 +33,21 @@
 
       &_title {
         font-weight: 500;
+        padding: 1rem;
         text-align: center;
       }
 
       &_subtitle {
-        font-weight: 400;
+        font-weight: 300;
+        // padding: 1rem 0;
         text-align: center;
+      }
+
+      &_desc {
+        text-align: center;
+        color: rgb(133, 133, 133);
+        font-weight: 300;
+        padding: 1rem;
       }
 
       &_techbox {
@@ -43,9 +55,18 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-bottom: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+        > h3 {
+          padding-bottom: 0.5rem;
+          color: $secondary-color;
+          font-weight: 500;
+          font-size: 1.4rem;
+        }
         > p {
-          font-size: 1rem;
+          padding: 0.5rem 0;
+          font-size: 1.1rem;
+          font-weight: 300;
         }
       }
     }

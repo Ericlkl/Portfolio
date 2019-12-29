@@ -40,7 +40,7 @@ const achievements = [
   }
 ];
 
-const Intro: React.FC = () => {
+const Profile: React.FC = () => {
   const renderAchievementBoxs = () =>
     achievements.map(achieve => (
       <AchievementBox title={achieve.title} items={achieve.items} />
@@ -48,7 +48,7 @@ const Intro: React.FC = () => {
 
   return (
     <section className='myHistory'>
-      <h1 className='section_title'>Intro</h1>
+      <h1 className='section_title'>Profile</h1>
 
       <div className='myHistory_content container'>
         {/* Section Left */}
@@ -90,4 +90,4 @@ const Intro: React.FC = () => {
   );
 };
 
-export default Intro;
+export default Profile;

@@ -70,7 +70,7 @@ const PersonalityGrid: React.FC = () => {
   return (
     <section className='personality'>
       <h1 className='section_title'>Working Style</h1>
-      <div className='personality_grid'>{personalityBoxs}</div>
+      <div className='personality_grid container'>{personalityBoxs}</div>
     </section>
   );
 };

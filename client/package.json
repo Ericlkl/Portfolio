@@ -22,7 +22,6 @@
     "react-scripts": "3.3.0",
     "react-slick": "^0.25.2",
     "react-typed": "^1.2.0",
-    "typed.js": "^2.0.11",
     "typescript": "^3.7.4"
   },
   "scripts": {
