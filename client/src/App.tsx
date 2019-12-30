@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react';
-import { createBrowserHistory } from 'history';
-import { Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 // Import css files
 import './assets/scss/index.scss';
@@ -11,15 +10,11 @@ import HomePage from './views/HomePage/HomePage';
 import ProjectsPage from './views/ProjectsPage/ProjectsPage';
 import AboutPage from './views/AboutPage/AboutPage';
 import ProjectDescriptionPage from './views/ProjectDescriptionPage/ProjectDescriptionPage';
-import Navbar from './components/Layout/Navbar';
-
-var hist = createBrowserHistory();
 
 const App: React.FC = () => {
   return (
-    <Router history={hist}>
+    <BrowserRouter>
       <Fragment>
-        <Navbar />
         <Switch>
           <Route path='/' exact component={HomePage} />
           <Route path='/projects' component={ProjectsPage} />
@@ -27,7 +22,7 @@ const App: React.FC = () => {
           <Route path='/projects/:id' component={ProjectDescriptionPage} />
         </Switch>
       </Fragment>
-    </Router>
+    </BrowserRouter>
   );
 };
 

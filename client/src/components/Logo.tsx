@@ -1,20 +1,21 @@
 import React from 'react';
 import logoBlue from '../assets/img/logo/logo_blue.png';
-import logoPurple from '../assets/img/logo/logo_purple.png';
+import logoGrey from '../assets/img/logo/logo_grey.png';
 import logoTeal from '../assets/img/logo/logo_teal.png';
 
 type LogoProps = {
-  color?: 'blue' | 'teal' | 'purple';
+  color: 'blue' | 'teal' | 'grey';
   className?: string;
 };
 const Logo: React.FC<LogoProps> = ({ color, className }) => {
-  let logo;
+  let logo: string;
   switch (color) {
     case 'teal':
       logo = logoTeal;
-    case 'purple':
-      logo = logoPurple;
-    default:
+      break;
+    case 'grey':
+      logo = logoGrey;
+      break;
     case 'blue':
       logo = logoBlue;
   }

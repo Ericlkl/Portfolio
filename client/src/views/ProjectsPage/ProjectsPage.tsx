@@ -4,6 +4,7 @@ import React from 'react';
 import HeroBG from '../../assets/img/project_hero.jpg';
 
 // Public Components
+import Navbar from '../../components/Layout/Navbar';
 import Hero from '../../components/Layout/Hero';
 import Projects from '../../components/Layout/Projects';
 import Footer from '../../components/Layout/Footer';
@@ -34,6 +35,7 @@ const devTools = [
 const ProfilePage: React.FC = ({ ...rest }) => {
   return (
     <DevToolsProvider>
+      <Navbar logoColor='teal' />
       <Hero img={HeroBG} title='My Projects' subtitle='' />
       <DevToolsBar devTools={devTools} />
 

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, RouteComponentProps } from 'react-router-dom';
 import Fade from 'react-reveal';
 
 // @material-ui/icons
@@ -14,9 +14,11 @@ type NavState = {
   expend: boolean;
 };
 
-const Navbar: React.FC = () => {
-  console.log(window.location.pathname);
+type NavbarProps = {
+  logoColor: 'blue' | 'grey' | 'teal';
+};
 
+const Navbar: React.FC<NavbarProps> = ({ logoColor }) => {
   const [navState, setNavState] = useState<NavState>({
     direction: window.innerWidth > 650 ? 'horizontal' : 'vertical',
     showName: false,
@@ -57,7 +59,7 @@ const Navbar: React.FC = () => {
       <div className='navbar_main horizontal space-between'>
         <div className='navbar_main_band'>
           <Link onMouseOut={hideName} onMouseOver={revealName} to='/'>
-            <Logo className='navbar_main_band_logo' />
+            <Logo color={logoColor} className='navbar_main_band_logo' />
           </Link>
           <Fade left when={navState.showName}>
             <h1 className='navbar_main_band_name'>ERIC LEE</h1>

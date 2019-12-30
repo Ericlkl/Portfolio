@@ -4,7 +4,7 @@ import React, { Fragment } from 'react';
 import Hero from '../../components/Layout/Hero';
 import AboutBG from '../../assets/img/about_hero2.jpg';
 import Footer from '../../components/Layout/Footer';
-
+import Navbar from '../../components/Layout/Navbar';
 import MySkills from './MySkills';
 import Profile from './Profile';
 import Personality from './Personality';
@@ -12,6 +12,7 @@ import Personality from './Personality';
 const AboutPage: React.FC = () => {
   return (
     <Fragment>
+      <Navbar logoColor='grey' />
       <Hero
         img={AboutBG}
         desc="I enjoy developing simple and beautiful application to solve complex problems. When I'm not coding, watching movies or reading books, you'll find me thinking, swimming or enjoying sunshine in Gold Coast."

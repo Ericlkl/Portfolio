@@ -110,17 +110,23 @@ $grey-color: rgb(182, 190, 195);
   color: $secondary-color;
 }
 
-@import './header.scss';
-@import './navbar.scss';
-@import './services.scss';
-@import './feature_project.scss';
-@import './projects.scss';
-@import './footer.scss';
-@import './hero.scss';
-@import './devtoolsbar.scss';
-@import './personality.scss';
-@import './work.scss';
-@import './mySkills.scss';
-@import './myPersonality.scss';
-@import './myHistory.scss';
-@import './contact.scss';
+// Layout
+@import './Layout/navbar.scss';
+@import './Layout/hero.scss';
+@import './Layout/footer.scss';
+
+// HomePage
+@import './HomePage/header.scss';
+@import './HomePage/personality.scss';
+@import './HomePage/services.scss';
+@import './HomePage/feature_project.scss';
+@import './HomePage/contact.scss';
+
+// About Page
+@import './AboutPage/myHistory.scss';
+@import './AboutPage/myPersonality.scss';
+@import './AboutPage/mySkills.scss';
+
+// Project Page
+@import './projectsPage/devtoolsbar.scss';
+@import './projectsPage/projects.scss';
