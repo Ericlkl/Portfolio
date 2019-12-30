@@ -6,7 +6,7 @@ import HeroBG from '../../assets/img/project_hero.jpg';
 // Public Components
 import Navbar from '../../components/Layout/Navbar';
 import Hero from '../../components/Layout/Hero';
-import Projects from '../../components/Layout/Projects';
+import Projects from './Projects';
 import Footer from '../../components/Layout/Footer';
 
 // Page Specific Compnents

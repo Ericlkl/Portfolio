@@ -1,6 +1,6 @@
 import React from 'react';
 import { Fab, Grid } from '@material-ui/core';
-import ProgrammingIcon from '../ProgrammingIcon';
+import ProgrammingIcon from '../../components/ProgrammingIcon';
 
 // `https://magora-systems.com/uploads/ReRGf0pfKf-L6G0KW4gpr3bEbx3viF5p.jpeg`
 const imgURL = `https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80`;
@@ -17,31 +17,57 @@ type ProjectCardProps = {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ title, bg_url }) => {
   return (
-    <div
-      style={{
-        backgroundImage:
-          'linear-gradient(rgba(22, 22, 22, 0.4), rgba(22, 22, 22, 0.4)), url(' +
-          bg_url +
-          ')'
-      }}
-      className={`project_card`}
-    >
-      <div className='project_card_content'>
-        <h3 className='project_card_content_title bold'>{title}</h3>
-        <div className='project_card_content_stack'>
-          <p className='project_card_content_stack_lbl'>React</p>
-          <p className='project_card_content_stack_lbl'>React</p>
-          <p className='project_card_content_stack_lbl'>React</p>
-          <p className='project_card_content_stack_lbl'>React</p>
-          <p className='project_card_content_stack_lbl'>React</p>
-          <p className='project_card_content_stack_lbl'>React</p>
-          <p className='project_card_content_stack_lbl'>React</p>
-          <p className='project_card_content_stack_lbl'>React</p>
-        </div>
-      </div>
+    <div className={`project_card`}>
+      <div className='project_card_inner'>
+        <div
+          style={{
+            backgroundImage:
+              'linear-gradient(rgba(22, 22, 22, 0.4), rgba(22, 22, 22, 0.4)), url(' +
+              bg_url +
+              ')'
+          }}
+          className='project_card_inner_front'
+        >
+          <div className='project_card_inner_front_left'>
+            <h3 className='project_card_inner_front_left_title'>{title}</h3>
 
-      <div className='project_card_logo'>
-        <ProgrammingIcon name='react' color />
+            <div className='project_card_inner_front_left_stack'>
+              <p className='project_card_inner_front_left_stack_lbl'>React</p>
+              <p className='project_card_inner_front_left_stack_lbl'>React</p>
+              <p className='project_card_inner_front_left_stack_lbl'>React</p>
+              <p className='project_card_inner_front_left_stack_lbl'>React</p>
+              <p className='project_card_inner_front_left_stack_lbl'>React</p>
+            </div>
+          </div>
+          <div className='project_card_inner_front_right'>
+            <ProgrammingIcon
+              className='project_card_inner_front_right_logo'
+              name='react'
+              color
+            />
+          </div>
+
+          {/* End of Card Front */}
+        </div>
+
+        <div className='project_card_inner_back'>
+          <div className='project_card_inner_back_desc'>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam,
+            vero quidem ratione blanditiis dolorem rem repudiandae illum,
+            nesciunt labore nemo iste, doloribus quaerat temporibus at ea cum
+            dolorum debitis earum.
+          </div>
+          <Fab
+            style={{ margin: 'auto' }}
+            variant='extended'
+            color='primary'
+            aria-label='add'
+          >
+            Learn More...
+          </Fab>
+        </div>
+
+        {/* End of Card inner */}
       </div>
     </div>
   );
