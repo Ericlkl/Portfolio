@@ -114,7 +114,8 @@ $grey-color: rgb(182, 190, 195);
 @import './Layout/navbar.scss';
 @import './Layout/hero.scss';
 @import './Layout/footer.scss';
-
+@import './Layout/jumbotron.scss';
+@import './Layout/material_card.scss';
 // HomePage
 @import './HomePage/header.scss';
 @import './HomePage/personality.scss';
@@ -130,3 +131,6 @@ $grey-color: rgb(182, 190, 195);
 // Project Page
 @import './projectsPage/devtoolsbar.scss';
 @import './projectsPage/projects.scss';
+
+// Project Description Page
+@import './DescriptionPage/project_desc.scss';

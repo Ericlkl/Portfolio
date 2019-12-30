@@ -65,7 +65,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, bg_url }) => {
               color='primary'
               aria-label='add'
             >
-              Learn More...
+              View Project
             </Fab>
           </div>
         </div>
@@ -94,17 +94,6 @@ const Projects: React.FC<Projects> = () => {
         />
         <ProjectCard title='Movie.Info' bg_url={movieImg} />
       </div>
-
-      <Grid style={{ margin: '1rem 0rem' }} container justify='center'>
-        <Fab
-          style={{ margin: 'auto' }}
-          variant='extended'
-          color='primary'
-          aria-label='add'
-        >
-          See more projects
-        </Fab>
-      </Grid>
     </section>
   );
 };

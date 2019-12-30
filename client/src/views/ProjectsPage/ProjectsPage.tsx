@@ -1,11 +1,12 @@
 import React from 'react';
 
 // Assests
-import HeroBG from '../../assets/img/project_hero.jpg';
+import ProjectBG from '../../assets/img/project_bg.jpg';
 
 // Public Components
 import Navbar from '../../components/Layout/Navbar';
-import Hero from '../../components/Layout/Hero';
+import Jumbotron from '../../components/Layout/Jumbotron';
+
 import Projects from './Projects';
 import Footer from '../../components/Layout/Footer';
 
@@ -36,7 +37,7 @@ const ProfilePage: React.FC = ({ ...rest }) => {
   return (
     <DevToolsProvider>
       <Navbar logoColor='teal' />
-      <Hero img={HeroBG} title='My Projects' subtitle='' />
+      <Jumbotron title='Projects' subtitle='All Projects are made with heart' backgroundIMG={ProjectBG} />
       <DevToolsBar devTools={devTools} />
 
       <Projects title='My Projects'></Projects>
