@@ -46,25 +46,28 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, bg_url }) => {
               color
             />
           </div>
-
           {/* End of Card Front */}
         </div>
 
         <div className='project_card_inner_back'>
           <div className='project_card_inner_back_desc'>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam,
-            vero quidem ratione blanditiis dolorem rem repudiandae illum,
-            nesciunt labore nemo iste, doloribus quaerat temporibus at ea cum
-            dolorum debitis earum.
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam,
+              vero quidem ratione blanditiis dolorem rem repudiandae illum,
+              nesciunt labore nemo iste, doloribus quaerat temporibus at ea cum
+              dolorum debitis earum.
+            </p>
           </div>
-          <Fab
-            style={{ margin: 'auto' }}
-            variant='extended'
-            color='primary'
-            aria-label='add'
-          >
-            Learn More...
-          </Fab>
+          <div>
+            <Fab
+              style={{ margin: 'auto' }}
+              variant='extended'
+              color='primary'
+              aria-label='add'
+            >
+              Learn More...
+            </Fab>
+          </div>
         </div>
 
         {/* End of Card inner */}
@@ -77,10 +80,9 @@ type Projects = {
   title: string;
 };
 
-const Projects: React.FC<Projects> = ({ children }) => {
+const Projects: React.FC<Projects> = () => {
   return (
     <section className='projects'>
-      {children}
       <div className='projects_showcase'>
         <ProjectCard title='Tweetery' bg_url={imgURL} />
         <ProjectCard title='Groundsman' bg_url={geoAppImg} />
