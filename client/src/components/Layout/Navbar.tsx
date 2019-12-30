@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, RouteComponentProps } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Fade from 'react-reveal';
 
 // @material-ui/icons

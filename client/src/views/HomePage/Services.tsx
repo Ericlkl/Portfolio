@@ -1,5 +1,4 @@
 import React from 'react';
-import { Card, CardContent } from '@material-ui/core';
 import { Slide } from 'react-reveal';
 
 const services = [

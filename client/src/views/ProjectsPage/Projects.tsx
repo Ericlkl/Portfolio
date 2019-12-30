@@ -1,5 +1,5 @@
 import React from 'react';
-import { Fab, Grid } from '@material-ui/core';
+import { Fab } from '@material-ui/core';
 import ProgrammingIcon from '../../components/ProgrammingIcon';
 
 // `https://magora-systems.com/uploads/ReRGf0pfKf-L6G0KW4gpr3bEbx3viF5p.jpeg`
