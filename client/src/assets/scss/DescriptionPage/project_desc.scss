@@ -57,10 +57,31 @@
         padding: 1rem 0;
       }
 
-      &_content {
+      &_description {
         font-size: 1.3rem;
         font-weight: 300;
         line-height: 2rem;
+      }
+
+      &_details {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-auto-rows: 1fr;
+        grid-gap: 1.5rem;
+        padding: 1rem;
+
+        &_detail {
+          &_title {
+            padding: 0.25rem 0;
+            font-weight: 400;
+          }
+
+          &_value {
+            padding: 0.25rem 0;
+            font-size: 1.25rem;
+            font-weight: 300;
+          }
+        }
       }
     }
   } // End of Desc Card

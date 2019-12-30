@@ -67,13 +67,14 @@ const ProfilePage: React.FC = () => {
         <div className='project_desc_card material_card'>
           <ProjectCardHeader />
           <ProjectCardSection title='Introduction'>
-            <p className='project_desc_card_section_content'>
+            <p className='project_desc_card_section_description'>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea et in
               molestias a corporis vel laboriosam officiis deserunt nostrum
               molestiae tenetur, nobis necessitatibus praesentium, voluptatibus
               dolore fugiat sit laborum ducimus.
             </p>
           </ProjectCardSection>
+
           <ProjectCardSection title='Preview'>
             <Carousel>
               <div className='project_gallery_slide'>
@@ -113,7 +114,50 @@ const ProfilePage: React.FC = () => {
               </div>
             </Carousel>
           </ProjectCardSection>
-          <ProjectCardSection title='Information' />
+          <ProjectCardSection title='Information'>
+            <div className='project_desc_card_section_details'>
+              <div className='project_desc_card_section_details_detail'>
+                <h1 className='project_desc_card_section_details_detail_title'>
+                  Developed By
+                </h1>
+                <h3 className='project_desc_card_section_details_detail_value'>
+                  Eric lee
+                </h3>
+              </div>
+              <div className='project_desc_card_section_details_detail'>
+                <h1 className='project_desc_card_section_details_detail_title'>
+                  Developed By
+                </h1>
+                <h3 className='project_desc_card_section_details_detail_value'>
+                  Eric lee
+                </h3>
+              </div>
+              <div className='project_desc_card_section_details_detail'>
+                <h1 className='project_desc_card_section_details_detail_title'>
+                  Developed By
+                </h1>
+                <h3 className='project_desc_card_section_details_detail_value'>
+                  Eric lee
+                </h3>
+              </div>
+              <div className='project_desc_card_section_details_detail'>
+                <h1 className='project_desc_card_section_details_detail_title'>
+                  Developed By
+                </h1>
+                <h3 className='project_desc_card_section_details_detail_value'>
+                  Eric lee
+                </h3>
+              </div>
+              <div className='project_desc_card_section_details_detail'>
+                <h1 className='project_desc_card_section_details_detail_title'>
+                  Developed By
+                </h1>
+                <h3 className='project_desc_card_section_details_detail_value'>
+                  Eric lee
+                </h3>
+              </div>
+            </div>
+          </ProjectCardSection>
         </div>
       </section>
 
