@@ -65,3 +65,11 @@
     }
   } // End of Desc Card
 }
+
+.project_gallery_slide {
+  padding: 1rem;
+  &_img {
+    cursor: pointer;
+    width: 100%;
+  }
+}

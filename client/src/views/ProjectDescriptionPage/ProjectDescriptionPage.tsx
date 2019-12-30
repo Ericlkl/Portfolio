@@ -3,11 +3,12 @@ import React, { Fragment } from 'react';
 // core components
 // Assests
 import ProjectBG from '../../assets/img/project_bg.jpg';
-
+import UI_IMG from '../../assets/img/tweetery_UI.jpg';
 // Public Components
 import Navbar from '../../components/Layout/Navbar';
 import Jumbotron from '../../components/Layout/Jumbotron';
 import Footer from '../../components/Layout/Footer';
+import Carousel from '../../components/Layout/Carousel';
 
 const ProjectCardHeader = () => {
   return (
@@ -73,7 +74,45 @@ const ProfilePage: React.FC = () => {
               dolore fugiat sit laborum ducimus.
             </p>
           </ProjectCardSection>
-          <ProjectCardSection title='Preview' />
+          <ProjectCardSection title='Preview'>
+            <Carousel>
+              <div className='project_gallery_slide'>
+                <img
+                  className='project_gallery_slide_img'
+                  src={UI_IMG}
+                  alt='ui img'
+                />
+              </div>
+              <div className='project_gallery_slide'>
+                <img
+                  className='project_gallery_slide_img'
+                  src={UI_IMG}
+                  alt='ui img'
+                />
+              </div>
+              <div className='project_gallery_slide'>
+                <img
+                  className='project_gallery_slide_img'
+                  src={UI_IMG}
+                  alt='ui img'
+                />
+              </div>
+              <div className='project_gallery_slide'>
+                <img
+                  className='project_gallery_slide_img'
+                  src={UI_IMG}
+                  alt='ui img'
+                />
+              </div>
+              <div className='project_gallery_slide'>
+                <img
+                  className='project_gallery_slide_img'
+                  src={UI_IMG}
+                  alt='ui img'
+                />
+              </div>
+            </Carousel>
+          </ProjectCardSection>
           <ProjectCardSection title='Information' />
         </div>
       </section>
