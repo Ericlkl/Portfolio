@@ -1,19 +1,17 @@
-import express, { Request, Response } from 'express';
-import path from 'path';
-import mongoose from 'mongoose';
-import { staticAssetsMiddleware, websiteRouterMiddleware } from './middlewares';
+import dotenv from 'dotenv';
+import express from 'express';
+import { staticAssetsMiddleware } from './middlewares';
 import routers from './routes';
+import connectDB from './config/db';
+
+dotenv.config();
 
 const app = express();
-const mongoURI = `mongodb://${process.env.MONGO_USERNAME}:${process.env.MONGO_PASSWORD}@ds155461.mlab.com:55461/eric_lee_portfolio`;
-
+app.use(express.json());
 // Serving Static Assets from client folder
 app.use(staticAssetsMiddleware);
 
-mongoose.connect(mongoURI, { useNewUrlParser: true }, () =>
-  console.log('Connected MLab Successfully')
-);
-
+connectDB();
 routers(app);
 
 const PORT = 5000;

@@ -12,6 +12,16 @@ export const createProject: RequestHandler = async (req, res) => {
   }
 };
 
+export const getProject: RequestHandler = async (req, res) => {
+  try {
+    const project = await ProjectModel.findById(req.params.id);
+    res.json(project);
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).json({ errors: error.message });
+  }
+};
+
 export const getAllProjects: RequestHandler = async (req, res) => {
   try {
     const projects = await ProjectModel.find();
