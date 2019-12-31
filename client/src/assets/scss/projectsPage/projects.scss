@@ -94,15 +94,6 @@
   &:hover &_inner {
     transform: rotateY(180deg);
   }
-
-  &_logo {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    > i {
-      font-size: 4rem;
-    }
-  }
 }
 
 // Tablet

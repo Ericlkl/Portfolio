@@ -22,6 +22,15 @@ const Header = () => {
             <i className='fas fa-globe-asia' /> Website
           </div>
         </div>
+        <p className='project_desc_card_header_right_links'>
+          <i className='fab fa-fw fa-github-square' /> <p>Http: //</p>
+        </p>
+        <p className='project_desc_card_header_right_links'>
+          <i className='fab fa-fw fa-docker' /> <p>Http: //</p>
+        </p>
+        <p className='project_desc_card_header_right_links'>
+          <i className='fas fa-fw fa-desktop' /> <p>Http://</p>
+        </p>
       </div>
     </div>
   );

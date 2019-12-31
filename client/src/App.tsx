@@ -8,10 +8,10 @@ import 'slick-carousel/slick/slick-theme.css';
 
 // pages for this product
 
-import HomePage from './views/HomePage/HomePage';
-import ProjectsPage from './views/ProjectsPage/ProjectsPage';
-import AboutPage from './views/AboutPage/AboutPage';
-import ProjectDescriptionPage from './views/ProjectDescriptionPage/ProjectDescriptionPage';
+import HomePage from './views/HomePage';
+import ProjectsPage from './views/ProjectsPage';
+import AboutPage from './views/AboutPage';
+import ProjectDescriptionPage from './views/ProjectDescriptionPage';
 
 const App: React.FC = () => {
   return (
