@@ -9,12 +9,8 @@ const ProjectSchema = new Schema({
   },
   language: {
     type: String,
-    required: [true, 'Project name is required'],
+    required: [true, 'Language is required'],
     trim: true
-  },
-  logo: {
-    type: String,
-    required: [true, 'logo is required']
   },
   cover: {
     type: String,
@@ -22,21 +18,36 @@ const ProjectSchema = new Schema({
   },
   stacks: {
     type: [String],
-    required: true
+    required: [true, 'Stacks are required']
+  },
+  logo: {
+    type: String,
+    required: [true, 'logo is required']
   },
   desc: {
     type: String,
-    required: true
+    required: [true, 'Description is required']
+  },
+  platforms: {
+    type: [String],
+    required: [true, 'Platform is required']
   },
   repo: {
     type: String,
-    required: true
+    required: [true, 'Repositry is required']
   },
   docker: {
-    type: String
+    type: String,
+    trim: true
   },
   download: {
-    type: String
+    type: [String],
+    trim: true
+  },
+  intro: {
+    type: String,
+    required: true,
+    trim: true
   },
   screenshots: {
     type: [String]
