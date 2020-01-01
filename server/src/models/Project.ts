@@ -53,7 +53,8 @@ const ProjectSchema = new Schema({
     type: [String]
   },
   information: {
-    type: Object
+    type: Object,
+    required: true
   }
 });
 

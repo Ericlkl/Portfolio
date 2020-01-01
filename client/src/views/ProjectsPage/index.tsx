@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect, useContext } from 'react';
+import ProjectsContext from '../../context/ProjectsContext/ProjectsContext';
 
 // Assests
 import ProjectBG from '../../assets/img/project_bg.jpg';
@@ -33,14 +34,28 @@ const devTools = [
   'python'
 ];
 
-const ProfilePage: React.FC = ({ ...rest }) => {
+const ProfilePage: React.FC = () => {
+  const { projects, fetchProjects } = useContext(ProjectsContext);
+
+  useEffect(() => {
+    if (projects === undefined) {
+      fetchProjects();
+    }
+    return () => {};
+    // eslint-disable-next-line
+  }, []);
+
   return (
     <DevToolsProvider>
       <Navbar logoColor='teal' />
-      <Jumbotron title='Projects' subtitle='All Projects are made with heart' backgroundIMG={ProjectBG} />
+      <Jumbotron
+        title='Projects'
+        subtitle='All Projects are made with heart'
+        backgroundIMG={ProjectBG}
+      />
       <DevToolsBar devTools={devTools} />
 
-      <Projects title='My Projects'></Projects>
+      <Projects />
       <Footer />
     </DevToolsProvider>
   );

@@ -76,11 +76,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, bg_url }) => {
   );
 };
 
-type Projects = {
-  title: string;
-};
-
-const Projects: React.FC<Projects> = () => {
+const Projects: React.FC = () => {
   return (
     <section className='projects'>
       <div className='projects_showcase'>
