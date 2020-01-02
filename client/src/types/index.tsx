@@ -1,4 +1,5 @@
 export type Project = {
+  _id: string;
   name: string;
   language: string;
   cover: string;

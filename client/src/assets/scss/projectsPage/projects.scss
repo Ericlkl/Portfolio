@@ -15,6 +15,7 @@
   background-color: transparent;
   perspective: 1000px;
   border-radius: 10px;
+
   &_inner {
     position: relative;
     width: 100%;
@@ -29,6 +30,7 @@
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 
       &_left {
         display: flex;
@@ -58,9 +60,19 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+
         &_logo {
+          display: flex;
+          justify-content: center;
+          margin: 1rem;
+          padding: 0.2rem;
           font-size: 4rem;
-          padding: 1rem;
+          background-color: rgba(200, 200, 200, 0.7);
+          // background: linear-gradient(
+          //   rgba(255, 255, 255, 0.9),
+          //   rgba(255, 255, 255, 0.9)
+          // );
+          color: white;
         }
       }
     } // Front End
@@ -73,7 +85,7 @@
       justify-content: center;
       align-items: center;
       transform: rotateY(180deg);
-
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
       &_desc {
         padding: 3rem;
         font-weight: 300;

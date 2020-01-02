@@ -1,28 +1,30 @@
 import React from 'react';
 
-const Detail: React.FC = () => {
+type DetailProps = {
+  name: string;
+  value: string;
+};
+const Detail: React.FC<DetailProps> = ({ name, value }) => {
   return (
     <div className='project_desc_card_section_details_detail'>
-      <h1 className='project_desc_card_section_details_detail_title'>
-        Developed By
-      </h1>
+      <h1 className='project_desc_card_section_details_detail_title'>{name}</h1>
       <h3 className='project_desc_card_section_details_detail_value'>
-        Eric lee
+        {value}
       </h3>
     </div>
   );
 };
 
-const Details: React.FC = () => {
+type DetailsProps = {
+  information: object;
+};
+
+const Details: React.FC<DetailsProps> = ({ information }) => {
   return (
     <div className='project_desc_card_section_details'>
-      <Detail />
-      <Detail />
-      <Detail />
-      <Detail />
-      <Detail />
-      <Detail />
-      <Detail />
+      {Object.entries(information).map(detail => (
+        <Detail key={detail[0]} name={detail[0]} value={detail[1]} />
+      ))}
     </div>
   );
 };

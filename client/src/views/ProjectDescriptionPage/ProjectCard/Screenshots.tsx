@@ -14,16 +14,16 @@ const Screenshot: React.FC<ScreenshotProps> = ({ imgSrc }) => {
   );
 };
 
-const Screenshots: React.FC = () => {
+type ScreenshotsProps = {
+  screenshots: string[];
+};
+
+const Screenshots: React.FC<ScreenshotsProps> = ({ screenshots }) => {
   return (
     <Carousel>
-      <Screenshot imgSrc={UI_IMG} />
-      <Screenshot imgSrc={UI_IMG} />
-      <Screenshot imgSrc={UI_IMG} />
-      <Screenshot imgSrc={UI_IMG} />
-      <Screenshot imgSrc={UI_IMG} />
-      <Screenshot imgSrc={UI_IMG} />
-      <Screenshot imgSrc={UI_IMG} />
+      {screenshots.map(img => (
+        <Screenshot key={img} imgSrc={img} />
+      ))}
     </Carousel>
   );
 };
