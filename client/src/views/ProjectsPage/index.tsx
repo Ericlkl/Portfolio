@@ -6,14 +6,13 @@ import ProjectBG from '../../assets/img/project_bg.jpg';
 
 // Public Components
 import Navbar from '../../components/Layout/Navbar';
+import Spinner from '../../components/Layout/Spinner';
 import Jumbotron from '../../components/Layout/Jumbotron';
-
-import Projects from './Projects';
 import Footer from '../../components/Layout/Footer';
 
 // Page Specific Compnents
 import DevToolsBar from './DevToolsBar';
-
+import ProjectGrid from './ProjectGrid';
 // Provider
 import DevToolsProvider from '../../context/DevToolsContext/DevToolsProvider';
 
@@ -35,15 +34,15 @@ const devTools = [
 ];
 
 const ProfilePage: React.FC = () => {
-  const { projects, fetchProjects } = useContext(ProjectsContext);
+  const { isloading, projects, fetchProjects } = useContext(ProjectsContext);
 
   useEffect(() => {
-    if (projects === undefined) {
+    if (isloading) {
       fetchProjects();
     }
     return () => {};
     // eslint-disable-next-line
-  }, []);
+  }, [projects]);
 
   return (
     <DevToolsProvider>
@@ -54,8 +53,8 @@ const ProfilePage: React.FC = () => {
         backgroundIMG={ProjectBG}
       />
       <DevToolsBar devTools={devTools} />
-
-      <Projects />
+      {isloading && <Spinner />}
+      {projects && <ProjectGrid projects={projects} />}
       <Footer />
     </DevToolsProvider>
   );

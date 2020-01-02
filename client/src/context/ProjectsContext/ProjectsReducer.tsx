@@ -3,6 +3,7 @@ import { Project } from '../../types';
 type State = {
   current: Project | undefined;
   projects: Project[] | undefined;
+  isloading: boolean;
 };
 
 type Action =
@@ -23,17 +24,20 @@ export default (state: State, action: Action) => {
     case ProjectsAction.FETCH_PROJECTS:
       return {
         ...state,
+        isloading: false,
         projects: action.payload
       };
     case ProjectsAction.FETCH_PROJECT:
     case ProjectsAction.SET_CURRENT_PROJECT:
       return {
         ...state,
+        isloading: false,
         current: action.payload
       };
     case ProjectsAction.CLEAR_CURRENT_PROJECT:
       return {
         ...state,
+        isloading: true,
         current: undefined
       };
     default:

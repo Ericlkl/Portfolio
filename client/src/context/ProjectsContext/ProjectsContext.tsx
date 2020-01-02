@@ -4,6 +4,7 @@ import { Project } from '../../types';
 export const initialState: {
   current: Project | undefined;
   projects: Project[] | undefined;
+  isloading: boolean;
   fetchProjects: () => void;
   fetchProject: (id: string) => void;
   setCurrentProject: (project: Project) => void;
@@ -11,6 +12,7 @@ export const initialState: {
 } = {
   current: undefined,
   projects: undefined,
+  isloading: true,
   fetchProjects: () => {},
   fetchProject: (id: string) => {},
   setCurrentProject: (project: Project) => {},

@@ -39,6 +39,7 @@ const ProjectsProvider: React.FC = ({ children }) => {
       value={{
         current: state.current,
         projects: state.projects,
+        isloading: state.isloading,
         fetchProjects,
         fetchProject,
         setCurrentProject,
