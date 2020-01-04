@@ -1,6 +1,6 @@
 import React from 'react';
 import StackedBar from '../../components/Chart/StackedBar';
-import ProgrammingIcon from '../../components/ProgrammingIcon';
+import ProgrammingLogo from '../../components/Programming/Logo';
 import { Fade } from 'react-reveal';
 import { skillChartKeys, skillChartData, skillBoxData } from './Data';
 
@@ -12,7 +12,7 @@ type SkillBoxProps = {
 const SkillBox: React.FC<SkillBoxProps> = ({ fieldName, skills }) => {
   const icons = skills.map(skill => (
     <div key={skill} className='mySkills_content_desc_skillbox_icons_icon'>
-      <ProgrammingIcon name={skill} color />
+      <ProgrammingLogo toolName={skill} />
       {skill}
     </div>
   ));

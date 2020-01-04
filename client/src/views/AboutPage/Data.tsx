@@ -24,13 +24,15 @@ export const skillBoxData = [
   {
     fieldName: 'Front End',
     skills: [
-      'HTML',
-      'CSS',
+      'HTML5',
+      'CSS3',
       'SCSS',
       'JavaScript',
       'TypeScript',
       'React',
-      'Bootstrap'
+      'Redux',
+      'Bootstrap',
+      'Semantic-UI'
     ]
   },
   {
@@ -39,7 +41,7 @@ export const skillBoxData = [
   },
   {
     fieldName: 'Mobile',
-    skills: ['C#', 'IOS', 'Android']
+    skills: ['C#', 'Xamarin', 'Flutter', 'IOS', 'Android']
   },
   {
     fieldName: 'Dev Tools',

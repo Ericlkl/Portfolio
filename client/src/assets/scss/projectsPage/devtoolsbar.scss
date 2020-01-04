@@ -16,6 +16,11 @@
       padding: 1rem;
       cursor: pointer;
 
+      > img {
+        width: 5rem;
+        height: 5rem;
+      }
+
       &_cancel {
         position: absolute;
         top: 0;

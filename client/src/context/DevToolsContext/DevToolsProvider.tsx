@@ -20,7 +20,7 @@ const DevToolsProvider: React.FC = ({ children }) => {
   return (
     <DevToolsContext.Provider
       value={{
-        active: state.active,
+        filter: state.filter,
         setSelector,
         clearSelector
       }}

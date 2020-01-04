@@ -13,7 +13,7 @@ export default (state: DevToolState, action: Action) => {
     case DevToolsAction.SET_SELECTOR:
       return {
         ...state,
-        active: action.payload
+        filter: action.payload
       };
     default:
       return state;

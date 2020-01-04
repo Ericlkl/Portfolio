@@ -1,13 +1,13 @@
 import { createContext } from 'react';
 
 export type DevToolState = {
-  active: string;
+  filter: string | undefined;
   setSelector: (toolName: string) => void;
   clearSelector: () => void;
 };
 
 export const initialState: DevToolState = {
-  active: '',
+  filter: undefined,
   setSelector: toolName => {},
   clearSelector: () => {}
 };

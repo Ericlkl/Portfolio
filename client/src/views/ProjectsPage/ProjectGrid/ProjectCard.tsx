@@ -3,7 +3,7 @@ import React, { useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 import ProjectsContext from '../../../context/ProjectsContext/ProjectsContext';
 import { Fab } from '@material-ui/core';
-import ProgrammingIcon from '../../../components/ProgrammingIcon';
+import ProgrammingLogo from '../../../components/Programming/Logo';
 
 import { Project } from '../../../types';
 
@@ -47,10 +47,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             </div>
           </div>
           <div className='project_card_inner_front_right'>
-            <ProgrammingIcon
+            <ProgrammingLogo
               className='project_card_inner_front_right_logo'
-              name={language}
-              color
+              toolName={language}
             />
           </div>
           {/* End of Card Front */}

@@ -1,4 +1,5 @@
 import React, { useEffect, useContext } from 'react';
+import _ from 'lodash';
 import ProjectsContext from '../../context/ProjectsContext/ProjectsContext';
 
 // Assests
@@ -16,22 +17,7 @@ import ProjectGrid from './ProjectGrid';
 // Provider
 import DevToolsProvider from '../../context/DevToolsContext/DevToolsProvider';
 
-const devTools = [
-  'html',
-  'css',
-  'javaScript',
-  'typeScript',
-  'react',
-  'vuejs',
-  'scss',
-  'nodejs',
-  'mysql',
-  'mongodb',
-  'sequelize',
-  'redis',
-  'c#',
-  'python'
-];
+let devTools: string[] = [];
 
 const ProfilePage: React.FC = () => {
   const { isloading, projects, fetchProjects } = useContext(ProjectsContext);
@@ -44,6 +30,10 @@ const ProfilePage: React.FC = () => {
     // eslint-disable-next-line
   }, []);
 
+  projects?.forEach(project => {
+    devTools = _.uniq([...devTools, ...project.stacks]);
+  });
+
   return (
     <DevToolsProvider>
       <Navbar logoColor='teal' />
@@ -52,7 +42,7 @@ const ProfilePage: React.FC = () => {
         subtitle='All Projects are made with heart'
         backgroundIMG={ProjectBG}
       />
-      <DevToolsBar devTools={devTools} />
+      <DevToolsBar devTools={_.orderBy(devTools, [], ['asc'])} />
       {isloading && <Spinner />}
       {projects && <ProjectGrid projects={projects} />}
       <Footer />
