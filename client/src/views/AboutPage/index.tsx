@@ -1,13 +1,29 @@
 import React, { Fragment, useEffect } from 'react';
+import { SRLWrapper } from 'simple-react-lightbox';
 
 // core components
 import Hero from '../../components/Layout/Hero';
-import AboutBG from '../../assets/img/about_hero2.jpg';
 import Footer from '../../components/Layout/Footer';
 import Navbar from '../../components/Layout/Navbar';
 import MySkills from './MySkills';
 import Profile from './Profile';
 import Personality from './Personality';
+
+// Images
+import My_Family from '../../assets/img/mypictures/My_Whole_Family.jpg';
+import My_Gf from '../../assets/img/mypictures/I_and_MyGF_Selfie.jpg';
+import Me_GC from '../../assets/img/mypictures/Me_Enjoying_Sunshire.jpg';
+import My_Bro from '../../assets/img/mypictures/My_Brothers.jpg';
+import My_Parents from '../../assets/img/mypictures/My_Parents.jpg';
+
+// Lightbox setting
+const options = {
+  transitionTimingFunction: 'ease',
+  slideTransitionSpeed: 1000,
+  buttonsIconPadding: '2px',
+  enablePanzoom: true,
+  hideControlsAfter: 1000
+};
 
 const AboutPage: React.FC = () => {
   useEffect(() => {
@@ -18,35 +34,58 @@ const AboutPage: React.FC = () => {
   return (
     <Fragment>
       <Navbar logoColor='grey' />
-      <Hero
-        img={AboutBG}
-        desc="I enjoy developing simple and beautiful application to solve complex problems. When I'm not coding, watching movies or reading books, you'll find me thinking, swimming or enjoying sunshine in Gold Coast."
-        title='About Me'
-        subtitle="I'm a software engineer based in Brisbane, Australia."
-      >
-        <div className='hero_gallery'>
-          <div className='hero_gallery_frame'>
-            <img className='hero_gallery_frame_img' src={AboutBG} alt='myImg' />
+      <SRLWrapper options={options}>
+        <Hero
+          img={My_Gf}
+          desc="I enjoy developing simple and beautiful application to solve complex problems. When I'm not coding, watching movies or reading books, you'll find me thinking, swimming or enjoying sunshine in Gold Coast."
+          title='About Me'
+          subtitle="I'm a software engineer based in Brisbane, Australia."
+        >
+          <div className='hero_gallery'>
+            <div className='hero_gallery_frame'>
+              <img className='hero_gallery_frame_img' src={Me_GC} alt='myImg' />
+            </div>
+            <div className='hero_gallery_frame'>
+              <img
+                className='hero_gallery_frame_img'
+                src={My_Family}
+                alt='myImg'
+              />
+            </div>
+            <div className='hero_gallery_frame'>
+              <img
+                className='hero_gallery_frame_img'
+                src={My_Bro}
+                alt='myImg'
+              />
+            </div>
+            <div className='hero_gallery_frame'>
+              <img
+                className='hero_gallery_frame_img'
+                src={My_Parents}
+                alt='myImg'
+              />
+            </div>
+            {/* <div className='hero_gallery_frame'>
+              <img
+                className='hero_gallery_frame_img'
+                src={AboutBG}
+                alt='myImg'
+              />
+            </div>
+            <div className='hero_gallery_frame'>
+              <img
+                className='hero_gallery_frame_img'
+                src={AboutBG}
+                alt='myImg'
+              />
+            </div> */}
           </div>
-          <div className='hero_gallery_frame'>
-            <img className='hero_gallery_frame_img' src={AboutBG} alt='myImg' />
-          </div>
-          <div className='hero_gallery_frame'>
-            <img className='hero_gallery_frame_img' src={AboutBG} alt='myImg' />
-          </div>
-          <div className='hero_gallery_frame'>
-            <img className='hero_gallery_frame_img' src={AboutBG} alt='myImg' />
-          </div>
-          <div className='hero_gallery_frame'>
-            <img className='hero_gallery_frame_img' src={AboutBG} alt='myImg' />
-          </div>
-          <div className='hero_gallery_frame'>
-            <img className='hero_gallery_frame_img' src={AboutBG} alt='myImg' />
-          </div>
-        </div>
-      </Hero>
-      <Profile />
-      <Personality />
+        </Hero>
+
+        <Profile />
+        <Personality />
+      </SRLWrapper>
       <MySkills />
       <Footer />
     </Fragment>

@@ -88,9 +88,9 @@ const Navbar: React.FC<NavbarProps> = ({ logoColor }) => {
           <ViewCompactIcon />
           &nbsp;Projects
         </Link>
-        <Link to='/' className='navbar_links_link'>
+        <a href='https://github.com/Ericlkl' className='navbar_links_link'>
           <i className={'navbar_links_icons fab fa-github'} />
-        </Link>
+        </a>
       </div>
     </nav>
   );

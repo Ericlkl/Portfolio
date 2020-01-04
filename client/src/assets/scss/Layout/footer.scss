@@ -32,8 +32,12 @@
         font-size: 1.5rem;
         margin: 1rem 0;
         color: rgba(255, 255, 255, 0.5);
-        > i {
+        i {
           color: #4b6cc1;
+        }
+
+        a {
+          color: rgba(255, 255, 255, 0.5);
         }
       }
     }

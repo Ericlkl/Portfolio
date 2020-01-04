@@ -1,5 +1,6 @@
 import React, { Fragment, useContext, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { SRLWrapper } from 'simple-react-lightbox';
 
 // Public Components
 import Navbar from '../../components/Layout/Navbar';
@@ -17,6 +18,15 @@ import ProjectsContext from '../../context/ProjectsContext/ProjectsContext';
 
 type RouteParams = {
   id: string;
+};
+
+// Lightbox setting
+const options = {
+  transitionTimingFunction: 'ease',
+  slideTransitionSpeed: 1000,
+  buttonsIconPadding: '2px',
+  enablePanzoom: true,
+  hideControlsAfter: 1000
 };
 
 const ProfilePage: React.FC = () => {
@@ -47,7 +57,12 @@ const ProfilePage: React.FC = () => {
         backgroundIMG={ProjectBG}
       />
       {isloading && <Spinner />}
-      {project && <ProjectCard project={project} />}
+      {project && (
+        <SRLWrapper options={options}>
+          <ProjectCard project={project} />
+        </SRLWrapper>
+      )}
+
       <Footer />
     </Fragment>
   );

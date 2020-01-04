@@ -36,7 +36,9 @@
     }
 
     &_img {
-      width: 100%;
+      margin: 1rem auto;
+      max-height: 450px;
+      cursor: pointer;
     }
   }
 
@@ -45,6 +47,8 @@
     margin: 1rem 0;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 2rem;
+    justify-content: center;
+    align-items: center;
 
     &_frame {
       cursor: pointer;
@@ -67,7 +71,7 @@
     &_gallery {
       display: grid;
       margin: 1rem 0;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       grid-gap: 2rem;
     }
   }
@@ -85,8 +89,15 @@
     &_gallery {
       display: grid;
       margin: 1rem 0;
-      grid-template-columns: repeat(6, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       grid-gap: 2rem;
+
+      &_frame {
+        cursor: pointer;
+        &_img {
+          width: 100%;
+        }
+      }
     }
   }
 }

@@ -110,6 +110,12 @@ $grey-color: rgb(182, 190, 195);
   color: $secondary-color;
 }
 
+a,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
 // Layout
 @import './Layout/navbar.scss';
 @import './Layout/hero.scss';

@@ -27,13 +27,19 @@ const Footer: React.FC = () => {
               <i className='far fa-envelope' /> Ericlkl.au@gmail.com
             </div>
             <div className='footer_content_methods_method'>
-              <i className='fab fa-facebook-square' /> On Facebook
+              <a href='https://www.facebook.com/raidenlkl'>
+                <i className='fab fa-facebook-square' /> On Facebook
+              </a>
             </div>
             <div className='footer_content_methods_method'>
-              <i className='fab fa-linkedin' /> On linkedin
+              <a href='https://www.linkedin.com/in/kalonglee-eric/'>
+                <i className='fab fa-linkedin' /> On linkedin
+              </a>
             </div>
             <div className='footer_content_methods_method'>
-              <i className='fab fa-instagram' /> On Instagram
+              <a href='https://www.instagram.com/ericlkl3333/'>
+                <i className='fab fa-instagram' /> On Instagram
+              </a>
             </div>
           </div>
         </div>
