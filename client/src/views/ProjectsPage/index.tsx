@@ -42,7 +42,7 @@ const ProfilePage: React.FC = () => {
     }
     return () => {};
     // eslint-disable-next-line
-  }, [projects]);
+  }, []);
 
   return (
     <DevToolsProvider>

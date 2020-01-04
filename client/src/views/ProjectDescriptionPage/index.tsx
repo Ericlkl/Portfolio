@@ -33,7 +33,7 @@ const ProfilePage: React.FC = () => {
       cleanCurrentProject();
     };
     // eslint-disable-next-line
-  }, [current]);
+  }, []);
 
   return (
     <Fragment>

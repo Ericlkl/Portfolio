@@ -106,18 +106,24 @@
   } // End of Desc Card
 }
 
-.project_gallery_slide {
-  margin: 1rem;
-  padding: 0.5rem;
-  border: 1px solid #fff;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  &_img {
-    cursor: pointer;
-    width: 100%;
-    min-width: 350px;
-  }
+.swiper-slide {
+  height: auto;
+  width: 100%;
 }
 
+.screenshots {
+  padding: 0.5rem;
+}
+
+.screenshot {
+  margin: auto;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  height: 100%;
+  > img {
+    width: 100%;
+    height: 100%;
+  }
+}
 @media (min-width: 650px) {
   .project_desc {
     background-color: rgb(233, 233, 233);

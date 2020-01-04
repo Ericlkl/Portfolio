@@ -1,30 +1,47 @@
 import React from 'react';
-import UI_IMG from '../../../assets/img/tweetery_UI.jpg';
-import Carousel from '../../../components/Layout/Carousel';
-
-type ScreenshotProps = {
-  imgSrc: string;
-};
-
-const Screenshot: React.FC<ScreenshotProps> = ({ imgSrc }) => {
-  return (
-    <div className='project_gallery_slide'>
-      <img className='project_gallery_slide_img' src={imgSrc} alt='ui img' />
-    </div>
-  );
-};
+import Swiper from 'react-id-swiper';
+import 'swiper/swiper.scss';
 
 type ScreenshotsProps = {
   screenshots: string[];
 };
 
 const Screenshots: React.FC<ScreenshotsProps> = ({ screenshots }) => {
+  const params = {
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets'
+    },
+    // Default parameters
+    slidesPerView: 3,
+    spaceBetween: 40, // Responsive breakpoints
+    breakpoints: {
+      // when window width is <= 650px
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 10
+      }, // when window width is <= 900px
+      700: {
+        slidesPerView: 2,
+        spaceBetween: 20
+      },
+      1100: {
+        slidesPerView: 3,
+        spaceBetween: 20
+      }
+    }
+  };
+
   return (
-    <Carousel>
-      {screenshots.map(img => (
-        <Screenshot key={img} imgSrc={img} />
-      ))}
-    </Carousel>
+    <div className='screenshots'>
+      <Swiper {...params}>
+        {screenshots.map(scrs => (
+          <div className='screenshot'>
+            <img src={scrs} />
+          </div>
+        ))}
+      </Swiper>
+    </div>
   );
 };
 
