@@ -83,7 +83,7 @@ const Profile: React.FC = () => {
             <img
               className='myHistory_content_achievement_profile_img'
               src={ProfileImg}
-              alt='My Picture'
+              alt='Eric Lee'
             />
             {AchievementBoxs}
           </div>

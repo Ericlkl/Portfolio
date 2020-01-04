@@ -15,3 +15,9 @@ export type Project = {
   screenshots?: string[];
   information: any;
 };
+
+export type ContactFormFields = {
+  name: string;
+  email: string;
+  content: string;
+};
