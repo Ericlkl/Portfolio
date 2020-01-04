@@ -5,31 +5,50 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-
-  // padding: 2rem 0;
-
-  &_greeting {
-    color: $secondary-color;
-    font-size: 3.052rem;
-    padding: 1.5rem 0;
-  }
-  &_fullname {
-    margin-top: 2rem;
-  }
-
-  &__profile {
+  padding: 4rem 0;
+  &_content {
     display: flex;
-    flex: 1;
+    flex-direction: column;
     justify-content: center;
-    align-content: center;
+    align-items: center;
+    // Left
+    min-height: 60vh;
 
-    > img {
-      border-radius: 50%;
-      height: 20rem;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-      border: 4.5px solid #555;
+    &_profile {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      padding: 2rem;
+      margin: auto;
+      > img {
+        border-radius: 50%;
+        height: 20rem;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+        border: 4.5px solid #555;
+      }
+    }
+
+    // Right
+    &_info {
+      flex-grow: 1;
+      padding: 2rem;
+      &_greeting {
+        color: $secondary-color;
+        font-size: 3.052rem;
+        padding: 1.5rem 0;
+      }
+      &_desc {
+        font-weight: 300;
+      }
     }
   }
 }
 
-// linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('../img/profile1.JPG') center center/cover;
+@media (min-width: 800px) {
+  .header {
+    &_content {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}

@@ -68,9 +68,13 @@ const Navbar: React.FC<NavbarProps> = ({ logoColor }) => {
         <div
           style={navState.direction === 'vertical' ? {} : { display: 'none' }}
           onClick={toggleMenu}
-          className='navbar_main_expand_btn'
+          className={`navbar_main_hmbg_btn ${
+            navState.expend === true ? 'change' : ''
+          }`}
         >
-          <i className='fas fa-bars' />
+          <div className='bar1' />
+          <div className='bar2' />
+          <div className='bar3' />
         </div>
       </div>
 

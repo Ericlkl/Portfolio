@@ -27,7 +27,7 @@ const Hero: React.FC<HeroProps> = ({
         </Fade>
 
         <Fade right>
-          <img className='hero_content_img' src={img} alt='hero_img' />
+          <img className='hero_content_img' src={img} alt='Me and My GF' />
         </Fade>
       </div>
       {children}

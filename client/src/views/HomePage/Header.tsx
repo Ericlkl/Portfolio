@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Typography, Box, Container, Grid } from '@material-ui/core';
 import Typed from 'react-typed';
 
 import profile_img from '../../assets/img/profile_small.jpg';
@@ -13,7 +12,6 @@ const Header: React.FC = () => {
       else setJobIndex(jobIndex + 1);
     }, 4000);
 
-    return () => {};
     //eslint-disable-next-line
   }, [jobIndex]);
 
@@ -25,32 +23,21 @@ const Header: React.FC = () => {
 
   return (
     <header className='header'>
-      <Container>
-        <Grid
-          style={{ height: '90vh' }}
-          container
-          justify='center'
-          alignItems='center'
-        >
-          <Grid item xs={12} md={6} className='header__profile'>
-            <img src={profile_img} alt='eric_profile' />
-          </Grid>
+      <div className='header_content container'>
+        <div className='header_content_profile'>
+          <img src={profile_img} alt='eric_profile' />
+        </div>
 
-          <Grid item xs={12} md={6}>
-            <h2 className='header_greeting'>
-              <Box fontWeight='fontWeightBold'>Hi, I'm Eric.</Box>
-              <Box fontWeight='fontWeightBold'>
-                <Typed strings={jobTitle} typeSpeed={65} backSpeed={65} loop />
-              </Box>
-            </h2>
-
-            {/* {jobTitle[jobIndex]} */}
-            <Typography variant='h5'>
-              I create applications that solve customer's problem.
-            </Typography>
-          </Grid>
-        </Grid>
-      </Container>
+        <div className='header_content_info'>
+          <h2 className='header_content_info_greeting'>
+            Hi, I'm Eric. <br />
+            <Typed strings={jobTitle} typeSpeed={65} backSpeed={65} loop />
+          </h2>
+          <h3 className='header_content_info_desc'>
+            I create applications that solve customer's problem.
+          </h3>
+        </div>
+      </div>
     </header>
   );
 };

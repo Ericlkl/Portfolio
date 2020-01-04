@@ -43,14 +43,13 @@ const achievements = [
 ];
 
 const Profile: React.FC = () => {
-  const renderAchievementBoxs = () =>
-    achievements.map(achieve => (
-      <AchievementBox
-        key={achieve.title}
-        title={achieve.title}
-        items={achieve.items}
-      />
-    ));
+  const AchievementBoxs = achievements.map(achieve => (
+    <AchievementBox
+      key={achieve.title}
+      title={achieve.title}
+      items={achieve.items}
+    />
+  ));
 
   return (
     <section className='myHistory'>
@@ -84,9 +83,9 @@ const Profile: React.FC = () => {
             <img
               className='myHistory_content_achievement_profile_img'
               src={ProfileImg}
-              alt='my_pic'
+              alt='My Picture'
             />
-            {renderAchievementBoxs()}
+            {AchievementBoxs}
           </div>
         </Fade>
 

@@ -2,7 +2,7 @@ import React, { Fragment, useEffect } from 'react';
 import { SRLWrapper } from 'simple-react-lightbox';
 
 // core components
-import Hero from '../../components/Layout/Hero';
+import Hero from './Hero';
 import Footer from '../../components/Layout/Footer';
 import Navbar from '../../components/Layout/Navbar';
 import MySkills from './MySkills';
@@ -43,27 +43,31 @@ const AboutPage: React.FC = () => {
         >
           <div className='hero_gallery'>
             <div className='hero_gallery_frame'>
-              <img className='hero_gallery_frame_img' src={Me_GC} alt='myImg' />
+              <img
+                className='hero_gallery_frame_img'
+                src={Me_GC}
+                alt='Watching Sunrise'
+              />
             </div>
             <div className='hero_gallery_frame'>
               <img
                 className='hero_gallery_frame_img'
                 src={My_Family}
-                alt='myImg'
+                alt='Me and My Family'
               />
             </div>
             <div className='hero_gallery_frame'>
               <img
                 className='hero_gallery_frame_img'
                 src={My_Bro}
-                alt='myImg'
+                alt='Me and My Brother'
               />
             </div>
             <div className='hero_gallery_frame'>
               <img
                 className='hero_gallery_frame_img'
                 src={My_Parents}
-                alt='myImg'
+                alt='Me and My Parents'
               />
             </div>
             {/* <div className='hero_gallery_frame'>

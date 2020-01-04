@@ -14,6 +14,9 @@ const getSvgPornIconName: (name: string) => string = name => {
     case 'html':
     case 'html5':
       return 'html-5';
+    case 'node':
+    case 'nodejs':
+      return 'nodejs-icon';
     case 'css':
     case 'css3':
       return 'css-3';

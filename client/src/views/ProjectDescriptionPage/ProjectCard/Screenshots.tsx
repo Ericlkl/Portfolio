@@ -35,9 +35,9 @@ const Screenshots: React.FC<ScreenshotsProps> = ({ screenshots }) => {
   return (
     <div className='screenshots'>
       <Swiper {...params}>
-        {screenshots.map(scrs => (
+        {screenshots.map((scrs, i) => (
           <div key={scrs} className='screenshot'>
-            <img src={scrs} alt='Project Screenshots' />
+            <img src={scrs} alt={`Project Screenshots ${i + 1}`} />
           </div>
         ))}
       </Swiper>

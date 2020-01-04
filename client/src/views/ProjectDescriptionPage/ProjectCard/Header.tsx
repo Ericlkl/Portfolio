@@ -43,7 +43,7 @@ const Header: React.FC<HeaderProps> = ({ project }) => {
         <img
           className='project_desc_card_header_left_logo'
           src={logo}
-          alt='project_logo'
+          alt='Project Logo'
         />
       </div>
       <div className='project_desc_card_header_right'>

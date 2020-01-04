@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import { Fab, Paper } from '@material-ui/core';
 import tweetery_img from '../../assets/img/tweetery_UI.jpg';
 import { Fade } from 'react-reveal';
@@ -36,6 +37,11 @@ const ProjectDescription: React.FC = () => {
     </div>
   ));
 
+  const history = useHistory();
+
+  const onViewBtnClick = () =>
+    history.push('projects/5e0c13465ecc76a3f98b94f6');
+
   return (
     <Fade right>
       <div className='feature_project_content_descbox'>
@@ -47,6 +53,7 @@ const ProjectDescription: React.FC = () => {
         </h3>
         {renderFeatures}
         <Fab
+          onClick={onViewBtnClick}
           style={{ margin: '1.5rem auto' }}
           variant='extended'
           color='primary'
