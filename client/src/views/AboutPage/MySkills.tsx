@@ -11,7 +11,7 @@ type SkillBoxProps = {
 
 const SkillBox: React.FC<SkillBoxProps> = ({ fieldName, skills }) => {
   const icons = skills.map(skill => (
-    <div className='mySkills_content_desc_skillbox_icons_icon'>
+    <div key={skill} className='mySkills_content_desc_skillbox_icons_icon'>
       <ProgrammingIcon name={skill} color />
       {skill}
     </div>
@@ -28,7 +28,7 @@ const SkillBox: React.FC<SkillBoxProps> = ({ fieldName, skills }) => {
 const MySkills: React.FC = () => {
   const renderSkillBoxs = () =>
     skillBoxData.map((boxData, i) => (
-      <Fade bottom delay={i * 500} duration={500}>
+      <Fade key={boxData.fieldName} bottom delay={i * 500} duration={500}>
         <SkillBox fieldName={boxData.fieldName} skills={boxData.skills} />
       </Fade>
     ));

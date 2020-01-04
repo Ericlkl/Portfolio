@@ -1,7 +1,10 @@
 import { ProjectsAction } from '../action';
 import { Project } from '../../types';
 type State = {
-  current: Project | undefined;
+  current: {
+    project: Project | undefined;
+    isloading: boolean;
+  };
   projects: Project[] | undefined;
   isloading: boolean;
 };
@@ -22,6 +25,9 @@ type Action =
 export default (state: State, action: Action) => {
   switch (action.type) {
     case ProjectsAction.FETCH_PROJECTS:
+      // Actions :
+      // 1 : isloading -> false - Turn Off spinnerz
+      // 2 : Projects -> res.data - Set values to server data
       return {
         ...state,
         isloading: false,
@@ -29,16 +35,26 @@ export default (state: State, action: Action) => {
       };
     case ProjectsAction.FETCH_PROJECT:
     case ProjectsAction.SET_CURRENT_PROJECT:
+      // Actions :
+      // 1 : isloading -> false - Dont need to fetch specific data from server
+      // 2 : Project -> res.data / context data
       return {
         ...state,
-        isloading: false,
-        current: action.payload
+        current: {
+          project: action.payload,
+          isloading: false
+        }
       };
     case ProjectsAction.CLEAR_CURRENT_PROJECT:
+      // Actions :
+      // 1 : isloading -> true - So people enter to another page can fetch new data
+      // 2 : project -> undefine - so the page will not show previous data
       return {
         ...state,
-        isloading: true,
-        current: undefined
+        current: {
+          project: undefined,
+          isloading: true
+        }
       };
     default:
       return state;

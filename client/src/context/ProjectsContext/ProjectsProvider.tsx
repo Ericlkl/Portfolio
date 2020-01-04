@@ -9,21 +9,22 @@ const ProjectsProvider: React.FC = ({ children }) => {
   const [state, dispatch] = useReducer(ProjectsReducer, initialState);
 
   const fetchProjects = async () => {
-    const res = await axios.get('/api/projects/');
-    console.log('Fetch Projects !');
-    console.log(res.data);
-    dispatch({
-      type: ProjectsAction.FETCH_PROJECTS,
-      payload: res.data
-    });
+    try {
+      const res = await axios.get('/api/projects/');
+      dispatch({
+        type: ProjectsAction.FETCH_PROJECTS,
+        payload: res.data
+      });
+    } catch (error) {}
   };
   const fetchProject = async (id: string) => {
-    const res = await axios.get(`/api/projects/${id}`);
-    console.log(res.data);
-    dispatch({
-      type: ProjectsAction.FETCH_PROJECT,
-      payload: res.data
-    });
+    try {
+      const res = await axios.get(`/api/projects/${id}`);
+      dispatch({
+        type: ProjectsAction.FETCH_PROJECT,
+        payload: res.data
+      });
+    } catch (error) {}
   };
   const setCurrentProject = (project: Project) =>
     dispatch({

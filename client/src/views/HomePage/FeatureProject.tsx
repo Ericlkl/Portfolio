@@ -30,7 +30,7 @@ const features = [
 
 const ProjectDescription: React.FC = () => {
   const renderFeatures = features.map(feature => (
-    <div className='feature_project_content_descbox_feature'>
+    <div key={feature.name} className='feature_project_content_descbox_feature'>
       {feature.icon}
       <p>{feature.name}</p>
     </div>

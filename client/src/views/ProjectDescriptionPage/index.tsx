@@ -20,14 +20,17 @@ type RouteParams = {
 };
 
 const ProfilePage: React.FC = () => {
-  const { current, isloading, fetchProject, cleanCurrentProject } = useContext(
+  const { current, fetchProject, cleanCurrentProject } = useContext(
     ProjectsContext
   );
+
+  const { isloading, project } = current;
 
   // Read ID from Route params
   const { id } = useParams<RouteParams>();
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     if (isloading) fetchProject(id);
     return () => {
       cleanCurrentProject();
@@ -44,7 +47,7 @@ const ProfilePage: React.FC = () => {
         backgroundIMG={ProjectBG}
       />
       {isloading && <Spinner />}
-      {current && <ProjectCard project={current} />}
+      {project && <ProjectCard project={project} />}
       <Footer />
     </Fragment>
   );

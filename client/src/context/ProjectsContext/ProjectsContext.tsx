@@ -2,7 +2,10 @@ import { createContext } from 'react';
 import { Project } from '../../types';
 
 export const initialState: {
-  current: Project | undefined;
+  current: {
+    project: Project | undefined;
+    isloading: boolean;
+  };
   projects: Project[] | undefined;
   isloading: boolean;
   fetchProjects: () => void;
@@ -10,7 +13,10 @@ export const initialState: {
   setCurrentProject: (project: Project) => void;
   cleanCurrentProject: () => void;
 } = {
-  current: undefined,
+  current: {
+    project: undefined,
+    isloading: true
+  },
   projects: undefined,
   isloading: true,
   fetchProjects: () => {},

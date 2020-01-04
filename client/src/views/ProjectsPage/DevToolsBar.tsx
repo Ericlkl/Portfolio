@@ -18,7 +18,7 @@ const DevToolsBar: React.FC<DevToolsBarProps> = ({ devTools }) => {
       : 'devtools_bar_btn deactivate';
 
     return (
-      <div className={className}>
+      <div key={toolName} className={className}>
         {_.isEqual(active, toolName) && (
           <CancelBtn
             className='devtools_bar_btn_cancel'

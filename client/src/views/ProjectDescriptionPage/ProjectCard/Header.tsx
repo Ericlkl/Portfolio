@@ -24,13 +24,13 @@ const Header: React.FC<HeaderProps> = ({ project }) => {
           </div>
         </div>
         <p className='project_desc_card_header_right_links'>
-          <i className='fab fa-fw fa-github-square' /> <p>{repo}</p>
+          <i className='fab fa-fw fa-github-square' /> {repo}
         </p>
         <p className='project_desc_card_header_right_links'>
-          <i className='fab fa-fw fa-docker' /> <p>{docker}</p>
+          <i className='fab fa-fw fa-docker' /> {docker}
         </p>
         <p className='project_desc_card_header_right_links'>
-          <i className='fas fa-fw fa-desktop' /> <p>Http://</p>
+          <i className='fas fa-fw fa-desktop' /> Http://
         </p>
       </div>
     </div>

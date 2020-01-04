@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect } from 'react';
 
 // core components
 import Hero from '../../components/Layout/Hero';
@@ -10,6 +10,11 @@ import Profile from './Profile';
 import Personality from './Personality';
 
 const AboutPage: React.FC = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    // eslint-disable-next-line
+  }, []);
+
   return (
     <Fragment>
       <Navbar logoColor='grey' />

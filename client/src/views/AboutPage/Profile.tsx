@@ -12,7 +12,9 @@ const AchievementBox: React.FC<AchievementBoxProps> = ({ title, items }) => {
     <div className='myHistory_content_achievement_box'>
       <h4 className='myHistory_content_achievement_box_title'>{title}</h4>
       {items.map(i => (
-        <h6 className='myHistory_content_achievement_box_item'>- {i}</h6>
+        <h6 key={i} className='myHistory_content_achievement_box_item'>
+          - {i}
+        </h6>
       ))}
     </div>
   );
@@ -28,7 +30,7 @@ const achievements = [
   },
   {
     title: 'Awards and Mentions',
-    items: ['Griffith University - Awards', 'Griffith University - Awards']
+    items: ['Griffith University - Awards', 'Griffith University - Awards ']
   },
   {
     title: 'Experience',
@@ -43,7 +45,11 @@ const achievements = [
 const Profile: React.FC = () => {
   const renderAchievementBoxs = () =>
     achievements.map(achieve => (
-      <AchievementBox title={achieve.title} items={achieve.items} />
+      <AchievementBox
+        key={achieve.title}
+        title={achieve.title}
+        items={achieve.items}
+      />
     ));
 
   return (

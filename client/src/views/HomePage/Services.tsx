@@ -72,7 +72,7 @@ type ServiceCardProps = {
 const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
   const { name, icon, features, desc, skills } = service;
 
-  const renderSkills = () => skills.map(name => <p>{name}</p>);
+  const renderSkills = () => skills.map(name => <p key={name}>{name}</p>);
 
   return (
     <Slide bottom>
@@ -93,7 +93,9 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
 
 const Services: React.FC = () => {
   const renderServices = () =>
-    services.map(service => <ServiceCard service={service} />);
+    services.map(service => (
+      <ServiceCard key={service.name} service={service} />
+    ));
 
   return (
     <section className='services'>

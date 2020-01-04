@@ -37,10 +37,10 @@ const ProfilePage: React.FC = () => {
   const { isloading, projects, fetchProjects } = useContext(ProjectsContext);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     if (isloading) {
       fetchProjects();
     }
-    return () => {};
     // eslint-disable-next-line
   }, []);
 

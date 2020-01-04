@@ -65,7 +65,7 @@ const PersonalityBox: React.FC<PersonalityBoxProps> = ({ personality }) => {
 
 const PersonalityGrid: React.FC = () => {
   const personalityBoxs = personalities.map(persona => (
-    <PersonalityBox personality={persona} />
+    <PersonalityBox key={persona.title} personality={persona} />
   ));
   return (
     <section className='personality'>

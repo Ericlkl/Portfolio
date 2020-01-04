@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect } from 'react';
 
 // core components
 import FeatureProject from './FeatureProject';
@@ -13,7 +13,12 @@ import Services from './Services';
 import Contact from './Contact';
 import PersonalityGrid from './PersonalityGrid';
 
-const HomePage: React.FC = ({ ...rest }) => {
+const HomePage: React.FC = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    // eslint-disable-next-line
+  }, []);
+
   return (
     <Fragment>
       <Navbar logoColor='blue' />
