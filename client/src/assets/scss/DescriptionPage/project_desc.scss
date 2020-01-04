@@ -47,21 +47,27 @@
             color: white;
             border-radius: 1rem;
             padding: 0.75rem;
+            margin-right: 0.75rem;
             background-color: rgb(133, 133, 133);
           }
         }
 
-        &_links {
+        &_links,
+        &_links:active,
+        &_links:hover {
+          margin: 0.25rem 0;
           display: flex;
           align-items: center;
-          padding: 0.5rem 0;
           > i {
-            font-size: 1.5rem;
+            font-size: 3rem;
           }
+          font-size: 1.2rem;
+          color: #333;
+          text-decoration: none;
+          font-weight: 300;
 
-          > p {
-            padding: 0 0.5rem;
-            font-weight: 300;
+          &:hover {
+            color: $secondary-color;
           }
         }
       } // End of Card Header Right
