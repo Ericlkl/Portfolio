@@ -1,6 +1,7 @@
 import { RequestHandler } from 'express';
 import ProjectModel from '../models/Project';
 import { Project } from '../types';
+import { getDataFromCache, saveDataToCache } from '../services/cache';
 
 // {
 // 	"name": "Pineland Music School",
@@ -33,9 +34,16 @@ export const createProject: RequestHandler = async (req, res) => {
 };
 
 export const getProject: RequestHandler = async (req, res) => {
+  const projectKey = `project:${req.params.id}`;
+  const cacheData = await getDataFromCache(projectKey);
+  if (cacheData) {
+    return res.json(cacheData);
+  }
+
   try {
     const project = await ProjectModel.findById(req.params.id);
-    res.json(project);
+    saveDataToCache(projectKey, 3600000, project);
+    return res.json(project);
   } catch (error) {
     console.error(error.message);
     res.status(500).json({ errors: error.message });
@@ -43,9 +51,16 @@ export const getProject: RequestHandler = async (req, res) => {
 };
 
 export const getAllProjects: RequestHandler = async (req, res) => {
+  const cachekey = `project:all`;
+  const cacheData = await getDataFromCache(cachekey);
+  if (cacheData) {
+    return res.json(cacheData);
+  }
+
   try {
     const projects = await ProjectModel.find();
-    res.json(projects);
+    saveDataToCache(cachekey, 3600000, projects);
+    return res.json(projects);
   } catch (error) {
     console.error(error.message);
     res.status(500).json({ errors: error.message });

@@ -12,10 +12,12 @@
   "license": "ISC",
   "dependencies": {
     "@types/config": "0.0.36",
+    "@types/redis": "^2.8.14",
     "config": "^3.2.4",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mongoose": "^5.8.3",
+    "redis": "^2.8.0",
     "ts-node": "^8.5.4",
     "typescript": "^3.7.4"
   },
