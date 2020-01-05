@@ -56,7 +56,7 @@ const Navbar: React.FC<NavbarProps> = ({ logoColor }) => {
           : 'horizontal space-around'
       }`}
     >
-      <div className='navbar_main horizontal space-between'>
+      <div className='navbar_main container'>
         <div className='navbar_main_band'>
           <Link onMouseOut={hideName} onMouseOver={revealName} to='/'>
             <Logo color={logoColor} className='navbar_main_band_logo' />
