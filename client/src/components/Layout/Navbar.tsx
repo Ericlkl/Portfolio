@@ -6,7 +6,7 @@ import Fade from 'react-reveal';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import ViewCompactIcon from '@material-ui/icons/ViewCompact';
 
-import Logo from '../Logo';
+import MyLogo from '../MyLogo';
 
 type NavState = {
   direction: 'vertical' | 'horizontal';
@@ -59,7 +59,7 @@ const Navbar: React.FC<NavbarProps> = ({ logoColor }) => {
       <div className='navbar_main container'>
         <div className='navbar_main_band'>
           <Link onMouseOut={hideName} onMouseOver={revealName} to='/'>
-            <Logo color={logoColor} className='navbar_main_band_logo' />
+            <MyLogo color={logoColor} className='navbar_main_band_logo' />
           </Link>
           <Fade left when={navState.showName}>
             <h1 className='navbar_main_band_name'>ERIC LEE</h1>

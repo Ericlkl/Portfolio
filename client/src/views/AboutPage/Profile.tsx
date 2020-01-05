@@ -1,10 +1,17 @@
 import React from 'react';
 import { Fade } from 'react-reveal';
 import ProfileImg from '../../assets/img/hero2.jpg';
+import { Award } from '../../types';
+
+// Logo
+import AAS from '../../assets/img/logo/aas.png';
+import CSIRO from '../../assets/img/logo/csiro.png';
+import GU from '../../assets/img/logo/gu.png';
+import QUT from '../../assets/img/logo/qut.png';
 
 type AchievementBoxProps = {
   title: string;
-  items: string[];
+  items: Award[];
 };
 
 const AchievementBox: React.FC<AchievementBoxProps> = ({ title, items }) => {
@@ -12,9 +19,10 @@ const AchievementBox: React.FC<AchievementBoxProps> = ({ title, items }) => {
     <div className='myHistory_content_achievement_box'>
       <h4 className='myHistory_content_achievement_box_title'>{title}</h4>
       {items.map(i => (
-        <h6 key={i} className='myHistory_content_achievement_box_item'>
-          - {i}
-        </h6>
+        <div className='myHistory_content_achievement_box_item'>
+          <img src={i.organization} alt='Company logo' />
+          <p>{i.name}</p>
+        </div>
       ))}
     </div>
   );
@@ -24,20 +32,31 @@ const achievements = [
   {
     title: 'Education',
     items: [
-      'Griffith Uni - Bachelor of IT | 2016 - 2017',
-      'Queensland University of Technology - Bachelor of Computer Science | 2017 - 2019'
+      {
+        organization: GU,
+        name: 'Bachelor of IT'
+      },
+      {
+        organization: QUT,
+        name: 'Bachelor of IT (Computer Science)'
+      }
     ]
-  },
-  {
-    title: 'Awards and Mentions',
-    items: ['Griffith University - Awards', 'Griffith University - Awards ']
   },
   {
     title: 'Experience',
     items: [
-      'AAS Education - IT Tutors',
-      'QUT - Mobile Application Developer Internship',
-      'CSIRO - Medicial Search Engine Developer'
+      {
+        organization: AAS,
+        name: 'IT Tutor'
+      },
+      {
+        organization: QUT,
+        name: ' Mobile Application Developer Internship'
+      },
+      {
+        organization: CSIRO,
+        name: 'Medicial Search Engine Developer'
+      }
     ]
   }
 ];

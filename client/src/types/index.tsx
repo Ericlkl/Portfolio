@@ -21,3 +21,8 @@ export type ContactFormFields = {
   email: string;
   content: string;
 };
+
+export type Award = {
+  organization: string;
+  name: string;
+};

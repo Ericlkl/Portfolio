@@ -43,11 +43,20 @@
         }
 
         &_item {
+          display: flex;
+          align-items: center;
           padding: 0.25rem 0;
-          font-weight: 300;
-          font-size: 0.85rem;
-          word-wrap: break-word;
-          white-space: initial;
+
+          > img {
+            margin: 0 0.25rem;
+            width: 50px;
+            height: 50px;
+          }
+
+          > p {
+            font-weight: 300;
+            font-size: 1.1rem;
+          }
         }
       }
     }
