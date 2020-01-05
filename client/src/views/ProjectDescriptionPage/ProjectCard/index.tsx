@@ -3,6 +3,8 @@ import React from 'react';
 // Specific component
 import Header from './Header';
 import Section from './Section';
+
+import Dependency from './Dependency';
 import Screenshots from './Screenshots';
 import Details from './Details';
 
@@ -14,7 +16,7 @@ type ProjectCardProps = {
 };
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
-  const { screenshots, intro, information } = project;
+  const { screenshots, intro, information, stacks } = project;
   return (
     <section className='project_desc'>
       <div className='project_desc_card material_card'>
@@ -23,13 +25,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           <p className='project_desc_card_section_description'>{intro}</p>
         </Section>
 
-        <Section title='Preview'>
-          <Screenshots screenshots={screenshots!} />
-        </Section>
+        <Dependency stacks={stacks} />
+        <Screenshots screenshots={screenshots!} />
 
-        <Section title='Information'>
-          <Details information={information} />
-        </Section>
+        <Details information={information} />
       </div>
     </section>
   );

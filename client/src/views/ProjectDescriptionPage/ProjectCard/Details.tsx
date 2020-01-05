@@ -1,9 +1,10 @@
 import React from 'react';
-
+import Section from './Section';
 type DetailProps = {
   name: string;
   value: string;
 };
+
 const Detail: React.FC<DetailProps> = ({ name, value }) => {
   return (
     <div className='project_desc_card_section_details_detail'>
@@ -21,11 +22,13 @@ type DetailsProps = {
 
 const Details: React.FC<DetailsProps> = ({ information }) => {
   return (
-    <div className='project_desc_card_section_details'>
-      {Object.entries(information).map(detail => (
-        <Detail key={detail[0]} name={detail[0]} value={detail[1]} />
-      ))}
-    </div>
+    <Section title='Information'>
+      <div className='project_desc_card_section_details'>
+        {Object.entries(information).map(detail => (
+          <Detail key={detail[0]} name={detail[0]} value={detail[1]} />
+        ))}
+      </div>
+    </Section>
   );
 };
 

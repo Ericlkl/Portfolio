@@ -1,5 +1,6 @@
 import React from 'react';
 import Swiper from 'react-id-swiper';
+import Section from './Section';
 import 'swiper/swiper.scss';
 
 type ScreenshotsProps = {
@@ -33,15 +34,17 @@ const Screenshots: React.FC<ScreenshotsProps> = ({ screenshots }) => {
   };
 
   return (
-    <div className='screenshots'>
-      <Swiper {...params}>
-        {screenshots.map((scrs, i) => (
-          <div key={scrs} className='screenshot'>
-            <img src={scrs} alt={`Project Screenshots ${i + 1}`} />
-          </div>
-        ))}
-      </Swiper>
-    </div>
+    <Section title='Preview'>
+      <div className='screenshots'>
+        <Swiper {...params}>
+          {screenshots.map((scrs, i) => (
+            <div key={scrs} className='screenshot'>
+              <img src={scrs} alt={`Project Screenshots ${i + 1}`} />
+            </div>
+          ))}
+        </Swiper>
+      </div>
+    </Section>
   );
 };
 
