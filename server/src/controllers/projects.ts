@@ -52,16 +52,22 @@ export const getProject: RequestHandler = async (req, res) => {
 
 export const getAllProjects: RequestHandler = async (req, res) => {
   const cachekey = `project:all`;
+  console.log('Before Access Redis');
   const cacheData = await getDataFromCache(cachekey);
+  console.log('Searched Caches');
   if (cacheData) {
+    console.log('Cache Found!');
     return res.json(cacheData);
   }
 
   try {
     const projects = await ProjectModel.find();
+    console.log('Cache Found! Ready to save to redis');
     saveDataToCache(cachekey, 3600000, projects);
+    console.log('Saved to redis! Ready to send!');
     return res.json(projects);
   } catch (error) {
+    console.log('Failed');
     console.error(error.message);
     res.status(500).json({ errors: error.message });
   }
