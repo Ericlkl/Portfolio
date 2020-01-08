@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import Typed from 'react-typed';
+import Particle from './Particle';
+import TextLoop from 'react-text-loop';
 
 import profile_img from '../../assets/img/profile_small.jpg';
 
@@ -15,24 +16,30 @@ const Header: React.FC = () => {
     //eslint-disable-next-line
   }, [jobIndex]);
 
-  const jobTitle = [
-    'A Software Engineer',
-    'A Full Stack Web Developer',
-    'A Mobile App Developer'
-  ];
-
   return (
     <header className='header'>
+      <Particle />
       <div className='header_content container'>
         <div className='header_content_profile'>
           <img src={profile_img} alt='eric_profile' />
         </div>
 
         <div className='header_content_info'>
-          <h2 className='header_content_info_greeting'>
-            Hi, I'm Eric. <br />
-            <Typed strings={jobTitle} typeSpeed={65} backSpeed={65} loop />
-          </h2>
+          <div className='header_content_info_highlight'>
+            <h2 className='header_content_info_highlight_name'>Eric lee,</h2>
+
+            <TextLoop>
+              <h2 className='header_content_info_highlight_title'>
+                Software Engineer
+              </h2>
+              <h2 className='header_content_info_highlight_title'>
+                Full Stack Developer
+              </h2>
+              <h2 className='header_content_info_highlight_title'>
+                Mobile App Developer
+              </h2>
+            </TextLoop>
+          </div>
           <h3 className='header_content_info_desc'>
             I create applications that solve customer's problem.
           </h3>

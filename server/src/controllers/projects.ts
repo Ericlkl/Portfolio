@@ -34,15 +34,22 @@ export const createProject: RequestHandler = async (req, res) => {
 };
 
 export const getProject: RequestHandler = async (req, res) => {
+  console.log('Get Project Start');
   const projectKey = `project:${req.params.id}`;
+  console.log('Try Fetch Data');
   const cacheData = await getDataFromCache(projectKey);
+  console.log('Redis searched');
   if (cacheData) {
+    console.log('Cache Data Found!');
     return res.json(cacheData);
   }
 
   try {
+    console.log('Try to access MLAB');
     const project = await ProjectModel.findById(req.params.id);
-    saveDataToCache(projectKey, 3600000, project);
+    console.log('Save to cache');
+    saveDataToCache(projectKey, 3600, project);
+    console.log('Save to cache successfully');
     return res.json(project);
   } catch (error) {
     console.error(error.message);
@@ -59,7 +66,7 @@ export const getAllProjects: RequestHandler = async (req, res) => {
 
   try {
     const projects = await ProjectModel.find();
-    saveDataToCache(cachekey, 3600000, projects);
+    saveDataToCache(cachekey, 3600, projects);
     return res.json(projects);
   } catch (error) {
     console.error(error.message);
