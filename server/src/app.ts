@@ -3,8 +3,8 @@ import express from 'express';
 import { staticAssetsMiddleware } from './middlewares';
 import routers from './routes';
 import connectDB from './config/db';
-
-dotenv.config();
+import path from 'path';
+dotenv.config({ path: path.join(__dirname, '../', '.env') });
 
 const app = express();
 app.use(express.json());
