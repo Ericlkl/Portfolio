@@ -70,7 +70,7 @@ const ProjectDescription: React.FC = () => {
 const FeatureProject: React.FC = () => {
   return (
     <section className='feature_project'>
-      <h3 className='section_title'>Feature Project</h3>
+      <h3 className='section_title'>Latest Project</h3>
       <div className='feature_project_content container'>
         <Fade left>
           <Paper className='feature_project_content_imgbox'>

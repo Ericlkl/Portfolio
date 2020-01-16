@@ -6,11 +6,10 @@ const services = [
     icon: 'fa-laptop',
     name: 'Web Development',
     features: 'Responsive and Interactive',
-    desc: `Every website should be built with two primary goals: Firstly, 
-    it needs to work across all devices. Secondly, it needs to be
-    fast as possible.`,
+    desc: `Every website I built work across all devices no matter large or small, and it is extremely fast and interactive.`,
     skills: [
-      'HTML',
+      'HTML5',
+      'CSS3',
       'SCSS',
       'JavaScript ES6+',
       'React',
@@ -24,9 +23,7 @@ const services = [
     icon: 'fa-server',
     name: 'Server Apps Development',
     features: 'Robust and Scalable',
-    desc: `Every website should be built with two primary goals: Firstly, 
-    it needs to work across all devices. Secondly, it needs to be
-    fast as possible.`,
+    desc: `Managing the interchange of data between the server and the users, optimization of the server for maximum speed and scalability.`,
     skills: [
       'NodeJS',
       'ExpressJS',
@@ -43,10 +40,8 @@ const services = [
   {
     icon: 'fa-mobile-alt',
     name: 'Mobile Apps Development',
-    features: 'MVC and User Friendly',
-    desc: `Every website should be built with two primary goals: Firstly, 
-    it needs to work across all devices. Secondly, it needs to be
-    fast as possible.`,
+    features: 'User Friendly and Compatible',
+    desc: `Every mobile application I built with works perfectly on Andriod / IOS, and it is easy to use without learning.`,
     skills: [
       'C#',
       'Xamarin Forms',
