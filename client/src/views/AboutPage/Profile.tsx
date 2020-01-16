@@ -80,16 +80,41 @@ const Profile: React.FC = () => {
           <div className='myHistory_content_intro'>
             <h2 className='myHistory_content_intro_name'>Eric Lee</h2>
             <p className='myHistory_content_intro_p'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
-              enim atque soluta eum. At quos est voluptates eum voluptatem qui
-              facere enim eaque dolorum fugiat. Minima culpa reiciendis quasi
-              esse.
+              <span role='img' aria-label='sheep'>
+                👋
+              </span>{' '}
+              I'm Eric Lee, a 26 years old enthusiastic full-stack developer
+              from Australia. Specialising in software development, mobile
+              application development, web design, full-stack development (coded
+              this site with React + Material UI) and cloud computing.
             </p>
             <p className='myHistory_content_intro_p'>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit at
-              voluptatem similique, maiores mollitia ipsam voluptate hic.
-              Exercitationem eveniet enim accusantium totam a quos consequatur
-              maiores numquam! Sed, officiis ducimus.
+              How did I get into tech
+              <span role='img' aria-label='sheep'>
+                🤔
+              </span>
+              ? I am a big fan of console & computer games since I was 7. I 've
+              invested plenty of time on PC games and computer system (such as
+              how to use game cheater).
+            </p>
+            <p className='myHistory_content_intro_p'>
+              After I graduated from high school, they didn't teach me any
+              knowledge about technology
+              <span role='img' aria-label='sheep'>
+                😢
+              </span>
+              . Therefore, I decided to study Information Technology in college.
+              I worked on my first assignment (building website) approximately 7
+              hrs+ without feeling tired. That is how my journey started.
+            </p>
+            <p className='myHistory_content_intro_p'>
+              I love to learn and discover new technologies JavaScript, HTML,
+              and CSS. You can catch my code on my
+              <a href='https://github.com/Ericlkl'> GitHub </a>.
+            </p>
+            <p className='myHistory_content_intro_p'>
+              However, when I’m not behind my macbook, you could find me either
+              at the library watching books or swimming in Gold Coast.
             </p>
           </div>
         </Fade>

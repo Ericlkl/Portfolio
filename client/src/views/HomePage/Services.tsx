@@ -41,7 +41,7 @@ const services = [
     icon: 'fa-mobile-alt',
     name: 'Mobile Apps Development',
     features: 'User Friendly and Compatible',
-    desc: `Every mobile application I built with works perfectly on Andriod / IOS, and it is easy to use without learning.`,
+    desc: `Every mobile application I built with works perfectly on Andriod / IOS, and they are easy to use without learning.`,
     skills: [
       'C#',
       'Xamarin Forms',

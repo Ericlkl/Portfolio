@@ -8,13 +8,6 @@ import Navbar from '../../components/Layout/Navbar';
 import MySkills from './MySkills';
 import Profile from './Profile';
 
-// Images
-import My_Family from '../../assets/img/mypictures/My_Whole_Family.jpg';
-import My_Gf from '../../assets/img/mypictures/I_and_MyGF_Selfie.jpg';
-import Me_GC from '../../assets/img/mypictures/Me_Enjoying_Sunshire.jpg';
-import My_Bro from '../../assets/img/mypictures/My_Brothers.jpg';
-import My_Parents from '../../assets/img/mypictures/My_Parents.jpg';
-
 // Lightbox setting
 const options = {
   transitionTimingFunction: 'ease',
@@ -35,7 +28,7 @@ const AboutPage: React.FC = () => {
       <Navbar logoColor='grey' />
       <SRLWrapper options={options}>
         <Hero
-          img={My_Gf}
+          img='https://i.imgur.com/njGf0mh.jpg?3'
           desc="I enjoy developing simple and beautiful application to solve complex problems. When I'm not coding, watching movies or reading books, you'll find me thinking, swimming or enjoying sunshine in Gold Coast."
           title='About Me'
           subtitle="I'm a software engineer based in Brisbane, Australia."
@@ -44,28 +37,28 @@ const AboutPage: React.FC = () => {
             <div className='hero_gallery_frame'>
               <img
                 className='hero_gallery_frame_img'
-                src={Me_GC}
+                src='https://i.imgur.com/rewQMvS.jpg?1'
                 alt='Watching Sunrise'
               />
             </div>
             <div className='hero_gallery_frame'>
               <img
                 className='hero_gallery_frame_img'
-                src={My_Family}
+                src='https://i.imgur.com/vPNpWCz.jpg?1'
                 alt='Me and My Family'
               />
             </div>
             <div className='hero_gallery_frame'>
               <img
                 className='hero_gallery_frame_img'
-                src={My_Bro}
+                src='https://i.imgur.com/Rg0Oi2E.jpg?1'
                 alt='Me and My Brother'
               />
             </div>
             <div className='hero_gallery_frame'>
               <img
                 className='hero_gallery_frame_img'
-                src={My_Parents}
+                src='https://i.imgur.com/exdawwf.jpg?1'
                 alt='Me and My Parents'
               />
             </div>

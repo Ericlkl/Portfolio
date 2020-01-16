@@ -98,7 +98,7 @@ const Navbar: React.FC<NavbarProps> = ({ logoColor }) => {
           className='navbar_links_link'
         >
           <AssignmentIndIcon />
-          Resume
+          &nbsp;Resume
         </a>
         <a href='https://github.com/Ericlkl' className='navbar_links_link'>
           <i className={'navbar_links_icons fab fa-github'} />

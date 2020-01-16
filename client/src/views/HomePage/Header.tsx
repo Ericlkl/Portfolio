@@ -30,7 +30,7 @@ const Header: React.FC = () => {
 
             <TextLoop>
               <h2 className='header_content_info_highlight_title'>
-                Software Engineer
+                JavaScript Developer
               </h2>
               <h2 className='header_content_info_highlight_title'>
                 Full Stack Developer
@@ -41,7 +41,8 @@ const Header: React.FC = () => {
             </TextLoop>
           </div>
           <h3 className='header_content_info_desc'>
-            I create applications that solve customer's problem.
+            I’m a software engineer with a passion for addressing people's
+            problem.
           </h3>
         </div>
       </div>
