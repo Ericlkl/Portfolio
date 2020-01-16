@@ -1,7 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import { Fab, Paper } from '@material-ui/core';
-import tweetery_img from '../../assets/img/tweetery_UI.jpg';
 import { Fade } from 'react-reveal';
 
 const features = [
@@ -18,15 +17,17 @@ const features = [
     )
   },
   {
-    name: 'AWS Hosting',
+    name: 'Data Visualization',
     icon: (
-      <i className='feature_project_content_descbox_feature_icon fas fa-server' />
+      <i className='feature_project_content_descbox_feature_icon fas fa-chart-area' />
+    )
+  },
+  {
+    name: 'Live Streaming',
+    icon: (
+      <i className='feature_project_content_descbox_feature_icon fas fa-satellite-dish' />
     )
   }
-  // {
-  //   name: 'Load Balancing',
-  //   icon: <i className='fas fa-sitemap fa-2x'></i>
-  // }
 ];
 
 const ProjectDescription: React.FC = () => {
@@ -75,7 +76,7 @@ const FeatureProject: React.FC = () => {
           <Paper className='feature_project_content_imgbox'>
             <img
               className='feature_project_content_imgbox_img'
-              src={tweetery_img}
+              src='https://i.imgur.com/hZCYEg1.png?1'
               alt='tweetery'
             />
           </Paper>

@@ -1,48 +1,73 @@
 import React from 'react';
 import Flip from 'react-reveal';
+
 const personalities: Personality[] = [
   {
     icon: <i className='fas fa-puzzle-piece' />,
     title: 'Problem Solver',
-    description:
-      'I believe there’s a solution for everything, it just takes the right mindset and approach to find it.'
-  },
-  {
-    icon: <i className='far fa-compass' />,
-    title: 'Curious Discoverer',
-    description:
-      'I love researching; I’m a collector of information and love to use insights to identify opportunities for growth and improvement.'
-  },
-  {
-    icon: <i className='far fa-lightbulb' />,
-    title: 'Enthusiastic Energiser',
-    description:
-      'I have a resilient and bubbly spirit (which tends to rub off on others) that keeps me motivated and committed to my work and team.'
-  },
-  {
-    icon: <i className='far fa-heart' />,
-    title: 'Passionate Empathiser',
-    description:
-      'Nothing is more important to me than advocating for others and keeping the end users of a product or service front of mind.'
+    description: (
+      <p className='personality_grid_box_desc'>
+        I believe <span>there’s a solution for everything</span>, it just takes
+        the right mindset and approach to find out the solution.
+      </p>
+    )
   },
   {
     icon: <i className='far fa-comments' />,
     title: 'Team Player',
-    description:
-      'I thrive off working with others, while I can work autonomously when required, I believe collaboration is key to building great experiences.'
+    description: (
+      <p className='personality_grid_box_desc'>
+        I love working in a team, I believe
+        <span> collaboration is key to reaching success.</span>
+      </p>
+    )
+  },
+  {
+    icon: <i className='far fa-lightbulb' />,
+    title: 'Enthusiastic Energiser',
+    description: (
+      <p className='personality_grid_box_desc'>
+        I have a resilient and bubbly spirit that keeps me
+        <span> motivated and committed to my work and team.</span>
+      </p>
+    )
+  },
+  {
+    icon: <i className='far fa-heart' />,
+    title: 'Passionate Empathiser',
+    description: (
+      <p className='personality_grid_box_desc'>
+        Finishing user requirement is not enough. I like trying my best to
+        <span> improve the User Experience.</span>
+      </p>
+    )
+  },
+  {
+    icon: <i className='far fa-compass' />,
+    title: 'Curious Discoverer',
+    description: (
+      <p className='personality_grid_box_desc'>
+        <span>Researching can address most of the problems.</span> I like using
+        insights to identify opportunities for improvement.
+      </p>
+    )
   },
   {
     icon: <i className='fas fa-pencil-ruler' />,
     title: 'Quality Assurer',
-    description:
-      'If you’re going to do it at all, you better do it well. I have a thorough understanding of user-centred design principles and an eye for detail.'
+    description: (
+      <p className='personality_grid_box_desc'>
+        I have a <span> thorough understanding of design patterns </span>and an
+        eye for detail.
+      </p>
+    )
   }
 ];
 
 type Personality = {
   icon: JSX.Element;
   title: string;
-  description: string;
+  description: JSX.Element;
 };
 
 type PersonalityBoxProps = {
@@ -57,7 +82,7 @@ const PersonalityBox: React.FC<PersonalityBoxProps> = ({ personality }) => {
         <div className='personality_grid_box_hexagon'>{icon}</div>
 
         <h2 className='personality_grid_box_title'>{title}</h2>
-        <p className='personality_grid_box_desc'>{description}</p>
+        {description}
       </div>
     </Flip>
   );
@@ -69,7 +94,7 @@ const PersonalityGrid: React.FC = () => {
   ));
   return (
     <section className='personality'>
-      <h1 className='section_title'>Working Style</h1>
+      <h1 className='section_title'>About ME</h1>
       <div className='personality_grid container'>{personalityBoxs}</div>
     </section>
   );

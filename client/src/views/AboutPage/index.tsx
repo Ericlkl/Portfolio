@@ -7,7 +7,6 @@ import Footer from '../../components/Layout/Footer';
 import Navbar from '../../components/Layout/Navbar';
 import MySkills from './MySkills';
 import Profile from './Profile';
-import Personality from './Personality';
 
 // Images
 import My_Family from '../../assets/img/mypictures/My_Whole_Family.jpg';
@@ -70,25 +69,10 @@ const AboutPage: React.FC = () => {
                 alt='Me and My Parents'
               />
             </div>
-            {/* <div className='hero_gallery_frame'>
-              <img
-                className='hero_gallery_frame_img'
-                src={AboutBG}
-                alt='myImg'
-              />
-            </div>
-            <div className='hero_gallery_frame'>
-              <img
-                className='hero_gallery_frame_img'
-                src={AboutBG}
-                alt='myImg'
-              />
-            </div> */}
           </div>
         </Hero>
 
         <Profile />
-        <Personality />
       </SRLWrapper>
       <MySkills />
       <Footer />

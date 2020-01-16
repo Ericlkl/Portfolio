@@ -5,6 +5,7 @@ import Fade from 'react-reveal';
 // @material-ui/icons
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import ViewCompactIcon from '@material-ui/icons/ViewCompact';
+import AssignmentIndIcon from '@material-ui/icons/AssignmentInd';
 
 import MyLogo from '../MyLogo';
 
@@ -92,6 +93,13 @@ const Navbar: React.FC<NavbarProps> = ({ logoColor }) => {
           <ViewCompactIcon />
           &nbsp;Projects
         </Link>
+        <a
+          href='https://drive.google.com/file/d/130Bs0y92n3BKYPmDm-lSXeVvCzMMMj55/view'
+          className='navbar_links_link'
+        >
+          <AssignmentIndIcon />
+          Resume
+        </a>
         <a href='https://github.com/Ericlkl' className='navbar_links_link'>
           <i className={'navbar_links_icons fab fa-github'} />
         </a>
