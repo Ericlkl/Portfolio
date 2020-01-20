@@ -2,9 +2,6 @@ import React, { useEffect, useContext } from 'react';
 import _ from 'lodash';
 import ProjectsContext from '../../context/ProjectsContext/ProjectsContext';
 
-// Assests
-import ProjectBG from '../../assets/img/project_bg.jpg';
-
 // Public Components
 import Navbar from '../../components/Layout/Navbar';
 import Spinner from '../../components/Layout/Spinner';
@@ -40,7 +37,7 @@ const ProfilePage: React.FC = () => {
       <Jumbotron
         title='Projects'
         subtitle='All Projects are made with heart'
-        backgroundIMG={ProjectBG}
+        backgroundIMG='https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80'
       />
       <DevToolsBar devTools={_.orderBy(devTools, [], ['asc'])} />
       {isloading && <Spinner />}

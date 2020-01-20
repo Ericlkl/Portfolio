@@ -16,10 +16,10 @@ type AchievementBoxProps = {
 
 const AchievementBox: React.FC<AchievementBoxProps> = ({ title, items }) => {
   return (
-    <div className='myHistory_content_achievement_box'>
-      <h4 className='myHistory_content_achievement_box_title'>{title}</h4>
+    <div className='profile_content_achievement_box'>
+      <h4 className='profile_content_achievement_box_title'>{title}</h4>
       {items.map(i => (
-        <div className='myHistory_content_achievement_box_item'>
+        <div className='profile_content_achievement_box_item'>
           <img src={i.organization} alt='Company logo' />
           <p>{i.name}</p>
         </div>
@@ -71,67 +71,58 @@ const Profile: React.FC = () => {
   ));
 
   return (
-    <section className='myHistory'>
+    <section className='profile'>
       <h1 className='section_title'>Profile</h1>
 
-      <div className='myHistory_content container'>
+      <div className='profile_content container'>
         {/* Section Left */}
-        <Fade bottom>
-          <div className='myHistory_content_intro'>
-            <h2 className='myHistory_content_intro_name'>Eric Lee</h2>
-            <p className='myHistory_content_intro_p'>
-              <span role='img' aria-label='sheep'>
-                👋
-              </span>{' '}
-              I'm Eric Lee, a 26 years old enthusiastic full-stack developer
-              from Australia. Specialising in software development, mobile
-              application development, web design, full-stack development (coded
-              this site with React + Material UI) and cloud computing.
-            </p>
-            <p className='myHistory_content_intro_p'>
-              How did I get into tech
-              <span role='img' aria-label='sheep'>
-                🤔
-              </span>
-              ? I am a big fan of console & computer games since I was 7. I 've
-              invested plenty of time on PC games and computer system (such as
-              how to use game cheater).
-            </p>
-            <p className='myHistory_content_intro_p'>
-              After I graduated from high school, they didn't teach me any
-              knowledge about technology
-              <span role='img' aria-label='sheep'>
-                😢
-              </span>
-              . Therefore, I decided to study Information Technology in college.
-              I worked on my first assignment (building website) approximately 7
-              hrs+ without feeling tired. That is how my journey started.
-            </p>
-            <p className='myHistory_content_intro_p'>
-              I love to learn and discover new technologies JavaScript, HTML,
-              and CSS. You can catch my code on my
-              <a href='https://github.com/Ericlkl'> GitHub </a>.
-            </p>
-            <p className='myHistory_content_intro_p'>
-              However, when I’m not behind my macbook, you could find me either
-              at the library watching books or swimming in Gold Coast.
-            </p>
-          </div>
-        </Fade>
 
-        {/* Left Section end */}
-
-        {/* Section Right */}
-        <Fade bottom>
-          <div className='myHistory_content_achievement'>
-            <img
-              className='myHistory_content_achievement_profile_img'
-              src={ProfileImg}
-              alt='Eric Lee'
-            />
-            {AchievementBoxs}
-          </div>
-        </Fade>
+        <h2 className='profile_content_name'>Eric Lee</h2>
+        <img
+          className='profile_content_selfie'
+          src={ProfileImg}
+          alt='Eric Lee'
+        />
+        <div className='profile_content_intro'>
+          <p className='profile_content_intro_p'>
+            <span role='img' aria-label='sheep'>
+              👋
+            </span>{' '}
+            I'm Eric Lee, a 26 years old enthusiastic full-stack developer from
+            Australia. Specialising in software development, mobile application
+            development, web design, full-stack development (coded this site
+            with React + Material UI) and cloud computing.
+          </p>
+          <p className='profile_content_intro_p'>
+            How did I get into tech
+            <span role='img' aria-label='sheep'>
+              🤔
+            </span>
+            ? I am a big fan of console & computer games since I was 7. I 've
+            invested plenty of time on PC games and computer system (such as how
+            to use game cheater).
+          </p>
+          <p className='profile_content_intro_p'>
+            After I graduated from high school, they didn't teach me any
+            knowledge about technology
+            <span role='img' aria-label='sheep'>
+              😢
+            </span>
+            . Therefore, I decided to study Information Technology in college. I
+            worked on my first assignment (building website) approximately 7
+            hrs+ without feeling tired. That is how my journey started.
+          </p>
+          <p className='profile_content_intro_p'>
+            I love to learn and discover new technologies JavaScript, HTML, and
+            CSS. You can catch my code on my
+            <a href='https://github.com/Ericlkl'> GitHub </a>.
+          </p>
+          <p className='profile_content_intro_p'>
+            However, when I’m not behind my macbook, you could find me either at
+            the library watching books or swimming in Gold Coast.
+          </p>
+        </div>
+        <div className='profile_content_achievement'>{AchievementBoxs}</div>
 
         {/* Section Right End*/}
       </div>
