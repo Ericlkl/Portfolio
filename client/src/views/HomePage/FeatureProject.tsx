@@ -49,8 +49,9 @@ const ProjectDescription: React.FC = () => {
         <h2 className='feature_project_content_descbox_title'>Tweetery</h2>
 
         <h3 className='feature_project_content_descbox_desc'>
-          Tweetery is a Web Application that allows user compare tweets in a
-          real time enviornment.
+          Tweetery is a web application that visualize how people feels about
+          celebrities / products / things by analysing tweets related to the
+          keyword user provided.
         </h3>
         {renderFeatures}
         <Fab

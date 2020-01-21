@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Particle from './Particle';
 import TextLoop from 'react-text-loop';
-
+import SocialMedia from '../../components/Layout/SocialMedia';
 import profile_img from '../../assets/img/profile_small.jpg';
 
 const Header: React.FC = () => {
@@ -44,6 +44,7 @@ const Header: React.FC = () => {
             I’m a software engineer with a passion for addressing people's
             problem.
           </h3>
+          <SocialMedia />
         </div>
       </div>
     </header>
