@@ -1,5 +1,4 @@
 import React from 'react';
-import { Fade } from 'react-reveal';
 import ProfileImg from '../../assets/img/hero2.jpg';
 import { Award } from '../../types';
 

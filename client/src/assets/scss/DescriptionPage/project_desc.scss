@@ -20,6 +20,7 @@
         &_logo {
           cursor: pointer;
           width: 100%;
+          min-width: 200px;
         }
       } // End of Card Header Left
 
@@ -46,9 +47,9 @@
           display: flex;
           &_platform {
             color: white;
-            border-radius: 1rem;
+            border-radius: 5px;
             padding: 0.75rem;
-            margin-right: 0.75rem;
+            margin: 0 0.5rem;
             background-color: rgb(133, 133, 133);
           }
         }
@@ -56,20 +57,9 @@
         &_links,
         &_links:active,
         &_links:hover {
-          margin: 0.25rem 0;
           display: flex;
-          align-items: center;
-          > i {
-            font-size: 3rem;
-          }
-          font-size: 1.2rem;
-          color: #333;
-          text-decoration: none;
-          font-weight: 300;
-
-          &:hover {
-            color: $secondary-color;
-          }
+          flex-direction: row;
+          flex-wrap: wrap;
         }
       } // End of Card Header Right
     } // End of Card Header

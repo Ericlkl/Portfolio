@@ -10,7 +10,11 @@ export type Project = {
   platforms: string[];
   repo: string;
   docker?: string;
-  download?: string[];
+  download?: {
+    ios?: string;
+    android?: string;
+    website?: string;
+  };
   intro: string;
   screenshots?: string[];
   information: any;

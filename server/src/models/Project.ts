@@ -41,8 +41,7 @@ const ProjectSchema = new Schema({
     trim: true
   },
   download: {
-    type: [String],
-    trim: true
+    type: Object
   },
   intro: {
     type: String,

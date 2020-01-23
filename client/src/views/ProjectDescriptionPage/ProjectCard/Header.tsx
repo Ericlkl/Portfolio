@@ -1,6 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 import { Project } from '../../../types';
+import DownloadBtn from '../../../components/Layout/DownloadBtn';
 
 type PlatformBoxProps = {
   name: string;
@@ -37,6 +38,8 @@ type HeaderProps = {
 
 const Header: React.FC<HeaderProps> = ({ project }) => {
   const { logo, name, desc, repo, docker, download, platforms } = project;
+
+  console.log(download);
   return (
     <div className='project_desc_card_header'>
       <div className='project_desc_card_header_left'>
@@ -55,30 +58,35 @@ const Header: React.FC<HeaderProps> = ({ project }) => {
             <PlatformBox key={platform} name={platform} />
           ))}
         </div>
-        {repo && (
-          <a href={repo} className='project_desc_card_header_right_links'>
-            <i className='fab fa-fw fa-github-square' />
-            {repo}
-          </a>
-        )}
+        <div className='project_desc_card_header_right_links'>
+          <DownloadBtn platform='github' link={repo} text='View Code' />
+          {download?.ios && (
+            <DownloadBtn platform='ios' link={download?.ios} text='Download' />
+          )}
+
+          {download?.android && (
+            <DownloadBtn
+              platform='android'
+              link={download?.android}
+              text='Download'
+            />
+          )}
+
+          {download?.website && (
+            <DownloadBtn
+              platform='website'
+              link={download?.website}
+              text='Browse Site'
+            />
+          )}
+        </div>
+
         {docker && (
           <a href={docker} className='project_desc_card_header_right_links'>
             <i className='fab fa-fw fa-docker' />
             {docker}
           </a>
         )}
-
-        {download &&
-          download.map(link => (
-            <a
-              key={link}
-              className='project_desc_card_header_right_links'
-              href={link}
-            >
-              <i className='fas fa-fw fa-download' />
-              {link}
-            </a>
-          ))}
       </div>
     </div>
   );
