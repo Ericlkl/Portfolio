@@ -87,33 +87,27 @@ const Profile: React.FC = () => {
             <span role='img' aria-label='sheep'>
               👋
             </span>{' '}
-            I'm Eric Lee, a 26 years old enthusiastic full-stack developer from
+            I'm Eric Lee, an experienced, enthusiastic full-stack developer from
             Australia. Specialising in software development, mobile application
             development, web design, full-stack development (coded this site
             with React + Material UI) and cloud computing.
           </p>
           <p className='profile_content_intro_p'>
-            How did I get into tech
-            <span role='img' aria-label='sheep'>
-              🤔
-            </span>
-            ? I am a big fan of console & computer games since I was 7. I 've
-            invested plenty of time on PC games and computer system (such as how
-            to use game cheater).
+            I have 3 Yrs+ experience efficiently coding websites and application
+            using HTML, CSS3, JavaScript Es6+, NodeJS, TypeScript and React. I
+            love building easy to use, useful, fascinating websites and
+            applications.
           </p>
           <p className='profile_content_intro_p'>
-            After I graduated from high school, they didn't teach me any
-            knowledge about technology
-            <span role='img' aria-label='sheep'>
-              😢
-            </span>
-            . Therefore, I decided to study Information Technology in college. I
-            worked on my first assignment (building website) approximately 7
-            hrs+ without feeling tired. That is how my journey started.
+            I am a person who aims to perform to the highest standard and take
+            my work very seriously. Making an excellent application not only can
+            keep my users happy but also makes me feel I can achieve something
+            big in life. I believe that is the reason why I am in love with
+            developing software.
           </p>
           <p className='profile_content_intro_p'>
-            I love to learn and discover new technologies JavaScript, HTML, and
-            CSS. You can catch my code on my
+            I love to learn and discover new technologies on YouTube and Medium.
+            You also can catch my code on my
             <a href='https://github.com/Ericlkl'> GitHub </a>.
           </p>
           <p className='profile_content_intro_p'>
