@@ -12,7 +12,7 @@
     "server-install": "npm install --prefix server",
     "server-build": "npm run build --prefix server",
     "dev": "concurrently 'npm run client' 'npm run server' ",
-    "project-install": "npm i && npm run client-install && npm run client-build && npm run server-install && npm run server-build",
+    "project-install": "npm i && npm run client-install && npm run client-build && npm run server-install && npm run server-build"
   },
   "repository": {
     "type": "git",
