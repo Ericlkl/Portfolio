@@ -59,21 +59,12 @@ ExpressJS
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-> install required packages first
+> install required packages first and build the projects file
 
 ```
 Change Directory to the client folder 
-npm install
-npm run client-install
-npm run server-install
+npm run project-install
 ```
-
-> build the projects file
-```
-npm run client-build
-npm run server-build
-```
-
 > run the program
 ```
 npm run start
