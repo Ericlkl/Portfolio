@@ -1,36 +1,36 @@
 import React from 'react';
-import Particles from 'react-particles-js';
+import Particles, { MoveDirection, OutMode } from 'react-particles-js';
 
 const Particle: React.FC = () => {
   return (
     <Particles
-      className='header_particle'
+      className="header_particle"
       params={{
         particles: {
           number: {
             value: 200,
             density: {
-              enable: false
-            }
+              enable: false,
+            },
           },
           size: {
             value: 3,
             random: true,
             anim: {
               speed: 2,
-              size_min: 0.3
-            }
+              size_min: 0.3,
+            },
           },
           line_linked: {
-            enable: false
+            enable: false,
           },
           move: {
             random: true,
             speed: 1,
-            direction: 'right',
-            out_mode: 'out'
-          }
-        }
+            direction: MoveDirection.right,
+            out_mode: OutMode.out,
+          },
+        },
       }}
     />
   );
