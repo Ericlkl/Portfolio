@@ -5,7 +5,7 @@ type JumbotronProps = {
   subtitle: string;
   backgroundIMG: string;
 };
-
+import styles from '../../styles/Layout/jumbotron.module.scss';
 const Jumbotron: React.FC<JumbotronProps> = ({
   title,
   subtitle,
@@ -16,12 +16,12 @@ const Jumbotron: React.FC<JumbotronProps> = ({
     <section
       style={{
         backgroundImage: `linear-gradient(rgba(13, 37, 56, 0.85), rgba(13, 37, 56, 0.85)),
-      url(${backgroundIMG})`
+      url(${backgroundIMG})`,
       }}
-      className='jumbotron'
+      className={styles.jumbotron}
     >
-      <h1 className='jumbotron_title'>{title}</h1>
-      <h2 className='jumbotron_subtitle'>{subtitle}</h2>
+      <h1 className={styles.jumbotron_title}>{title}</h1>
+      <h2 className={styles.jumbotron_subtitle}>{subtitle}</h2>
       {children}
     </section>
   );

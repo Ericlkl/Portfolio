@@ -1,0 +1,71 @@
+.devtools {
+  &_bar {
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+    background-color: rgb(255, 255, 255);
+    margin: 0.75rem;
+    &_btn {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+
+      > img {
+        width: 3rem;
+        height: 3rem;
+      }
+
+      &_cancel {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 1rem;
+        font-size: 1.5rem;
+        color: red;
+        cursor: pointer;
+        z-index: 2;
+      }
+
+      &.activate {
+        transform: scale(1.25);
+      }
+
+      &.deactivate {
+        opacity: 0.5;
+      }
+
+      &:hover {
+        transition: transform 0.5s;
+        transform: scale(1.25);
+      }
+      &_name {
+        color: rgb(100, 100, 100);
+        font-weight: 400;
+        margin: 0.5rem 0;
+        text-transform: capitalize;
+      }
+    }
+  }
+}
+
+@media (min-width: 650px) {
+  .devtools {
+    &_bar {
+      &_btn {
+        padding: 0.5rem 1rem;
+        > img {
+          width: 5rem;
+          height: 5rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+}

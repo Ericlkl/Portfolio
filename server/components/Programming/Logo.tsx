@@ -1,5 +1,4 @@
 import React from 'react';
-import _ from 'lodash';
 
 type LogoProps = {
   toolName: string;
@@ -7,8 +6,10 @@ type LogoProps = {
   onLogoClick?: () => void;
 };
 
-const getSvgPornIconName: (name: string) => string = name => {
-  switch (_.trim(name).toLowerCase()) {
+const getSvgPornIconName: (name: string) => string = (name) => {
+  // Todo: Fix Trim
+  // switch (_.trim(name).toLowerCase()) {
+  switch (name) {
     case 'typescript':
       return 'typescript-icon';
     case 'html':
@@ -37,7 +38,7 @@ const getSvgPornIconName: (name: string) => string = name => {
     case 'docker':
       return 'docker-icon';
     default:
-      return _.trim(name).toLowerCase();
+      return name.toLowerCase();
   }
 };
 
@@ -49,7 +50,7 @@ const Logo: React.FC<LogoProps> = ({ toolName, className, onLogoClick }) => {
       onClick={onLogoClick}
       className={className}
       src={`https://cdn.svgporn.com/logos/${iconName}.svg`}
-      alt='Programming Logo'
+      alt="Programming Logo"
     />
   );
 };
