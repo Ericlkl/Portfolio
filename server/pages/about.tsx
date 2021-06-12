@@ -1,8 +1,8 @@
 import React, { Fragment, useEffect } from 'react';
 
 // core components
-import LayoutComponents from '../components/Layout';
-import PageComponents from '../sections/AboutPage';
+import LayoutComponents from '@/components/Layout';
+import PageComponents from '@/sections/AboutPage';
 const { Navbar, Footer } = LayoutComponents;
 const { Hero, MySkills, Profile, MyImages } = PageComponents;
 

@@ -6,7 +6,7 @@ type LogoProps = {
   onLogoClick?: () => void;
 };
 
-const getSvgPornIconName: (name: string) => string = (name) => {
+const getSvgPornIconName: (name: string) => string = (name: string) => {
   // Todo: Fix Trim
   // switch (_.trim(name).toLowerCase()) {
   switch (name) {

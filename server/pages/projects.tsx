@@ -1,15 +1,15 @@
 // Public Components
-import LayoutComponents from '../components/Layout';
+import LayoutComponents from '@/components/Layout';
 const { BasicLayout, Spinner, Jumbotron } = LayoutComponents;
 
 // Page Specific Components
-import PageComponents from '../sections/ProjectsPage';
+import PageComponents from '@/sections/ProjectsPage';
 const { DevToolsBar, ProjectGrid } = PageComponents;
 // Provider
-import DevToolsProvider from '../context/DevToolsContext/DevToolsProvider';
+import DevToolsProvider from '@/context/DevToolsContext/DevToolsProvider';
 
 // Configs
-import configs from '../config'
+import configs from '@/config'
 const {devToolsOptions} = configs;
 
 const ProjectsPage: React.FC = () => {

@@ -7,7 +7,7 @@ import AssignmentIndIcon from '@material-ui/icons/AssignmentInd';
 
 import MyLogo from '../MyLogo';
 
-import styles from '../../styles/Layout/navbar.module.scss';
+import styles from '@/styles/Layout/navbar.module.scss';
 
 type NavState = {
   direction: 'vertical' | 'horizontal';
@@ -50,41 +50,43 @@ const Navbar: React.FC<NavbarProps> = ({ logoColor }) => {
   // }, []);
 
   return (
-    <nav
-      className={`${styles.navbar} ${styles.horizontal} ${styles['space-around']}`}
-    >
-      <div className={`${styles.navbar_main} container`}>
-        <div className={styles.navbar_main_band}>
-          {/* <Link onMouseOut={hideName} onMouseOver={revealName} to='/'> */}
-          <MyLogo color={logoColor} className={styles.navbar_main_band_logo} />
-          {/* </Link> */}
-
-          <h1 className={styles.navbar_main_band_name}>ERIC LEE</h1>
+    <nav className={styles.navbar}>
+      <div className={`${styles.nav_content} container`}>
+        <div className={styles.band}>
+          <MyLogo color={logoColor} className={styles.nav_logo} />
+          <h1 className={styles.band_name}>ERIC LEE</h1>
         </div>
-        <div className={styles.navbar_main_hmbg_btn}>
+        <div className={`${styles.hamburger_btn} ${styles.active}`}>
           <div className={styles.bar1} />
           <div className={styles.bar2} />
           <div className={styles.bar3} />
         </div>
       </div>
 
-      <div className={`${styles.navbar_links} ${styles.horizontal}`}>
-        <AccountCircleIcon />
-        &nbsp;About
-        <ViewCompactIcon />
-        &nbsp;Projects
+      <div className={`${styles.nav_links} ${styles.active}`}>
         <a
           href="https://drive.google.com/file/d/130Bs0y92n3BKYPmDm-lSXeVvCzMMMj55/view"
-          className={styles.navbar_links_link}
+          className={styles.nav_link}
         >
-          <AssignmentIndIcon />
-          &nbsp;Resume
+          <AccountCircleIcon />
+          About
         </a>
         <a
-          href="https://github.com/Ericlkl"
-          className={styles.navbar_links_link}
+          href="https://drive.google.com/file/d/130Bs0y92n3BKYPmDm-lSXeVvCzMMMj55/view"
+          className={styles.nav_link}
         >
-          <i className={`${styles.navbar_links_icons} fab fa-github`} />
+          <ViewCompactIcon />
+          Projects
+        </a>
+        <a
+          href="https://drive.google.com/file/d/130Bs0y92n3BKYPmDm-lSXeVvCzMMMj55/view"
+          className={styles.nav_link}
+        >
+          <AssignmentIndIcon />
+          Resume
+        </a>
+        <a href="https://github.com/Ericlkl" className={styles.nav_link}>
+          <i className={`${styles.nav_link_icon} fab fa-github`} />
         </a>
       </div>
     </nav>

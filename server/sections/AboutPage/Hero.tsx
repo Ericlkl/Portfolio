@@ -1,5 +1,5 @@
 import { HeroProps } from './interfaces';
-import styles from '../../styles/Layout/hero.module.scss';
+import styles from '@/styles/Layout/hero.module.scss';
 const Hero: React.FC<HeroProps> = ({
   img,
   title,

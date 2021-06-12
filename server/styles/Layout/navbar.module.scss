@@ -13,6 +13,8 @@
 @import '../variables.scss';
 
 .navbar {
+  display: flex;
+  flex-direction: column;
   position: sticky;
   overflow: auto;
   top: 0; /* required */
@@ -20,123 +22,128 @@
   z-index: 2;
   background-color: $primary-color;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 6px 20px;
+}
 
-  &_main {
+// Content
+.nav_content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 1rem;
+  padding: 0rem 1.5rem;
+}
+
+// Left Section
+.band {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    .band_name {
+      display: block;
+    }
+  }
+}
+
+.band_name {
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 1.6rem;
+  letter-spacing: 0.4rem;
+  padding: 0 2rem;
+  color: #fff;
+  z-index: -10;
+  display: none;
+}
+
+.nav_logo {
+  width: 50px;
+  height: 50px;
+}
+
+// Right Section
+.hamburger_btn {
+  display: inline-block;
+  cursor: pointer;
+  .bar1,
+  .bar2,
+  .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  &.active{
+    /* Rotate first bar */
+    .bar1 {
+      -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+      transform: rotate(-45deg) translate(-9px, 6px);
+    }
+
+    /* Fade out the second bar */
+    .bar2 {
+      opacity: 0;
+    }
+
+    /* Rotate last bar */
+    .bar3 {
+      -webkit-transform: rotate(45deg) translate(-8px, -8px);
+      transform: rotate(45deg) translate(-8px, -8px);
+    }
+  }
+}
+
+.nav_links{
+  display: none;
+  padding: 0rem 1.5rem;
+  flex-direction: column;
+  align-items: center;
+  > a {
+    color: white;
+    text-decoration: none;
+  }
+
+  &.active {
+    display: flex;
+  }
+}
+
+.nav_link {
+  display: flex;
+  padding: 0.75rem;
+  font-size: 1.2rem;
+  &:hover {
+    color: $secondary-color;
+  }
+}
+
+.nav_link_icon {
+  color: white;
+  font-size: 2rem;
+  &:hover {
+    color: $secondary-color;
+  }
+}
+
+@media (min-width: 700px) {
+  .navbar {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .nav_content {
+    .hamburger_btn {
+      display: none;
+    }
+  }
+
+  .nav_links {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin: 1rem;
-    padding: 0rem 1.5rem;
-
-    &_band {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      &_logo {
-        width: 50px;
-        height: 50px;
-      }
-
-      &_name {
-        text-decoration: none;
-        font-weight: 800;
-        font-size: 1.6rem;
-        letter-spacing: 0.4rem;
-        padding: 0 2rem;
-        color: #fff;
-        z-index: -10;
-      }
-    }
-
-    &_hmbg_btn {
-      display: inline-block;
-      cursor: pointer;
-
-      .bar1,
-      .bar2,
-      .bar3 {
-        width: 35px;
-        height: 5px;
-        background-color: #fff;
-        margin: 6px 0;
-        transition: 0.4s;
-      }
-
-      &.change {
-        /* Rotate first bar */
-        .bar1 {
-          -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-          transform: rotate(-45deg) translate(-9px, 6px);
-        }
-
-        /* Fade out the second bar */
-        .bar2 {
-          opacity: 0;
-        }
-
-        /* Rotate last bar */
-        .bar3 {
-          -webkit-transform: rotate(45deg) translate(-8px, -8px);
-          transform: rotate(45deg) translate(-8px, -8px);
-        }
-      }
-    }
-  }
-
-  &_links {
-    padding: 0rem 1.5rem;
-    align-items: center;
-
-    &_link {
-      display: flex;
-      padding: 0.75rem;
-      font-size: 1.2rem;
-      &:hover {
-        color: $secondary-color;
-      }
-    }
-
-    > a {
-      color: white;
-      text-decoration: none;
-    }
-
-    &_icons {
-      color: white;
-      font-size: 2rem;
-      &:hover {
-        color: $secondary-color;
-      }
-    }
-  }
-}
-
-.horizontal {
-  display: flex;
-  flex-direction: row;
-  &.space-around {
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  &.space-between {
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  &.center {
-    justify-content: center;
-    align-items: baseline;
-  }
-}
-
-.vertical {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  &.space-around {
-    justify-content: space-around;
   }
 }
