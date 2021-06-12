@@ -1,0 +1,101 @@
+@import '../../variables.scss';
+.personality {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  background-color: rgb(233, 233, 233);
+
+  &_grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 1fr;
+    grid-gap: 2rem;
+    margin: 3rem 0;
+
+    &_box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &_title {
+        margin: 0.5rem 0;
+        font-weight: 400;
+        font-size: 1.5rem;
+      }
+
+      &_desc {
+        text-align: center;
+        color: #666;
+        padding: 0 4rem;
+        font-size: 1.05rem;
+        font-weight: 300;
+
+        > span {
+          font-weight: bold;
+        }
+      }
+
+      &_hexagon {
+        width: 100px;
+        height: 55px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $secondary-color;
+        position: relative;
+        margin: 2rem 0;
+        > i {
+          font-size: 2.5rem;
+          color: white;
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: -25px;
+          left: 0;
+          width: 0;
+          height: 0;
+          border-left: 50px solid transparent;
+          border-right: 50px solid transparent;
+          border-bottom: 25px solid $secondary-color;
+        }
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: -25px;
+          left: 0;
+          width: 0;
+          height: 0;
+          border-left: 50px solid transparent;
+          border-right: 50px solid transparent;
+          border-top: 25px solid $secondary-color;
+        }
+      }
+    }
+  }
+}
+
+// Tablet
+@media (min-width: 750px) {
+  .personality {
+    &_grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 2rem;
+    }
+  }
+}
+
+// Tablet
+@media (min-width: 1250px) {
+  .personality {
+    &_grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 2rem;
+    }
+  }
+}

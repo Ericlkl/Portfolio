@@ -1,0 +1,111 @@
+.profile {
+  background-color: rgb(233, 233, 233);
+  padding: 1rem;
+
+  &_content {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    overflow: hidden;
+
+    &_name {
+      color: $secondary-color;
+      font-size: 2.5rem;
+    }
+
+    &_selfie {
+      width: 100%;
+      padding: 1rem 0;
+      cursor: pointer;
+    }
+
+    &_intro {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin: 1rem 0;
+
+      &_p {
+        padding: 1rem 0;
+        font-size: 1.2rem;
+        line-height: 1.7rem;
+        font-weight: 400;
+        color: $primary-color;
+        white-space: pre-line;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-word;
+        hyphens: auto;
+      }
+    }
+
+    &_achievement {
+      margin: 0 auto;
+
+      &_box {
+        &_title {
+          padding: 0.5rem 0;
+        }
+
+        &_item {
+          display: flex;
+          align-items: center;
+          padding: 0.25rem 0;
+
+          > img {
+            margin: 0 0.5rem;
+            width: 50px;
+            height: 50px;
+          }
+
+          > p {
+            font-weight: 400;
+            font-size: 1.1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Tablet
+@media (min-width: 800px) {
+  .profile {
+    &_content {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: repeat(12, 1fr);
+      max-height: 900px;
+
+      &_name {
+        grid-column: 1/ 8;
+        grid-row: 1;
+      }
+
+      &_selfie {
+        grid-column: 8 / 12;
+        grid-row: 1/5;
+      }
+
+      &_intro {
+        grid-column: 1/ 7;
+        grid-row: 2/12;
+      }
+
+      &_achievement {
+        grid-column: 8 / 12;
+        grid-row: 5/12;
+      }
+    }
+  }
+}
+
+// Laptop
+@media (min-width: 1050px) {
+  // .profile {
+  //   &_content {
+  //     display: grid;
+  //     grid-template-columns: 50% 50%;
+  //   }
+  // }
+}

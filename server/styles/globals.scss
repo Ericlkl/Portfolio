@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import './variables.scss';
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+}
+
+// Utilities class
+.container {
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 1rem;
+}
+
+.section_title {
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+  color: $primary-color;
+  margin: 1rem;
+  &:after {
+    display: block;
+    height: 3.5px;
+    background-color: $primary-color;
+    content: '';
+    width: 6rem;
+    margin: 1rem auto;
+  }
+}
+
+.p-1 {
+  padding: 0.5rem;
+}
+
+.p-2 {
+  padding: 1rem;
+}
+
+.p-3 {
+  padding: 1.5rem;
+}
+
+.p-4 {
+  padding: 2rem;
+}
+
+.p-5 {
+  padding: 2.5rem;
+}
+
+.py-1 {
+  padding: 0.5rem 0rem;
+}
+
+.py-2 {
+  padding: 1rem 0rem;
+}
+
+.py-3 {
+  padding: 1.5rem 0rem;
+}
+
+.py-4 {
+  padding: 2rem 0rem;
+}
+
+.py-5 {
+  padding: 2.5rem 0rem;
+}
+
+.px-1 {
+  padding: 0rem 0.5rem;
+}
+
+.px-2 {
+  padding: 0rem 1rem;
+}
+
+.px-3 {
+  padding: 0rem 1.5rem;
+}
+
+.px-4 {
+  padding: 0rem 2rem;
+}
+
+.px-5 {
+  padding: 0rem 2.5rem;
+}
+
+.white {
+  color: rgb(255, 255, 255);
+}
+
+.bold {
+  font-weight: 500;
+}
+
+.text-primary {
+  color: $primary-color;
+}
+
+.text_secondary {
+  color: $secondary-color;
+}
+
+a,
+a:hover,
+a:active {
+  text-decoration: none;
+}
