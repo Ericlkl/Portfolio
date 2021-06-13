@@ -5,25 +5,37 @@ const features = [
   {
     name: 'Interactive Web Application',
     icon: (
-      <i className="feature_project_content_descbox_feature_icon fas fa-laptop-code" />
+      <i
+        aria-hidden="true"
+        className="feature_project_content_descbox_feature_icon fas fa-laptop-code"
+      />
     ),
   },
   {
     name: 'MERN Stack Development',
     icon: (
-      <i className="feature_project_content_descbox_feature_icon fab fa-react" />
+      <i
+        aria-hidden="true"
+        className="feature_project_content_descbox_feature_icon fab fa-react"
+      />
     ),
   },
   {
     name: 'Data Visualization',
     icon: (
-      <i className="feature_project_content_descbox_feature_icon fas fa-chart-area" />
+      <i
+        aria-hidden="true"
+        className="feature_project_content_descbox_feature_icon fas fa-chart-area"
+      />
     ),
   },
   {
     name: 'Live Streaming',
     icon: (
-      <i className="feature_project_content_descbox_feature_icon fas fa-satellite-dish" />
+      <i
+        aria-hidden="true"
+        className="feature_project_content_descbox_feature_icon fas fa-satellite-dish"
+      />
     ),
   },
 ];

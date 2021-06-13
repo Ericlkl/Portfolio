@@ -72,7 +72,10 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
 
   return (
     <div className={styles.services_content_cards}>
-      <i className={`${styles.services_content_cards_icons} fas ${icon}`} />
+      <i
+        aria-hidden="true"
+        className={`${styles.services_content_cards_icons} fas ${icon}`}
+      />
       <h1 className={styles.services_content_cards_title}>{name}</h1>
       <h2 className={styles.services_content_cards_subtitle}>{features}</h2>
       <p className={styles.services_content_cards_desc}> {desc} </p>

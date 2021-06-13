@@ -5,7 +5,7 @@ import styles from '../../styles/pages/HomePage/personality.module.scss';
 
 const personalities: Personality[] = [
   {
-    icon: <i className="fas fa-puzzle-piece" />,
+    icon: <i aria-hidden="true" className="fas fa-puzzle-piece" />,
     title: 'Problem Solver',
     description: (
       <p className={styles.personality_grid_box_desc}>
@@ -15,7 +15,7 @@ const personalities: Personality[] = [
     ),
   },
   {
-    icon: <i className="far fa-comments" />,
+    icon: <i aria-hidden="true" className="far fa-comments" />,
     title: 'Team Player',
     description: (
       <p className={styles.personality_grid_box_desc}>
@@ -25,7 +25,7 @@ const personalities: Personality[] = [
     ),
   },
   {
-    icon: <i className="far fa-lightbulb" />,
+    icon: <i aria-hidden="true" className="far fa-lightbulb" />,
     title: 'Enthusiastic Energiser',
     description: (
       <p className={styles.personality_grid_box_desc}>
@@ -35,7 +35,7 @@ const personalities: Personality[] = [
     ),
   },
   {
-    icon: <i className="far fa-heart" />,
+    icon: <i aria-hidden="true" className="far fa-heart" />,
     title: 'Passionate Empathiser',
     description: (
       <p className={styles.personality_grid_box_desc}>
@@ -45,7 +45,7 @@ const personalities: Personality[] = [
     ),
   },
   {
-    icon: <i className="far fa-compass" />,
+    icon: <i aria-hidden="true" className="far fa-compass" />,
     title: 'Curious Discoverer',
     description: (
       <p className={styles.personality_grid_box_desc}>
@@ -55,7 +55,7 @@ const personalities: Personality[] = [
     ),
   },
   {
-    icon: <i className="fas fa-pencil-ruler" />,
+    icon: <i aria-hidden="true" className="fas fa-pencil-ruler" />,
     title: 'Quality Assurer',
     description: (
       <p className={styles.personality_grid_box_desc}>

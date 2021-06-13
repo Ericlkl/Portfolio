@@ -4,24 +4,21 @@ import React, { Fragment } from 'react';
 import FeatureProject from '@/sections/HomePage/FeatureProject';
 
 // Basic Layout component
-import Navbar from '@/components/Layout/Navbar';
-import Footer from '@/components/Layout/Footer';
-
+import LayoutComponents from '@/components/Layout';
+const { BasicLayout } = LayoutComponents;
 // Page Component
 import HomeComponents from '@/sections/HomePage';
 const { Header, Services, Contact, PersonalityGrid } = HomeComponents;
 
 const HomePage: React.FC = () => {
   return (
-    <Fragment>
-      <Navbar logoColor="blue" />
+    <BasicLayout>
       <Header />
       <PersonalityGrid />
       <Services />
       <FeatureProject />
       <Contact />
-      <Footer />
-    </Fragment>
+    </BasicLayout>
   );
 };
 

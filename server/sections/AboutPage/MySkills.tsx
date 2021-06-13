@@ -34,7 +34,11 @@ const SkillBox: React.FC<SkillBoxProps> = ({ fieldName, skills }) => {
 const MySkills: React.FC = () => {
   const renderSkillBoxes = () =>
     skillBoxData.map((boxData, i) => (
-      <SkillBox fieldName={boxData.fieldName} skills={boxData.skills} />
+      <SkillBox
+        key={boxData.fieldName}
+        fieldName={boxData.fieldName}
+        skills={boxData.skills}
+      />
     ));
   return (
     <section className={styles['mySkills']}>

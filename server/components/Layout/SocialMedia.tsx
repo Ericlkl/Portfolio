@@ -14,7 +14,7 @@ const SocialMedia: React.FC = () => {
         }
       >
         <span className={styles['social-button__inner']}>
-          <i className="fab fa-github" />
+          <i aria-hidden="true" className="fab fa-github" />
         </span>
       </a>
       <a
@@ -26,7 +26,7 @@ const SocialMedia: React.FC = () => {
         }
       >
         <span className={styles['social-button__inner']}>
-          <i className="fab fa-linkedin-in" />
+          <i aria-hidden="true" className="fab fa-linkedin-in" />
         </span>
       </a>
       <a
@@ -38,7 +38,7 @@ const SocialMedia: React.FC = () => {
         }
       >
         <span className={styles['social-button__inner']}>
-          <i className="fab fa-facebook-f" />
+          <i aria-hidden="true" className="fab fa-facebook-f" />
         </span>
       </a>
       <a
@@ -50,7 +50,7 @@ const SocialMedia: React.FC = () => {
         }
       >
         <span className={styles['social-button__inner']}>
-          <i className="fab fa-instagram" />
+          <i aria-hidden="true" className="fab fa-instagram" />
         </span>
       </a>
     </div>

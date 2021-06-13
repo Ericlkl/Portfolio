@@ -9,7 +9,7 @@ type LogoProps = {
 const getSvgPornIconName: (name: string) => string = (name: string) => {
   // Todo: Fix Trim
   // switch (_.trim(name).toLowerCase()) {
-  switch (name) {
+  switch (name.toLowerCase()) {
     case 'typescript':
       return 'typescript-icon';
     case 'html':

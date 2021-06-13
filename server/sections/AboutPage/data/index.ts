@@ -44,8 +44,8 @@ export const skillBoxData = [
   {
     fieldName: 'Front End',
     skills: [
-      'HTML5',
-      'CSS3',
+      'HTML',
+      'CSS',
       'SCSS',
       'JavaScript',
       'TypeScript',
