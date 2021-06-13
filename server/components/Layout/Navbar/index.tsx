@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 // Components
 import MyLogo from '@/components/MyLogo';
 import NavLinks from './NavLinks';
+import NavLink from './NavLink';
 import HamburgerButton from './HamburgerButton';
 
 import styles from '@/styles/Layout/navbar.module.scss';
@@ -10,27 +11,31 @@ import styles from '@/styles/Layout/navbar.module.scss';
 // Props
 import { NavbarProps } from '@/components/Layout/interfaces';
 
-const Navbar: React.FC<NavbarProps> = ({ logoColor }) => {
-  // const [active, setActive] = useState<NavState>({
-  //   direction: window.innerWidth > 650 ? 'horizontal' : 'vertical',
-  //   showName: false,
-  //   expend: window.innerWidth > 650 ? true : false,
-  // });
+// data
+import config from '@/config';
+const { navbarInfo } = config;
 
+const Navbar: React.FC<NavbarProps> = ({ logoColor }) => {
+  const [active, setActive] = useState(false);
+
+  // Todo: SSR Support
+  const { band, navLinks } = navbarInfo;
   // Expend the menu
-  // const toggleMenu = () =>
-  //   setNavState({ ...navState, expend: !navState.expend });
+  const toggleMenu = () => setActive(!active);
 
   return (
     <nav className={styles.navbar}>
       <div className={`${styles.nav_content} container`}>
-        <div className={styles.band}>
-          {/* <MyLogo color={logoColor} className={styles.nav_logo} /> */}
-          <h1 className={styles.band_name}>ERIC LEE</h1>
-        </div>
-        <HamburgerButton active={true} />
+        <NavLink href="/">
+          <div className={styles.band}>
+            <MyLogo color={logoColor} className={styles.nav_logo} />
+            <h1 className={styles.band_name}>{band.name}</h1>
+          </div>
+        </NavLink>
+
+        <HamburgerButton active={active} onClick={toggleMenu} />
       </div>
-      <NavLinks />
+      <NavLinks active={active} navLinks={navLinks} />
     </nav>
   );
 };

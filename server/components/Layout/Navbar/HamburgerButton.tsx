@@ -13,13 +13,16 @@ const Bars: React.FC = () => {
   );
 };
 
-const HamburgerButton: React.FC<HamburgerButtonProps> = ({ active }) => {
+const HamburgerButton: React.FC<HamburgerButtonProps> = ({
+  active,
+  onClick,
+}) => {
   const className = active
     ? styles.hamburger_btn + ' ' + styles.active
     : styles.hamburger_btn;
 
   return (
-    <div className={className}>
+    <div className={className} onClick={onClick}>
       <Bars />
     </div>
   );

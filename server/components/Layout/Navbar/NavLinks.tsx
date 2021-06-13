@@ -1,42 +1,27 @@
 import styles from '@/styles/Layout/navbar.module.scss';
 
-// @material-ui/icons
-import AccountCircleIcon from '@material-ui/icons/AccountCircle';
-import ViewCompactIcon from '@material-ui/icons/ViewCompact';
-import AssignmentIndIcon from '@material-ui/icons/AssignmentInd';
+// Components
+import NavLink from './NavLink';
 
-const NavLinks: React.FC = () => {
-  return (
-    <div className={`${styles.nav_links} ${styles.active}`}>
-      <a
-        href="https://drive.google.com/file/d/130Bs0y92n3BKYPmDm-lSXeVvCzMMMj55/view"
-        className={styles.nav_link}
-      >
-        <AccountCircleIcon />
-        About
-      </a>
-      <a
-        href="https://drive.google.com/file/d/130Bs0y92n3BKYPmDm-lSXeVvCzMMMj55/view"
-        className={styles.nav_link}
-      >
-        <ViewCompactIcon />
-        Projects
-      </a>
-      <a
-        href="https://drive.google.com/file/d/130Bs0y92n3BKYPmDm-lSXeVvCzMMMj55/view"
-        className={styles.nav_link}
-      >
-        <AssignmentIndIcon />
-        Resume
-      </a>
-      <a href="https://github.com/Ericlkl" className={styles.nav_link}>
-        <i
-          aria-hidden="true"
-          className={`${styles.nav_link_icon} fab fa-github`}
-        />
-      </a>
-    </div>
-  );
+// Interfaces
+import { NavLinksProps } from '../interfaces';
+
+const NavLinks: React.FC<NavLinksProps> = ({ active, navLinks }) => {
+  const wrapperClassName = active
+    ? styles.nav_links + ' ' + styles.active
+    : styles.nav_links;
+
+  const NavLinkComponents = navLinks.map((navLink) => (
+    <NavLink
+      key={navLink.pageName}
+      href={navLink.href}
+      label={navLink.pageName}
+    >
+      {navLink.icon}
+    </NavLink>
+  ));
+
+  return <div className={wrapperClassName}>{NavLinkComponents}</div>;
 };
 
 export default NavLinks;

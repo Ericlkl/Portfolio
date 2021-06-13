@@ -11,9 +11,9 @@ const AboutPage: React.FC = () => {
     <BasicLayout>
       <Hero
         img="https://i.imgur.com/njGf0mh.jpg?3"
-        desc="I enjoy developing simple and beautiful application to solve complex problems. When I'm not coding, watching movies or reading books, you'll find me thinking, swimming or enjoying sunshine in Gold Coast."
+        desc="I enjoy developing simple and beautiful application to solve complex problems. When I'm not coding, watching movies or reading books, you'll find me swimming or enjoying sunshine in Gold Coast."
         title="About Me"
-        subtitle="I'm a software engineer based in Brisbane, Australia."
+        subtitle="I'm a software engineer based in Hong Kong."
       >
         <MyImages />
       </Hero>
