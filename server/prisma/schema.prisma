@@ -1,0 +1,60 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Step1. npx prisma init - init script
+// Step2. npx prisma migrate dev - create database file and keep it up-to-date
+// Step3. npx prisma studio - open management GUI
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model DevelopmentField {
+  id              Int               @id @default(autoincrement())
+  name            String
+  DevelopmentTool DevelopmentTool[]
+}
+
+model DevelopmentTool {
+  id                 Int              @id @default(autoincrement())
+  name               String
+  projects           Project[]
+  devField           DevelopmentField @relation(fields: [developmentFieldId], references: [id])
+  developmentFieldId Int
+}
+
+model SoftwarePlatform {
+  id       Int       @id @default(autoincrement())
+  name     String
+  projects Project[]
+}
+
+model ProjectScreenshots {
+  id        Int      @id @default(autoincrement())
+  url       String
+  Project   Project? @relation(fields: [projectId], references: [id])
+  projectId Int?
+}
+
+model Project {
+  id           Int                  @id @default(autoincrement())
+  name         String
+  type         String
+  repo         String
+  logo         String
+  intro        String
+  devTools     DevelopmentTool[]
+  language     String
+  coverUrl     String
+  platforms    SoftwarePlatform[]
+  description  String
+  dockerHubUrl String
+  downloadUrl  String
+  tags         String
+  screenshots  ProjectScreenshots[]
+}
