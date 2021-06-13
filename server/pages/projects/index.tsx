@@ -1,3 +1,5 @@
+// Library
+import { PrismaClient } from '@prisma/client';
 // Public Components
 import LayoutComponents from '@/components/Layout';
 const { BasicLayout, Spinner, Jumbotron } = LayoutComponents;
@@ -9,10 +11,31 @@ const { DevToolsBar, ProjectGrid } = PageComponents;
 import DevToolsProvider from '@/context/DevToolsContext/DevToolsProvider';
 
 // Configs
-import configs from '@/config'
-const {devToolsOptions} = configs;
+import configs from '@/config';
+const { devToolsOptions } = configs;
 
-const ProjectsPage: React.FC = () => {
+import { Project } from '@/models';
+
+export async function getStaticProps() {
+  const prisma = new PrismaClient();
+  const projects = await prisma.project.findMany({
+    include: {
+      devTools: true,
+      platforms: true,
+    },
+  });
+  return {
+    props: {
+      projects,
+    },
+  };
+}
+
+interface ProjectsPageProps {
+  projects: Project[];
+}
+
+const ProjectsPage: React.FC<ProjectsPageProps> = ({ projects }) => {
   return (
     <DevToolsProvider>
       <BasicLayout>
@@ -22,8 +45,7 @@ const ProjectsPage: React.FC = () => {
           backgroundIMG="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80"
         />
         <DevToolsBar devTools={devToolsOptions} />
-        <Spinner />
-      {/* {projects && <ProjectGrid projects={projects} />} */} */}
+        <ProjectGrid projects={projects} />
       </BasicLayout>
     </DevToolsProvider>
   );

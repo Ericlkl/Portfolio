@@ -11,7 +11,8 @@ const ProjectGrid: React.FC<ProjectGridProps> = ({ projects }) => {
 
   const projectCards = projects
     .filter((project) => {
-      if (filter) return project.stacks.includes(filter);
+      if (filter)
+        return project.devTools.map((devTool) => devTool.name).includes(filter);
       else return true;
     })
     .map((project) => <ProjectCard key={project.name} project={project} />);

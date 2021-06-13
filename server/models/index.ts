@@ -1,3 +1,24 @@
+export interface DevelopmentField {
+  id: number;
+  name: string;
+  DevelopmentTool: DevelopmentTool[];
+}
+
+export interface DevelopmentTool {
+  id: number;
+  name: string;
+}
+
+export interface SoftwarePlatform {
+  id: number;
+  name: string;
+}
+
+export interface ProjectScreenshots {
+  id: number;
+  url: string;
+}
+
 export interface Project {
   id: number;
   name: string;
@@ -5,13 +26,13 @@ export interface Project {
   repo: string;
   logo: string;
   intro: string;
-  stacks: string[];
+  devTools?: DevelopmentTool[];
   language: string;
   coverUrl: string;
-  platforms: string[];
+  platforms?: SoftwarePlatform[];
   description: string;
   dockerHubUrl: string;
-  downloadUrl: object;
-  screenshots: string[];
-  tags: object;
+  downloadUrl: string;
+  screenshots?: ProjectScreenshots[];
+  tags: string;
 }

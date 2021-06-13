@@ -7,13 +7,17 @@ import { ProjectCardProps } from '../interfaces';
 import styles from '../../../styles/pages/projectsPage/projects.module.scss';
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
-  const { _id, name, cover, intro, stacks, language } = project;
-
-  const stacklbls = stacks.map((stack) => (
-    <p key={stack} className="project_card_inner_front_left_stack_lbl">
-      {stack}
-    </p>
-  ));
+  const { name, coverUrl, intro, devTools, language } = project;
+  const devToolLabels = devTools.map((devTool) => {
+    return (
+      <p
+        key={devTool.name}
+        className={styles['project_card_inner_front_left_stack_lbl']}
+      >
+        {devTool.name}
+      </p>
+    );
+  });
 
   const onViewProjectBtnClicked = () => {
     // Todo: Navigate user to next page
@@ -24,7 +28,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       <div className={styles.project_card_inner}>
         <div
           style={{
-            backgroundImage: `linear-gradient(rgba(66, 66, 66, 0.6), rgba(66, 66, 66, 0.6)), url(${cover}) `,
+            backgroundImage: `linear-gradient(rgba(66, 66, 66, 0.6), rgba(66, 66, 66, 0.6)), url(${coverUrl}) `,
           }}
           className={styles.project_card_inner_front}
         >
@@ -34,7 +38,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             </h3>
 
             <div className={styles.project_card_inner_front_left_stack}>
-              {stacklbls}
+              {devToolLabels}
             </div>
           </div>
           <div className={styles.project_card_inner_front_right}>
