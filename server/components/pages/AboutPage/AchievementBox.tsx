@@ -1,5 +1,5 @@
 import { AchievementBoxProps } from './interfaces';
-import styles from '../../styles/pages/AboutPage/profile.module.scss';
+import styles from '../../../styles/pages/AboutPage/profile.module.scss';
 const AchievementBox: React.FC<AchievementBoxProps> = ({ title, items }) => {
   const Achievements = items.map((i) => (
     <div key={i.name} className={styles.profile_content_achievement_box_item}>

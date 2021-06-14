@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from '../../styles/pages/HomePage/services.module.scss';
+import styles from '../../../styles/pages/HomePage/services.module.scss';
 const services = [
   {
     icon: 'fa-laptop',

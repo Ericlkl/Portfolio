@@ -1,7 +1,7 @@
 import { myImages } from './data';
 import { FrameProps } from './interfaces';
 
-import styles from '../../styles/Layout/hero.module.scss';
+import styles from '../../../styles/Layout/hero.module.scss';
 
 // Todo: To fix the scss file to different files later
 

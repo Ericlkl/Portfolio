@@ -4,7 +4,7 @@ type SectionProps = {
   title: string;
 };
 
-import styles from '../../../styles/pages/ProjectPage/project_desc.module.scss';
+import styles from '../../../../styles/pages/ProjectPage/project_desc.module.scss';
 
 const Section: React.FC<SectionProps> = ({ title, children }) => {
   return (

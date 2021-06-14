@@ -1,10 +1,10 @@
 import Section from './Section';
-import ProgrammingLogo from '../../../components/Common/DevToolIcon';
+import ProgrammingLogo from '../../../common/DevToolIcon';
 
 // interfaces
-import { DevelopmentTool } from '../../../interfaces';
+import { DevelopmentTool } from '../../../../interfaces';
 
-import styles from '../../../styles/pages/ProjectPage/project_desc.module.scss';
+import styles from '../../../../styles/pages/ProjectPage/project_desc.module.scss';
 
 interface DependencyProps {
   devTools: DevelopmentTool[];

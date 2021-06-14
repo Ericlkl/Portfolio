@@ -1,11 +1,11 @@
 import router from 'next/router';
 import { Fab } from '@material-ui/core';
-import ProgrammingLogo from '../../../components/Common/DevToolIcon';
+import ProgrammingLogo from '../../../common/DevToolIcon';
 
 // interfaces
 import { ProjectCardProps } from '../interfaces';
 // styles
-import styles from '../../../styles/pages/projectsPage/projects.module.scss';
+import styles from '../../../../styles/pages/projectsPage/projects.module.scss';
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   const { id, name, coverUrl, intro, devTools, language } = project;

@@ -1,12 +1,12 @@
 import { useContext } from 'react';
-import DevToolsContext from '../../context/DevToolsContext/DevToolsContext';
-import CancelBtn from '../../components/Layout/CancelBtn';
-import ProgrammingLogo from '../../components/Common/DevToolIcon';
+import DevToolsContext from '../../../context/DevToolsContext/DevToolsContext';
+import CancelBtn from '../../layout/CancelBtn';
+import DevToolIcon from '../../common/DevToolIcon';
 
 // Interfaces
 import { DevToolsBarProps } from './interfaces';
 // styles
-import styles from '../../styles/pages/projectsPage/devtoolsbar.module.scss';
+import styles from '../../../styles/pages/projectsPage/devtoolsbar.module.scss';
 
 const DevToolsBar: React.FC<DevToolsBarProps> = ({ devTools }) => {
   const { filter, setSelector, clearSelector } = useContext(DevToolsContext);
@@ -26,8 +26,8 @@ const DevToolsBar: React.FC<DevToolsBarProps> = ({ devTools }) => {
           />
         )}
 
-        <ProgrammingLogo
-          onLogoClick={() => setSelector(toolName)}
+        <DevToolIcon
+          onIconClicked={() => setSelector(toolName)}
           toolName={toolName}
         />
 

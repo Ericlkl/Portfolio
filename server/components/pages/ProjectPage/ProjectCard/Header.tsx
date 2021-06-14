@@ -1,6 +1,6 @@
 import React from 'react';
-import { Project } from '../../../interfaces';
-import DownloadBtn from '../../../components/Layout/DownloadBtn';
+import { Project } from '../../../../interfaces';
+import DownloadBtn from '../../../layout/DownloadBtn';
 
 interface PlatformBoxProps {
   name: string;
@@ -20,7 +20,7 @@ const getIconName = (name: string) => {
   }
 };
 
-import styles from '../../../styles/pages/ProjectPage/project_desc.module.scss';
+import styles from '../../../../styles/pages/ProjectPage/project_desc.module.scss';
 
 const PlatformBox: React.FC<PlatformBoxProps> = ({ name }) => {
   const iconName = getIconName(name);

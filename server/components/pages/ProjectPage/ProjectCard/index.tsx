@@ -9,13 +9,13 @@ import Screenshots from './Screenshots';
 import Details from './Details';
 
 // Type
-import { Project } from '../../../interfaces';
+import { Project } from '../../../../interfaces';
 
 type ProjectCardProps = {
   project: Project;
 };
 
-import styles from '../../../styles/pages/ProjectPage/project_desc.module.scss';
+import styles from '../../../../styles/pages/ProjectPage/project_desc.module.scss';
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   const { screenshots, intro, devTools } = project;

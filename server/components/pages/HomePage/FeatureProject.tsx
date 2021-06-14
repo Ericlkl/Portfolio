@@ -1,6 +1,6 @@
 import React from 'react';
 import { Fab, Paper } from '@material-ui/core';
-import styles from '../../styles/pages/HomePage/feature_project.module.scss';
+import styles from '../../../styles/pages/HomePage/feature_project.module.scss';
 const features = [
   {
     name: 'Interactive Web Application',

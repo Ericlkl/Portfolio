@@ -3,7 +3,7 @@ import Swiper from 'react-id-swiper';
 import Section from './Section';
 
 // Interfaces
-import { ProjectScreenshots } from '../../../interfaces';
+import { ProjectScreenshots } from '../../../../interfaces';
 
 interface ScreenshotsProps {
   screenshots: ProjectScreenshots[];
@@ -35,7 +35,7 @@ const params = {
   },
 };
 
-import styles from '../../../styles/pages/ProjectPage/project_desc.module.scss';
+import styles from '../../../../styles/pages/ProjectPage/project_desc.module.scss';
 
 const Screenshots: React.FC<ScreenshotsProps> = ({ screenshots }) => {
   const Screenshots = screenshots.map((screenshot, i) => (

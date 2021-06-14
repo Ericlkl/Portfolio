@@ -1,10 +1,10 @@
 import { useState } from 'react';
 // import { isEmpty } from 'lodash';
 import { TextField, Fab } from '@material-ui/core';
-import { ContactFormFields } from '../../types';
+// import { ContactFormFields } from '../../types';
 // import { contactFormValidation } from '../../validation';
 
-import styles from '../../styles/pages/HomePage/contact.module.scss';
+import styles from '../../../styles/pages/HomePage/contact.module.scss';
 
 export const initFormState = {
   name: '',
@@ -13,8 +13,8 @@ export const initFormState = {
 };
 
 const Contact: React.FC = () => {
-  const [formValue, setformValue] = useState<ContactFormFields>(initFormState);
-  const [error, setError] = useState<ContactFormFields>(initFormState);
+  const [formValue, setformValue] = useState(initFormState);
+  const [error, setError] = useState(initFormState);
 
   const isEmpty = (value: any) => {
     return !!value;

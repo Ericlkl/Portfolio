@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 // Components
-import MyBand from '../../Common/MyBand';
+import MyBand from '../../common/MyBand';
 import NavLinks from './NavLinks';
 import NavLink from './NavLink';
 import HamburgerButton from './HamburgerButton';
@@ -9,7 +9,7 @@ import HamburgerButton from './HamburgerButton';
 import styles from '@/styles/Layout/navbar.module.scss';
 
 // Props
-import { NavbarProps } from '../../../components/Layout/interfaces';
+import { NavbarProps } from '../interfaces';
 
 // data
 import config from '@/config';

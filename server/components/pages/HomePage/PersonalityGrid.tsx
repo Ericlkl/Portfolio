@@ -1,7 +1,7 @@
 import React from 'react';
 
 // styles
-import styles from '../../styles/pages/HomePage/personality.module.scss';
+import styles from '../../../styles/pages/HomePage/personality.module.scss';
 
 const personalities: Personality[] = [
   {

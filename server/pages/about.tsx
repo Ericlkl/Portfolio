@@ -1,6 +1,11 @@
 // core components
-import { BasicLayout } from '../components/Layout';
-import { Hero, MySkills, Profile, MyImages } from '../sections/AboutPage';
+import { BasicLayout } from '../components/layout';
+import {
+  Hero,
+  MySkills,
+  Profile,
+  MyImages,
+} from '../components/pages/AboutPage';
 
 export async function getStaticProps() {
   return {

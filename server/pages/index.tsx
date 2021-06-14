@@ -1,5 +1,5 @@
 // Basic Layout component
-import { BasicLayout } from '../components/Layout';
+import { BasicLayout } from '../components/layout';
 // Page Component
 import {
   Header,
@@ -7,7 +7,7 @@ import {
   Contact,
   PersonalityGrid,
   FeatureProject,
-} from '../sections/HomePage';
+} from '../components/pages/HomePage';
 
 export async function getStaticProps() {
   return {

@@ -2,7 +2,7 @@ import React from 'react';
 import { achievements } from './data';
 import AchievementBox from './AchievementBox';
 
-import styles from '../../styles/pages/AboutPage/profile.module.scss';
+import styles from '../../../styles/pages/AboutPage/profile.module.scss';
 const Profile: React.FC = () => {
   const AchievementBoxes = achievements.map((achieve) => (
     <AchievementBox

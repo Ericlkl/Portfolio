@@ -1,10 +1,10 @@
 // Library
 import { getProjects, getProject } from '@/models/project';
 // Public Components
-import { BasicLayout, Jumbotron } from '../../components/Layout';
+import { BasicLayout, Jumbotron } from '../../components/layout';
 
 // Page Specific Components
-import { ProjectCard } from '../../sections/ProjectPage';
+import { ProjectCard } from '../../components/pages/ProjectPage';
 
 // Model
 import { NextRoute } from '@/models/next';

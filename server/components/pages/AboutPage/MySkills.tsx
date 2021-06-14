@@ -1,10 +1,10 @@
 import React from 'react';
-import StackedBar from '../../components/Common/Chart/StackedBar';
-import ProgrammingLogo from '../../components/Common/DevToolIcon';
+import StackedBar from '../../common/Chart/StackedBar';
+import ProgrammingLogo from '../../common/DevToolIcon';
 import { skillChartKeys, skillChartData, skillBoxData } from './data';
 
 // Styles
-import styles from '../../styles/pages/AboutPage/mySkills.module.scss';
+import styles from '../../../styles/pages/AboutPage/mySkills.module.scss';
 // Props
 import { SkillBoxProps } from './interfaces';
 
