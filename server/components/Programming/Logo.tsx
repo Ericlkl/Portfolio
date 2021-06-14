@@ -1,4 +1,4 @@
-import React from 'react';
+import { ReactSVG } from 'react-svg';
 
 type LogoProps = {
   toolName: string;
@@ -11,32 +11,32 @@ const getSvgPornIconName: (name: string) => string = (name: string) => {
   // switch (_.trim(name).toLowerCase()) {
   switch (name.toLowerCase()) {
     case 'typescript':
-      return 'typescript-icon';
+      return 'typescript';
     case 'html':
     case 'html5':
-      return 'html-5';
+      return 'html5';
     case 'node':
     case 'nodejs':
-      return 'nodejs-icon';
+      return 'nodejs';
     case 'css':
     case 'css3':
-      return 'css-3';
+      return 'css3';
     case 'scss':
       return 'node-sass';
     case 'c#':
-      return 'c-sharp';
+      return 'csharp';
     case 'vs code':
-      return 'visual-studio-code';
+      return 'vscode';
     case 'ios':
       return 'apple-app-store';
     case 'android':
-      return 'android-icon';
+      return 'android';
     case 'github':
-      return 'github-icon';
+      return 'github';
     case 'r':
       return 'r-lang';
     case 'docker':
-      return 'docker-icon';
+      return 'docker';
     default:
       return name.toLowerCase();
   }
@@ -44,13 +44,14 @@ const getSvgPornIconName: (name: string) => string = (name: string) => {
 
 const Logo: React.FC<LogoProps> = ({ toolName, className, onLogoClick }) => {
   const iconName = getSvgPornIconName(toolName);
+  const src = `icons/${iconName}/${iconName}-original.svg`;
 
   return (
-    <img
+    <ReactSVG
+      style={{ width: '50px' }}
       onClick={onLogoClick}
       className={className}
-      src={`https://cdn.svgporn.com/logos/${iconName}.svg`}
-      alt="Programming Logo"
+      src={src}
     />
   );
 };
