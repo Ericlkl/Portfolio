@@ -1,14 +1,13 @@
-import React, { Fragment } from 'react';
-
-// core components
-import FeatureProject from '@/sections/HomePage/FeatureProject';
-
 // Basic Layout component
-import LayoutComponents from '@/components/Layout';
-const { BasicLayout } = LayoutComponents;
+import { BasicLayout } from '../components/Layout';
 // Page Component
-import HomeComponents from '@/sections/HomePage';
-const { Header, Services, Contact, PersonalityGrid } = HomeComponents;
+import {
+  Header,
+  Services,
+  Contact,
+  PersonalityGrid,
+  FeatureProject,
+} from '../sections/HomePage';
 
 export async function getStaticProps() {
   return {

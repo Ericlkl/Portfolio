@@ -4,10 +4,4 @@ import Personality from './Personality';
 import Hero from './Hero';
 import MyImages from './MyImages';
 
-export default {
-  MyImages,
-  Profile,
-  MySkills,
-  Personality,
-  Hero,
-};
+export { MyImages, Profile, MySkills, Personality, Hero };

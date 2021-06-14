@@ -1,10 +1,6 @@
-import React, { Fragment, useEffect } from 'react';
-
 // core components
-import LayoutComponents from '@/components/Layout';
-import PageComponents from '@/sections/AboutPage';
-const { BasicLayout } = LayoutComponents;
-const { Hero, MySkills, Profile, MyImages } = PageComponents;
+import { BasicLayout } from '../components/Layout';
+import { Hero, MySkills, Profile, MyImages } from '../sections/AboutPage';
 
 export async function getStaticProps() {
   return {

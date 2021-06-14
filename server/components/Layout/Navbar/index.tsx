@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 // Components
-import MyLogo from '@/components/MyLogo';
+import MyBand from '../../Common/MyBand';
 import NavLinks from './NavLinks';
 import NavLink from './NavLink';
 import HamburgerButton from './HamburgerButton';
@@ -9,7 +9,7 @@ import HamburgerButton from './HamburgerButton';
 import styles from '@/styles/Layout/navbar.module.scss';
 
 // Props
-import { NavbarProps } from '@/components/Layout/interfaces';
+import { NavbarProps } from '../../../components/Layout/interfaces';
 
 // data
 import config from '@/config';
@@ -28,7 +28,7 @@ const Navbar: React.FC<NavbarProps> = ({ logoColor }) => {
       <div className={`${styles.nav_content} container`}>
         <NavLink href="/">
           <div className={styles.band}>
-            <MyLogo color={logoColor} className={styles.nav_logo} />
+            <MyBand color={logoColor} className={styles.nav_logo} />
             <h1 className={styles.band_name}>{band.name}</h1>
           </div>
         </NavLink>

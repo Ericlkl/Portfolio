@@ -1,11 +1,9 @@
 import { getProjects } from '../../models/project';
 // Public Components
-import LayoutComponents from '@/components/Layout';
-const { BasicLayout, Spinner, Jumbotron } = LayoutComponents;
+import { BasicLayout, Jumbotron } from '../../components/Layout';
 
 // Page Specific Components
-import PageComponents from '@/sections/ProjectsPage';
-const { DevToolsBar, ProjectGrid } = PageComponents;
+import { DevToolsBar, ProjectGrid } from '../../sections/ProjectsPage';
 // Provider
 import DevToolsProvider from '@/context/DevToolsContext/DevToolsProvider';
 

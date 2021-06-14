@@ -7,7 +7,7 @@ import Navbar from './Navbar';
 import SocialMedia from './SocialMedia';
 import Spinner from './Spinner';
 
-export default {
+export {
   BasicLayout,
   CancelBtn,
   DownloadBtn,

@@ -1,5 +1,5 @@
 import React from 'react';
-import Radar from '../../components/Chart/Radar';
+import Radar from '../../components/Common/Chart/Radar';
 import { personalityData } from './data';
 const Personality: React.FC = () => {
   return (

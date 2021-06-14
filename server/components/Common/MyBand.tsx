@@ -1,11 +1,11 @@
 import React from 'react';
 import Image from 'next/image';
 
-type MyLogoProps = {
+type MyBandProps = {
   color: 'blue' | 'teal' | 'grey';
   className?: string;
 };
-const MyLogo: React.FC<MyLogoProps> = ({ color, className }) => {
+const MyBand: React.FC<MyBandProps> = ({ color, className }) => {
   let logo: string;
   switch (color) {
     case 'teal':
@@ -29,4 +29,4 @@ const MyLogo: React.FC<MyLogoProps> = ({ color, className }) => {
   );
 };
 
-export default MyLogo;
+export default MyBand;

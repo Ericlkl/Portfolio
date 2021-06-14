@@ -1,5 +1,5 @@
 import Section from './Section';
-import ProgrammingLogo from '../../../components/Programming/Logo';
+import ProgrammingLogo from '../../../components/Common/DevToolIcon';
 
 // interfaces
 import { DevelopmentTool } from '../../../interfaces';

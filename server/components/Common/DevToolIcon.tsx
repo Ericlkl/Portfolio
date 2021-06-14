@@ -1,10 +1,10 @@
 import { ReactSVG } from 'react-svg';
 
-type LogoProps = {
+interface DevToolIconProps {
   toolName: string;
   className?: string;
-  onLogoClick?: () => void;
-};
+  onIconClicked?: () => void;
+}
 
 const getSvgPornIconName: (name: string) => string = (name: string) => {
   // Todo: Fix Trim
@@ -42,18 +42,22 @@ const getSvgPornIconName: (name: string) => string = (name: string) => {
   }
 };
 
-const Logo: React.FC<LogoProps> = ({ toolName, className, onLogoClick }) => {
+const DevToolIcon: React.FC<DevToolIconProps> = ({
+  toolName,
+  className,
+  onIconClicked,
+}) => {
   const iconName = getSvgPornIconName(toolName);
   const src = `icons/${iconName}/${iconName}-original.svg`;
 
   return (
     <ReactSVG
       style={{ width: '50px' }}
-      onClick={onLogoClick}
+      onClick={onIconClicked}
       className={className}
       src={src}
     />
   );
 };
 
-export default Logo;
+export default DevToolIcon;

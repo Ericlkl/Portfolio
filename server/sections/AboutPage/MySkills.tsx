@@ -1,6 +1,6 @@
 import React from 'react';
-import StackedBar from '../../components/Chart/StackedBar';
-import ProgrammingLogo from '../../components/Programming/Logo';
+import StackedBar from '../../components/Common/Chart/StackedBar';
+import ProgrammingLogo from '../../components/Common/DevToolIcon';
 import { skillChartKeys, skillChartData, skillBoxData } from './data';
 
 // Styles

@@ -1,8 +1,7 @@
-import LayoutComponents from '@/components/Layout';
-const { BasicLayout } = LayoutComponents;
+// Layout Components
+import { BasicLayout } from '../components/Layout';
 // Page Components
-import PageComponents from '@/sections/404';
-const { Content } = PageComponents;
+import { Content } from '../sections/404';
 
 export async function getStaticProps() {
   return {

@@ -5,13 +5,4 @@ import PersonalityGrid from './PersonalityGrid';
 import Services from './Services';
 import Contact from './Contact';
 
-const components = {
-  Header,
-  FeatureProject,
-  Particle,
-  PersonalityGrid,
-  Services,
-  Contact,
-};
-
-export default components;
+export { Header, FeatureProject, Particle, PersonalityGrid, Services, Contact };

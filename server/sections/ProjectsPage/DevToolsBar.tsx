@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import DevToolsContext from '../../context/DevToolsContext/DevToolsContext';
 import CancelBtn from '../../components/Layout/CancelBtn';
-import ProgrammingLogo from '../../components/Programming/Logo';
+import ProgrammingLogo from '../../components/Common/DevToolIcon';
 
 // Interfaces
 import { DevToolsBarProps } from './interfaces';

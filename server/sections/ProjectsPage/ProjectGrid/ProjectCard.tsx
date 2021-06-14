@@ -1,6 +1,6 @@
 import router from 'next/router';
 import { Fab } from '@material-ui/core';
-import ProgrammingLogo from '../../../components/Programming/Logo';
+import ProgrammingLogo from '../../../components/Common/DevToolIcon';
 
 // interfaces
 import { ProjectCardProps } from '../interfaces';
