@@ -21,18 +21,34 @@ export async function getStaticPaths() {
   );
   return {
     paths,
-    fallback: true,
+    fallback: 'blocking',
   };
 }
 
 export async function getStaticProps(props) {
   const { id } = props.params;
-  const project = await getProject({ id: Number(id) });
-  return {
-    props: {
-      project,
-    },
-  };
+  try {
+    const project = await getProject({ id: Number(id) });
+
+    if (!project) {
+      return {
+        redirect: {
+          destination: '/projects',
+        },
+      };
+    }
+
+    return {
+      props: {
+        project,
+      },
+      revalidate: 60 * 2,
+    };
+  } catch (error) {
+    return {
+      notFound: true,
+    };
+  }
 }
 
 interface ProjectPageProps {

@@ -4,6 +4,8 @@
     "private": true,
     "scripts": {
         "dev": "next dev",
+        "dbStudio": "prisma studio",
+        "migrate": "prisma migrate dev",
         "build": "next build",
         "start": "next start"
     },

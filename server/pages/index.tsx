@@ -10,6 +10,13 @@ const { BasicLayout } = LayoutComponents;
 import HomeComponents from '@/sections/HomePage';
 const { Header, Services, Contact, PersonalityGrid } = HomeComponents;
 
+export async function getStaticProps() {
+  return {
+    props: {},
+    revalidate: 60 * 60 * 12,
+  };
+}
+
 const HomePage: React.FC = () => {
   return (
     <BasicLayout>

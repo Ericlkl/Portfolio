@@ -6,6 +6,13 @@ import PageComponents from '@/sections/AboutPage';
 const { BasicLayout } = LayoutComponents;
 const { Hero, MySkills, Profile, MyImages } = PageComponents;
 
+export async function getStaticProps() {
+  return {
+    props: {},
+    revalidate: 60 * 60 * 24,
+  };
+}
+
 const AboutPage: React.FC = () => {
   return (
     <BasicLayout>
