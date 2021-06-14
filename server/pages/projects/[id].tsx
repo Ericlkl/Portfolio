@@ -1,57 +1,55 @@
 // Library
-import { PrismaClient } from '@prisma/client';
+import { getProjects, getProject } from '@/models/project';
 // Public Components
 import LayoutComponents from '@/components/Layout';
-const { BasicLayout, Spinner, Jumbotron } = LayoutComponents;
+const { BasicLayout, Jumbotron } = LayoutComponents;
 
 // Page Specific Components
-import PageComponents from '@/sections/ProjectsPage';
-const { DevToolsBar, ProjectGrid } = PageComponents;
-// Provider
-import DevToolsProvider from '@/context/DevToolsContext/DevToolsProvider';
+import PageComponents from '@/sections/ProjectPage';
+const { ProjectCard } = PageComponents;
 
-// Configs
-import configs from '@/config';
-const { devToolsOptions } = configs;
+// Model
+import { NextRoute } from '@/models/next';
 
-import { Project } from '@/models';
+// interface
+import { Project as IProject } from '../../interfaces';
+
+export async function getStaticPaths() {
+  const projects: IProject[] = await getProjects();
+  const paths = projects.map(
+    (project) => new NextRoute({ id: String(project.id) })
+  );
+  return {
+    paths,
+    fallback: true,
+  };
+}
 
 export async function getStaticProps(props) {
-  const prisma = new PrismaClient();
-  const projects = await prisma.project.findFirst({
-    where: {
-      id: 0,
-    },
-    include: {
-      devTools: true,
-      platforms: true,
-    },
-  });
+  const { id } = props.params;
+  const project = await getProject({ id: Number(id) });
   return {
     props: {
-      projects,
+      project,
     },
   };
 }
 
-interface ProjectsPageProps {
-  project: Project;
+interface ProjectPageProps {
+  project: IProject;
 }
 
-const ProjectsPage: React.FC<ProjectsPageProps> = ({ projects }) => {
+const ProjectPage: React.FC<ProjectPageProps> = ({ project }) => {
   return (
-    <DevToolsProvider>
-      <BasicLayout>
-        <Jumbotron
-          title="Projects"
-          subtitle="All Projects are made with heart"
-          backgroundIMG="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80"
-        />
-        <DevToolsBar devTools={devToolsOptions} />
-        <ProjectGrid projects={projects} />
-      </BasicLayout>
-    </DevToolsProvider>
+    <BasicLayout>
+      <Jumbotron
+        title="Projects"
+        subtitle="All Projects are made with heart"
+        backgroundIMG="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80"
+      />
+      <ProjectCard project={project} />
+    </BasicLayout>
   );
 };
 
-export default ProjectsPage;
+export default ProjectPage;

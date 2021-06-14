@@ -1,5 +1,4 @@
-// Library
-import { PrismaClient } from '@prisma/client';
+import { getProjects } from '../../models/project';
 // Public Components
 import LayoutComponents from '@/components/Layout';
 const { BasicLayout, Spinner, Jumbotron } = LayoutComponents;
@@ -17,13 +16,8 @@ const { devToolsOptions } = configs;
 import { Project } from '@/models';
 
 export async function getStaticProps() {
-  const prisma = new PrismaClient();
-  const projects = await prisma.project.findMany({
-    include: {
-      devTools: true,
-      platforms: true,
-    },
-  });
+  const projects = await getProjects();
+
   return {
     props: {
       projects,

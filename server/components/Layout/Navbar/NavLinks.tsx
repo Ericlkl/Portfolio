@@ -11,12 +11,8 @@ const NavLinks: React.FC<NavLinksProps> = ({ active, navLinks }) => {
     ? styles.nav_links + ' ' + styles.active
     : styles.nav_links;
 
-  const NavLinkComponents = navLinks.map((navLink) => (
-    <NavLink
-      key={navLink.pageName}
-      href={navLink.href}
-      label={navLink.pageName}
-    >
+  const NavLinkComponents = navLinks.map((navLink, index) => (
+    <NavLink key={navLink.href} href={navLink.href} label={navLink.pageName}>
       {navLink.icon}
     </NavLink>
   ));

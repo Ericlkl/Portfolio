@@ -1,3 +1,4 @@
+import router from 'next/router';
 import { Fab } from '@material-ui/core';
 import ProgrammingLogo from '../../../components/Programming/Logo';
 
@@ -7,7 +8,8 @@ import { ProjectCardProps } from '../interfaces';
 import styles from '../../../styles/pages/projectsPage/projects.module.scss';
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
-  const { name, coverUrl, intro, devTools, language } = project;
+  const { id, name, coverUrl, intro, devTools, language } = project;
+
   const devToolLabels = devTools.map((devTool) => {
     return (
       <p
@@ -21,6 +23,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 
   const onViewProjectBtnClicked = () => {
     // Todo: Navigate user to next page
+    router.push(`/projects/${id}`);
   };
 
   return (
