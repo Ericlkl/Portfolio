@@ -1,33 +1,32 @@
 {
-    "name": "server",
-    "version": "0.1.0",
-    "private": true,
-    "scripts": {
-        "dev": "next dev",
-        "dbStudio": "prisma studio",
-        "migrate": "prisma migrate dev",
-        "build": "next build",
-        "start": "next start"
-    },
-    "dependencies": {
-        "@material-ui/core": "^4.11.4",
-        "@material-ui/icons": "^4.11.2",
-        "@nivo/radar": "^0.70.1",
-        "@prisma/client": "^2.24.1",
-        "lodash": "^4.17.21",
-        "next": "10.2.3",
-        "prisma": "^2.24.1",
-        "react": "17.0.2",
-        "react-dom": "17.0.2",
-        "react-id-swiper": "^4.0.0",
-        "react-particles-js": "^3.4.1",
-        "react-svg": "^14.0.1",
-        "react-text-loop": "^2.3.0",
-        "sass": "^1.34.1"
-    },
-    "devDependencies": {
-        "@types/node": "^15.12.1",
-        "@types/react": "^17.0.9",
-        "typescript": "^4.3.2"
-    }
+	"name": "server",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"dbStudio": "prisma studio",
+		"migrate": "prisma migrate dev",
+		"build": "next build",
+		"start": "next start"
+	},
+	"dependencies": {
+		"@material-ui/core": "^4.11.4",
+		"@material-ui/icons": "^4.11.2",
+		"@prisma/client": "^2.24.1",
+		"lodash": "^4.17.21",
+		"next": "10.2.3",
+		"prisma": "^2.24.1",
+		"react": "17.0.2",
+		"react-dom": "17.0.2",
+		"react-id-swiper": "^4.0.0",
+		"react-particles-js": "^3.4.1",
+		"react-svg": "^14.0.1",
+		"react-text-loop": "^2.3.0",
+		"sass": "^1.34.1"
+	},
+	"devDependencies": {
+		"@types/node": "^15.12.1",
+		"@types/react": "^17.0.9",
+		"typescript": "^4.3.2"
+	}
 }

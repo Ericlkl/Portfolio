@@ -1,4 +1,4 @@
-import router from 'next/router';
+import Router from 'next/router';
 import { Fab } from '@material-ui/core';
 import ProgrammingLogo from '../../../common/DevToolIcon';
 
@@ -23,7 +23,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 
   const onViewProjectBtnClicked = () => {
     // Todo: Navigate user to next page
-    router.push(`/projects/${id}`);
+    Router.push(`/projects/${id}`);
   };
 
   return (

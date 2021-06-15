@@ -4,9 +4,10 @@ WORKDIR /app
 
 COPY ./package.json /app
 
-RUN npm install
+RUN npm install --legacy-peer-deps
 
-COPY . /app
+# it is okay to skip, since we are going to use bind mount
+# COPY . .
 
 EXPOSE 3000
 
