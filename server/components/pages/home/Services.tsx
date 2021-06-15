@@ -1,57 +1,8 @@
 import React from 'react';
 
 import styles from '../../../styles/pages/home/services.module.scss';
-const services = [
-  {
-    icon: 'fa-laptop',
-    name: 'Web Development',
-    features: 'Responsive and Interactive',
-    desc: `Every website I built work across all devices no matter large or small, and it is extremely fast and interactive.`,
-    skills: [
-      'HTML5',
-      'CSS3',
-      'SCSS',
-      'JavaScript ES6+',
-      'React',
-      'React Context',
-      'Redux',
-      'Semantic UI',
-      'Bootstrap 4',
-      'Axios',
-    ],
-  },
-  {
-    icon: 'fa-server',
-    name: 'Server Apps Development',
-    features: 'Robust and Scalable',
-    desc: `Managing the interchange of data between the server and the users, optimization of the server for maximum speed and scalability.`,
-    skills: [
-      'NodeJS',
-      'ExpressJS',
-      'Redis',
-      'JsonWebToken',
-      'MongoDB',
-      'Mongoose',
-      'MySQL',
-      'Sequalize',
-      'AWS',
-      'Docker',
-    ],
-  },
-  {
-    icon: 'fa-mobile-alt',
-    name: 'Mobile Apps Development',
-    features: 'User Friendly and Compatible',
-    desc: `Every mobile application I built works perfectly on Andriod / IOS, and they are easy to use without learning.`,
-    skills: [
-      'C#',
-      'Xamarin Forms',
-      'Xamarin Forms Essential',
-      'Xamarin Forms Google Map',
-      'SQLite',
-    ],
-  },
-];
+
+import { services } from '../../../config/pages';
 
 type Service = {
   icon: string;

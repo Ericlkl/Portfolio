@@ -1,6 +1,6 @@
 import React from 'react';
 // import Radar from '../../common/Chart/Radar';
-import { personalityData } from './data';
+import { personalityData } from '../../../config/pages';
 const Personality: React.FC = () => {
   return (
     <section className="my_personality">

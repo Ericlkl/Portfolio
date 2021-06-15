@@ -1,5 +1,5 @@
 import React from 'react';
-import { achievements } from './data';
+import { achievements } from '../../../config/pages';
 import AchievementBox from './AchievementBox';
 
 import styles from '../../../styles/pages/about/profile.module.scss';

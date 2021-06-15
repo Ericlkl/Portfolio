@@ -1,4 +1,4 @@
-import { myImages } from './data';
+import { myImages } from '../../../config/pages';
 import { FrameProps } from './interfaces';
 
 import styles from '../../../styles/layout/hero.module.scss';

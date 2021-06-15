@@ -1,44 +1,7 @@
 import React from 'react';
 import { Fab, Paper } from '@material-ui/core';
 import styles from '../../../styles/pages/home/feature_project.module.scss';
-const features = [
-  {
-    name: 'Interactive Web Application',
-    icon: (
-      <i
-        aria-hidden="true"
-        className="feature_project_content_descbox_feature_icon fas fa-laptop-code"
-      />
-    ),
-  },
-  {
-    name: 'MERN Stack Development',
-    icon: (
-      <i
-        aria-hidden="true"
-        className="feature_project_content_descbox_feature_icon fab fa-react"
-      />
-    ),
-  },
-  {
-    name: 'Data Visualization',
-    icon: (
-      <i
-        aria-hidden="true"
-        className="feature_project_content_descbox_feature_icon fas fa-chart-area"
-      />
-    ),
-  },
-  {
-    name: 'Live Streaming',
-    icon: (
-      <i
-        aria-hidden="true"
-        className="feature_project_content_descbox_feature_icon fas fa-satellite-dish"
-      />
-    ),
-  },
-];
+import { features } from '../../../config/pages'
 
 const ProjectDescription: React.FC = () => {
   const renderFeatures = features.map((feature) => (
