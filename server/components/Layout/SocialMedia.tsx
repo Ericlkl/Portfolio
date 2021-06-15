@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from '../../styles/Layout/social_btns.module.scss';
+import styles from '../../styles/layout/social_btns.module.scss';
 
 const SocialMedia: React.FC = () => {
   return (

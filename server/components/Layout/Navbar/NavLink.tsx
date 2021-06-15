@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import styles from '@/styles/Layout/navbar.module.scss';
+import styles from '@/styles/layout/navbar.module.scss';
 import { NavLinkProps } from '../interfaces';
 
 const NavLink: React.FC<NavLinkProps> = ({ href, label, children }) => {

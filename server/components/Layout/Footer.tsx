@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { Fab } from '@material-ui/core';
 
-import styles from '../../styles/Layout/footer.module.scss';
+import styles from '../../styles/layout/footer.module.scss';
 
 const Footer: React.FC = () => {
   return (

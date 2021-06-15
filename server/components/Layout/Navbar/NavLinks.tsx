@@ -1,4 +1,4 @@
-import styles from '@/styles/Layout/navbar.module.scss';
+import styles from '@/styles/layout/navbar.module.scss';
 
 // Components
 import NavLink from './NavLink';

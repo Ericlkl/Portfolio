@@ -6,7 +6,7 @@ import NavLinks from './NavLinks';
 import NavLink from './NavLink';
 import HamburgerButton from './HamburgerButton';
 
-import styles from '@/styles/Layout/navbar.module.scss';
+import styles from '@/styles/layout/navbar.module.scss';
 
 // Props
 import { NavbarProps } from '../interfaces';

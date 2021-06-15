@@ -5,7 +5,7 @@ type JumbotronProps = {
   subtitle: string;
   backgroundIMG: string;
 };
-import styles from '../../styles/Layout/jumbotron.module.scss';
+import styles from '../../styles/layout/jumbotron.module.scss';
 const Jumbotron: React.FC<JumbotronProps> = ({
   title,
   subtitle,

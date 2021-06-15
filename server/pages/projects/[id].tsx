@@ -1,19 +1,19 @@
 // Library
-import { getProjects, getProject } from '@/models/project';
+import {ProjectManager } from '../../models';
 // Public Components
 import { BasicLayout, Jumbotron } from '../../components/layout';
 
 // Page Specific Components
-import { ProjectCard } from '../../components/pages/ProjectPage';
+import { ProjectCard } from '../../components/pages/project';
 
 // Model
 import { NextRoute } from '@/models/next';
 
 // interface
-import { Project as IProject } from '../../interfaces';
+import { Project as IProject } from '../../models/interfaces';
 
 export async function getStaticPaths() {
-  const projects: IProject[] = await getProjects();
+  const projects: IProject[] = await ProjectManager.getProjects();
   const paths = projects.map(
     (project) => new NextRoute({ id: String(project.id) })
   );
@@ -26,7 +26,7 @@ export async function getStaticPaths() {
 export async function getStaticProps(props) {
   const { id } = props.params;
   try {
-    const project = await getProject({ id: Number(id) });
+    const project = await ProjectManager.getProject({ id: Number(id) });
 
     if (!project) {
       return {

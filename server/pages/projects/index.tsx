@@ -1,9 +1,9 @@
-import { getProjects } from '../../models/project';
+import { ProjectManager } from '../../models';
 // Public Components
 import { BasicLayout, Jumbotron } from '../../components/layout';
 
 // Page Specific Components
-import { DevToolsBar, ProjectGrid } from '../../components/pages/ProjectsPage';
+import { DevToolsBar, ProjectGrid } from '../../components/pages/projects';
 // Provider
 import DevToolsProvider from '@/context/DevToolsContext/DevToolsProvider';
 
@@ -14,7 +14,7 @@ const { devToolsOptions } = configs;
 import { Project } from '@/models';
 
 export async function getStaticProps() {
-  const projects = await getProjects();
+  const projects = await ProjectManager.getProjects();
 
   return {
     props: {

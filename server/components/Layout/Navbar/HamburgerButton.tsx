@@ -1,7 +1,7 @@
 // Props
 import { HamburgerButtonProps } from '../interfaces';
 // styles
-import styles from '@/styles/Layout/navbar.module.scss';
+import styles from '@/styles/layout/navbar.module.scss';
 
 const Bars: React.FC = () => {
   return (

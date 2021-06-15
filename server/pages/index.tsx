@@ -7,7 +7,7 @@ import {
   Contact,
   PersonalityGrid,
   FeatureProject,
-} from '../components/pages/HomePage';
+} from '../components/pages/home';
 
 export async function getStaticProps() {
   return {

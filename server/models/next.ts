@@ -1,15 +1,8 @@
-import { HashMap } from '../interfaces';
+import { NextRoute as INextRoute, NextRouteParams } from './interfaces';
+export class NextRoute implements INextRoute {
+	params: NextRouteParams;
 
-export interface NextRoute {
-  params: HashMap<string>;
-}
-
-export interface NextRouteParams extends HashMap<string> {}
-
-export class NextRoute implements NextRoute {
-  params: NextRouteParams;
-
-  constructor(params: NextRouteParams) {
-    this.params = { ...params };
-  }
+	constructor(params: NextRouteParams) {
+		this.params = { ...params };
+	}
 }

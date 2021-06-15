@@ -5,7 +5,7 @@ import {
   MySkills,
   Profile,
   MyImages,
-} from '../components/pages/AboutPage';
+} from '../components/pages/about';
 
 export async function getStaticProps() {
   return {
