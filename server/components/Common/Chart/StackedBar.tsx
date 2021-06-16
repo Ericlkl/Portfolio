@@ -1,20 +1,7 @@
 import React from 'react';
 import { ResponsiveBar } from '@nivo/bar';
 
-type Fill = {
-  match: {
-    id: string;
-  };
-  id: string;
-};
-
-type StackBarProps = {
-  data: object[];
-  keys: string[];
-  fills?: Fill[];
-  xlabel: string;
-  ylabel: string;
-};
+import { StackBarProps } from 'interfaces/components/common/chart.interface'
 
 const StackBar: React.FC<StackBarProps> = ({
   data,

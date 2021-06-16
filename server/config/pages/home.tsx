@@ -1,5 +1,5 @@
 // styles
-import styles from '../../styles/pages/home/personality.module.scss'
+import styles from 'styles/pages/home/personality.module.scss'
 
 export const features = [
   {

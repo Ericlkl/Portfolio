@@ -1,7 +1,2 @@
-import { navbarInfo } from './components/navbar';
-import { devToolsOptions } from './components/devtools';
-
-export default {
-  navbarInfo,
-  devToolsOptions,
-};
+export { navbarInfo } from './components/navbar';
+export { devToolsOptions } from './components/devtools';

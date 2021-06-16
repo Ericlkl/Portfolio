@@ -1,4 +1,4 @@
-import { FrameProps } from '../../components/pages/about/interfaces';
+import { FrameProps } from 'interfaces/components/pages/about';
 export const myImages: FrameProps[] = [
 	{
 		url: 'https://i.imgur.com/rewQMvS.jpg?1',

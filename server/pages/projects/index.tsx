@@ -1,17 +1,16 @@
-import { ProjectManager } from '../../models';
+import { ProjectManager } from 'models/project';
 // Public Components
-import { BasicLayout, Jumbotron } from '../../components/layout';
+import { BasicLayout, Jumbotron } from '../../components/common';
 
 // Page Specific Components
 import { DevToolsBar, ProjectGrid } from '../../components/pages/projects';
 // Provider
-import DevToolsProvider from '@/context/DevToolsContext/DevToolsProvider';
+import DevToolsProvider from 'context/DevToolsContext/DevToolsProvider';
 
 // Configs
-import configs from '@/config';
-const { devToolsOptions } = configs;
+import { devToolsOptions } from 'config';
 
-import { Project } from '@/models';
+import { Project } from 'interfaces/models/project';
 
 export async function getStaticProps() {
   const projects = await ProjectManager.getProjects();

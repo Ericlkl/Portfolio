@@ -1,20 +1,11 @@
 import React from 'react';
 
-import styles from '../../../styles/pages/home/services.module.scss';
+import styles from 'styles/pages/home/services.module.scss';
 
-import { services } from '../../../config/pages';
+import { services } from 'config/pages';
 
-type Service = {
-  icon: string;
-  name: string;
-  features: string;
-  desc: string;
-  skills: string[];
-};
-
-type ServiceCardProps = {
-  service: Service;
-};
+// interfaces
+import { ServiceCardProps } from 'interfaces/components/pages/home'
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
   const { name, icon, features, desc, skills } = service;

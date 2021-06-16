@@ -1,4 +1,4 @@
-import styles from '@/styles/pages/404/content.module.scss';
+import styles from 'styles/pages/404/content.module.scss';
 
 const Content = () => {
   return (

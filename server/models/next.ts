@@ -1,4 +1,4 @@
-import { NextRoute as INextRoute, NextRouteParams } from './interfaces';
+import { NextRoute as INextRoute, NextRouteParams } from 'interfaces/models/nextjs';
 export class NextRoute implements INextRoute {
 	params: NextRouteParams;
 

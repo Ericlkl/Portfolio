@@ -1,19 +1,12 @@
 import React from 'react';
 
 // styles
-import styles from '../../../styles/pages/home/personality.module.scss';
+import styles from 'styles/pages/home/personality.module.scss';
+// interfaces
+import { PersonalityBoxProps } from 'interfaces/components/pages/home'
+// config data
+import { personalities } from 'config/pages';
 
-import { personalities } from '../../../config/pages';
-
-type Personality = {
-  icon: JSX.Element;
-  title: string;
-  description: JSX.Element;
-};
-
-type PersonalityBoxProps = {
-  personality: Personality;
-};
 
 const PersonalityBox: React.FC<PersonalityBoxProps> = ({ personality }) => {
   const { icon, title, description } = personality;

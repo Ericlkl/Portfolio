@@ -1,4 +1,4 @@
-import {
+export {
 	myImages,
 	skillChartKeys,
 	skillBoxData,
@@ -7,16 +7,4 @@ import {
 	achievements,
 } from './about';
 
-import { features, personalities, services } from './home';
-
-export {
-	myImages,
-	services,
-	features,
-	personalities,
-	skillChartKeys,
-	skillBoxData,
-	skillChartData,
-	personalityData,
-	achievements,
-};
+export { features, personalities, services } from './home';

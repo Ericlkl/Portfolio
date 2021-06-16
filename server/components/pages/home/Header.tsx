@@ -4,7 +4,7 @@ import Particle from './Particle';
 // import SocialMedia from '../../components/Layout/SocialMedia';
 
 // Styles
-import styles from '../../../styles/pages/home/header.module.scss';
+import styles from 'styles/pages/home/header.module.scss';
 
 const Header: React.FC = () => {
   const [jobIndex, setJobIndex] = useState(0);

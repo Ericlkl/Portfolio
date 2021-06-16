@@ -1,12 +1,12 @@
 import React from 'react';
-import StackedBar from '../../common/chart/StackedBar';
-import ProgrammingLogo from '../../common/DevToolIcon';
-import { skillChartKeys, skillChartData, skillBoxData } from '../../../config/pages';
+import StackedBar from 'components/common/chart/StackedBar';
+import ProgrammingLogo from 'components/common/DevToolIcon';
+import { skillChartKeys, skillChartData, skillBoxData } from 'config/pages';
 
 // Styles
-import styles from '../../../styles/pages/about/mySkills.module.scss';
+import styles from 'styles/pages/about/mySkills.module.scss';
 // Props
-import { SkillBoxProps } from './interfaces';
+import { SkillBoxProps } from 'interfaces/components/pages/about';
 
 const SkillBox: React.FC<SkillBoxProps> = ({ fieldName, skills }) => {
   const icons = skills.map((skill) => (

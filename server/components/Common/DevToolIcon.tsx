@@ -1,10 +1,6 @@
 import { ReactSVG } from 'react-svg';
 
-interface DevToolIconProps {
-  toolName: string;
-  className?: string;
-  onIconClicked?: () => void;
-}
+import { DevToolIconProps } from 'interfaces/components/common/devToolIcon.interface'
 
 const getSvgPornIconName: (name: string) => string = (name: string) => {
   // Todo: Fix Trim

@@ -2,7 +2,7 @@
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import ViewCompactIcon from '@material-ui/icons/ViewCompact';
 import AssignmentIndIcon from '@material-ui/icons/AssignmentInd';
-import styles from '@/styles/layout/navbar.module.scss';
+import styles from 'styles/common/navbar.module.scss';
 
 export const navbarInfo = {
   band: {

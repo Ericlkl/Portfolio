@@ -1,7 +1,9 @@
-import { myImages } from '../../../config/pages';
-import { FrameProps } from './interfaces';
+// config data
+import { myImages } from 'config/pages';
+// interfaces
+import { FrameProps } from 'interfaces/components/pages/about';
 
-import styles from '../../../styles/layout/hero.module.scss';
+import styles from 'styles/common/hero.module.scss';
 
 // Todo: To fix the scss file to different files later
 

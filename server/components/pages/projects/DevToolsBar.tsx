@@ -1,12 +1,15 @@
 import { useContext } from 'react';
-import DevToolsContext from '../../../context/DevToolsContext/DevToolsContext';
-import CancelBtn from '../../layout/CancelBtn';
-import DevToolIcon from '../../common/DevToolIcon';
+
+// Components
+import CancelBtn from 'components/common/CancelBtn';
+import DevToolIcon from 'components/common/DevToolIcon';
+// Context
+import DevToolsContext from 'context/DevToolsContext/DevToolsContext';
 
 // Interfaces
-import { DevToolsBarProps } from './interfaces';
-// styles
-import styles from '../../../styles/pages/projects/devtoolsbar.module.scss';
+import { DevToolsBarProps } from 'interfaces/components/pages/projects';
+// Styles
+import styles from 'styles/pages/projects/devtoolsbar.module.scss';
 
 const DevToolsBar: React.FC<DevToolsBarProps> = ({ devTools }) => {
   const { filter, setSelector, clearSelector } = useContext(DevToolsContext);

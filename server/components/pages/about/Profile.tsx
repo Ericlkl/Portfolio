@@ -1,8 +1,11 @@
-import React from 'react';
-import { achievements } from '../../../config/pages';
+// components
 import AchievementBox from './AchievementBox';
+// config data
+import { achievements } from 'config/pages';
+// styles
+import styles from 'styles/pages/about/profile.module.scss';
 
-import styles from '../../../styles/pages/about/profile.module.scss';
+
 const Profile: React.FC = () => {
   const AchievementBoxes = achievements.map((achieve) => (
     <AchievementBox

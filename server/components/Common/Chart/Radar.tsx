@@ -1,12 +1,7 @@
 import { ResponsiveRadar } from '@nivo/radar';
 
 import React from 'react';
-
-type RadarProps = {
-  keys: string[];
-  index: string;
-  data: object[];
-};
+import { RadarProps  } from 'interfaces/components/common/chart.interface'
 
 const Radar: React.FC<RadarProps> = ({ data, keys, index }) => {
   return (

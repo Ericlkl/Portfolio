@@ -1,7 +1,7 @@
 import React from 'react';
 import Particles, { MoveDirection, OutMode } from 'react-particles-js';
 
-import styles from '../../../styles/pages/home/header.module.scss';
+import styles from 'styles/pages/home/header.module.scss';
 const Particle: React.FC = () => {
   return (
     <Particles

@@ -1,4 +1,4 @@
-import { Project, ProjectIncludes } from './interfaces';
+import { Project, ProjectIncludes } from 'interfaces/models/project';
 import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 

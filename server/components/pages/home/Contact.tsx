@@ -4,7 +4,7 @@ import { TextField, Fab } from '@material-ui/core';
 // import { ContactFormFields } from '../../types';
 // import { contactFormValidation } from '../../validation';
 
-import styles from '../../../styles/pages/home/contact.module.scss';
+import styles from 'styles/pages/home/contact.module.scss';
 
 export const initFormState = {
   name: '',

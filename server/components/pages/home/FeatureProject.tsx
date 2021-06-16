@@ -1,7 +1,7 @@
 import React from 'react';
 import { Fab, Paper } from '@material-ui/core';
-import styles from '../../../styles/pages/home/feature_project.module.scss';
-import { features } from '../../../config/pages'
+import styles from 'styles/pages/home/feature_project.module.scss';
+import { features } from 'config/pages'
 
 const ProjectDescription: React.FC = () => {
   const renderFeatures = features.map((feature) => (

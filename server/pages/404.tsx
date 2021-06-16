@@ -1,5 +1,5 @@
 // Layout Components
-import { BasicLayout } from '../components/layout';
+import { BasicLayout } from '../components/common';
 // Page Components
 import { Content } from '../components/pages/404';
 

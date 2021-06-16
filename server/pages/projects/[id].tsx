@@ -1,16 +1,16 @@
 // Library
-import {ProjectManager } from '../../models';
+import { ProjectManager } from 'models/project';
 // Public Components
-import { BasicLayout, Jumbotron } from '../../components/layout';
+import { BasicLayout, Jumbotron } from '../../components/common';
 
 // Page Specific Components
-import { ProjectCard } from '../../components/pages/project';
+import ProjectCard  from 'components/pages/project';
 
 // Model
-import { NextRoute } from '@/models/next';
+import { NextRoute } from 'models/next';
 
 // interface
-import { Project as IProject } from '../../models/interfaces';
+import { Project as IProject } from 'interfaces/models/project';
 
 export async function getStaticPaths() {
   const projects: IProject[] = await ProjectManager.getProjects();
