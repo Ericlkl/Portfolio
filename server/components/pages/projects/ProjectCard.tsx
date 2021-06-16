@@ -11,7 +11,7 @@ import styles from 'styles/pages/projects/projects.module.scss';
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   const { id, name, coverUrl, intro, devTools, language } = project;
 
-  const devToolLabels = devTools?.map((devTool) => {
+  const devToolLabels = devTools?.slice(0, 8).map((devTool) => {
     return (
       <p
         key={devTool.name}

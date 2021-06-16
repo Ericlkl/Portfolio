@@ -1,12 +1,13 @@
+import { DevelopmentTool } from 'interfaces/models/devTools';
 import { Project } from 'interfaces/models/project';
 export interface DevToolsBarProps {
-	devTools: string[];
+  devTools: DevelopmentTool[];
 }
 
 export interface ProjectGridProps {
-	projects: Project[];
+  projects: Project[];
 }
 
 export interface ProjectCardProps {
-	project: Project;
+  project: Project;
 }

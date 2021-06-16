@@ -3,10 +3,13 @@ import Swiper from 'react-id-swiper';
 import Section from './Section';
 
 // Styles
-import styles from '../../../../styles/pages/project/project_desc.module.scss';
+import styles from 'styles/pages/project/project_desc.module.scss';
 
 // interfaces
-import { ScreenshotsProps, ScreenshotProps } from 'interfaces/components/pages/project'
+import {
+  ScreenshotsProps,
+  ScreenshotProps,
+} from 'interfaces/components/pages/project';
 
 const params = {
   pagination: {
@@ -39,7 +42,7 @@ const Screenshot: React.FC<ScreenshotProps> = ({ screenshot }) => {
     <div key={screenshot.id} className={styles['screenshot']}>
       <img src={screenshot.url} alt={`Project Screenshots`} />
     </div>
-  )
+  );
 };
 
 const Screenshots: React.FC<ScreenshotsProps> = ({ screenshots }) => {

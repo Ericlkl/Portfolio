@@ -14,7 +14,8 @@ import styles from 'styles/pages/projects/devtoolsbar.module.scss';
 const DevToolsBar: React.FC<DevToolsBarProps> = ({ devTools }) => {
   const { filter, setSelector, clearSelector } = useContext(DevToolsContext);
 
-  const renderDevToolBtns = devTools.map((toolName) => {
+  const renderDevToolBtns = devTools.map((devTool) => {
+    const toolName = devTool.name;
     const className =
       filter === toolName
         ? `${styles.devtools_bar_btn} ${styles.activate}`

@@ -2,9 +2,7 @@ import { ReactSVG } from 'react-svg';
 
 import { getDevToolIconPath } from 'helper';
 
-import { DevToolIconProps } from 'interfaces/components/common/devToolIcon.interface'
-
-
+import { DevToolIconProps } from 'interfaces/components/common/devToolIcon.interface';
 
 const DevToolIcon: React.FC<DevToolIconProps> = ({
   toolName,
@@ -12,7 +10,6 @@ const DevToolIcon: React.FC<DevToolIconProps> = ({
   onIconClicked,
 }) => {
   const iconUrl = getDevToolIconPath(toolName);
-
   return (
     <ReactSVG
       style={{ width: '50px' }}
