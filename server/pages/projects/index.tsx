@@ -10,7 +10,9 @@ import DevToolsProvider from 'context/DevToolsContext/DevToolsProvider';
 // Configs
 import { devToolsOptions } from 'config';
 
-import { Project } from 'interfaces/models/project';
+// interface
+import { ProjectsPageProps } from 'interfaces/controllers/projects';
+
 
 export async function getStaticProps() {
   const projects = await ProjectManager.getProjects();
@@ -21,10 +23,6 @@ export async function getStaticProps() {
     },
     revalidate: 60 * 2,
   };
-}
-
-interface ProjectsPageProps {
-  projects: Project[];
 }
 
 const ProjectsPage: React.FC<ProjectsPageProps> = ({ projects }) => {

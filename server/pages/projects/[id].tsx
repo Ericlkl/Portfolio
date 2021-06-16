@@ -10,7 +10,8 @@ import ProjectCard  from 'components/pages/project';
 import { NextRoute } from 'models/next';
 
 // interface
-import { Project as IProject } from 'interfaces/models/project';
+import { Project as IProject } from 'interfaces/models/project'
+import { ProjectPageProps } from 'interfaces/controllers/project';
 
 export async function getStaticPaths() {
   const projects: IProject[] = await ProjectManager.getProjects();
@@ -47,10 +48,6 @@ export async function getStaticProps(props) {
       notFound: true,
     };
   }
-}
-
-interface ProjectPageProps {
-  project: IProject;
 }
 
 const ProjectPage: React.FC<ProjectPageProps> = ({ project }) => {
