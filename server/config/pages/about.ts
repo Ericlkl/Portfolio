@@ -1,37 +1,46 @@
 import { FrameProps } from 'interfaces/components/pages/about';
-export const myImages: FrameProps[] = [
-	{
-		url: 'https://i.imgur.com/rewQMvS.jpg?1',
-		description: 'Watching Sunrise',
+
+export const headerInfo = {
+	mainImage: {
+		url: 'https://i.imgur.com/njGf0mh.jpg?3',
 	},
-	{
-		url: 'https://i.imgur.com/vPNpWCz.jpg?1',
-		description: 'Me and My Family',
-	},
-	{
-		url: 'https://i.imgur.com/Rg0Oi2E.jpg?1',
-		description: 'Me and My Brother',
-	},
-	{
-		url: 'https://i.imgur.com/exdawwf.jpg?1',
-		description: 'Me and My Parents',
-	},
-];
+	hightlight: `I'm a software engineer based in Hong Kong.`,
+	description: `I enjoy developing simple and beautiful application to solve complex problems. When I'm not coding, watching movies or reading books, you'll find me swimming or enjoying sunshine in Gold Coast.`,
+	otherImages: [
+		{
+			url: 'https://i.imgur.com/rewQMvS.jpg?1',
+			description: 'Watching Sunrise',
+		},
+		{
+			url: 'https://i.imgur.com/vPNpWCz.jpg?1',
+			description: 'Me and My Family',
+		},
+		{
+			url: 'https://i.imgur.com/Rg0Oi2E.jpg?1',
+			description: 'Me and My Brother',
+		},
+		{
+			url: 'https://i.imgur.com/exdawwf.jpg?1',
+			description: 'Me and My Parents',
+		},
+	],
+};
+// export const myImages: FrameProps[] =
 
 export const skillChartKeys = [
-	'HTML',
-	'CSS',
+	'HTML5',
+	'CSS3',
 	'JavaScript',
 	'React',
 	'Redux',
-	'Bootstrap4',
+	'Bootstrap',
 	'NodeJS',
 	'ExpressJS',
 	'TypeScript',
 	'Mongoose',
 	'SQL',
 	'Sequalize',
-	'C#',
+	'CSharp',
 	'Xamarin',
 	'Flutter',
 	'Firebase',
@@ -44,8 +53,8 @@ export const skillBoxData = [
 	{
 		fieldName: 'Front End',
 		skills: [
-			'HTML',
-			'CSS',
+			'HTML5',
+			'CSS3',
 			'SCSS',
 			'JavaScript',
 			'TypeScript',
@@ -61,11 +70,11 @@ export const skillBoxData = [
 	},
 	{
 		fieldName: 'Mobile',
-		skills: ['C#', 'Xamarin', 'Flutter', 'IOS', 'Android'],
+		skills: ['CSharp', 'Xamarin', 'Flutter', 'IOS', 'Android'],
 	},
 	{
 		fieldName: 'Dev Tools',
-		skills: ['Git', 'Github', 'VS code', 'AWS', 'Docker'],
+		skills: ['Git', 'Github', 'VScode', 'AWS', 'Docker'],
 	},
 ];
 
