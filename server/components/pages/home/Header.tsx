@@ -1,52 +1,43 @@
 import React, { useState, useEffect } from 'react';
 import TextLoop from 'react-text-loop';
-import Particle from './Particle';
+import Particle from '../../common/Particle';
 // import SocialMedia from '../../components/Layout/SocialMedia';
 
 // Styles
 import styles from 'styles/pages/home/header.module.scss';
 
-const Header: React.FC = () => {
-  const [jobIndex, setJobIndex] = useState(0);
+// Interfaces
+import { HeaderProps } from 'interfaces/components/pages/home'
 
-  useEffect(() => {
-    setTimeout(() => {
-      if (jobIndex === 2) setJobIndex(0);
-      else setJobIndex(jobIndex + 1);
-    }, 4000);
-
-    //eslint-disable-next-line
-  }, [jobIndex]);
+const Header: React.FC<HeaderProps> = ({ headerInfo }) => {
+  
+  const JobTitles = headerInfo.jobTitles.map(
+    (title) => 
+    <h2 key={title} className={styles.header_content_info_highlight_title}>
+      {title}
+    </h2>
+  );
 
   return (
     <header className={styles.header}>
       <Particle />
       <div className={`${styles.header_content} container`}>
         <div className={styles.header_content_profile}>
-          <img src={'img/profile_small.jpg'} alt="eric_profile" />
+          <img src={headerInfo.avator.url} alt={headerInfo.avator.alt} />
         </div>
 
         <div className={styles.header_content_info}>
           <div className={styles.header_content_info_highlight}>
             <h2 className={styles.header_content_info_highlight_name}>
-              Eric lee,
+              {headerInfo.name}
             </h2>
 
             <TextLoop>
-              <h2 className={styles.header_content_info_highlight_title}>
-                JavaScript Developer
-              </h2>
-              <h2 className={styles.header_content_info_highlight_title}>
-                Full Stack Developer
-              </h2>
-              <h2 className={styles.header_content_info_highlight_title}>
-                Mobile App Developer
-              </h2>
+              {JobTitles}
             </TextLoop>
           </div>
           <h3 className={styles.header_content_info_desc}>
-            I’m a software engineer with a passion for addressing people's
-            problem.
+            { headerInfo.highlight }
           </h3>
           {/* <SocialMedia /> */}
         </div>

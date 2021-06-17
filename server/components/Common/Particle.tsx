@@ -1,8 +1,9 @@
 import React from 'react';
 import Particles, { MoveDirection, OutMode } from 'react-particles-js';
 
+import { ParticlesProps } from '@interfaces/components/common/particles.interface'
 import styles from 'styles/pages/home/header.module.scss';
-const Particle: React.FC = () => {
+const Particle: React.FC<ParticlesProps> = () => {
   return (
     <Particles
       className={styles.header_particle}

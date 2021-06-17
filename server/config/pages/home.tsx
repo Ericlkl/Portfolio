@@ -1,46 +1,67 @@
+// Interfaces
+import { HeaderInfo , Personality, Service, FeatureProjectInfo } from 'interfaces/components/pages/home';
 // styles
 import styles from 'styles/pages/home/personality.module.scss'
 
-export const features = [
-  {
-    name: 'Interactive Web Application',
-    icon: (
-      <i
-        aria-hidden="true"
-        className="feature_project_content_descbox_feature_icon fas fa-laptop-code"
-      />
-    ),
-  },
-  {
-    name: 'MERN Stack Development',
-    icon: (
-      <i
-        aria-hidden="true"
-        className="feature_project_content_descbox_feature_icon fab fa-react"
-      />
-    ),
-  },
-  {
-    name: 'Data Visualization',
-    icon: (
-      <i
-        aria-hidden="true"
-        className="feature_project_content_descbox_feature_icon fas fa-chart-area"
-      />
-    ),
-  },
-  {
-    name: 'Live Streaming',
-    icon: (
-      <i
-        aria-hidden="true"
-        className="feature_project_content_descbox_feature_icon fas fa-satellite-dish"
-      />
-    ),
-  },
-];
+export const headerInfo: HeaderInfo = {
+  name: 'Eric lee,',
+  jobTitles: ['JavaScript Developer', 'Full Stack Developer', 'Mobile App Developer'],
+  highlight: `I’m a software engineer with a passion for addressing people's
+  problem.`,
+  avator: {
+    url: 'img/profile_small.jpg',
+    alt: 'eric_profile'
+  }
+}
 
-export const personalities = [
+export const featureProjectInfo : FeatureProjectInfo = {
+  name: 'Tweetery',
+  description: `Tweetery is a web application that visualize how people feels about
+  celebrities / products / things by analyzing tweets related to the
+  keyword user provided.`,
+  imageUrl: 'https://i.imgur.com/hZCYEg1.png?1',
+  projectId: 1,
+  features:  [
+    {
+      name: 'Interactive Web Application',
+      icon: (
+        <i
+          aria-hidden="true"
+          className="feature_project_content_descbox_feature_icon fas fa-laptop-code"
+        />
+      ),
+    },
+    {
+      name: 'MERN Stack Development',
+      icon: (
+        <i
+          aria-hidden="true"
+          className="feature_project_content_descbox_feature_icon fab fa-react"
+        />
+      ),
+    },
+    {
+      name: 'Data Visualization',
+      icon: (
+        <i
+          aria-hidden="true"
+          className="feature_project_content_descbox_feature_icon fas fa-chart-area"
+        />
+      ),
+    },
+    {
+      name: 'Live Streaming',
+      icon: (
+        <i
+          aria-hidden="true"
+          className="feature_project_content_descbox_feature_icon fas fa-satellite-dish"
+        />
+      ),
+    },
+  ]
+}
+
+export const personalities: Personality[] = [
   {
     icon: <i aria-hidden="true" className="fas fa-puzzle-piece" />,
     title: 'Problem Solver',
@@ -103,7 +124,7 @@ export const personalities = [
   },
 ];
 
-export const services = [
+export const services: Service[] = [
   {
     icon: 'fa-laptop',
     name: 'Web Development',
