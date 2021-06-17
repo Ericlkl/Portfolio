@@ -1,5 +1,5 @@
 // Layout Components
-import { BasicLayout } from '../components/common';
+import { BasicLayout, PageHead } from '../components/common';
 // Page Components
 import { Content } from '../components/pages/404';
 
@@ -13,6 +13,7 @@ export async function getStaticProps() {
 const ErrorPage: React.FC = () => {
   return (
     <BasicLayout>
+      <PageHead title="Content Not Found!"/>
       <Content />
     </BasicLayout>
   );

@@ -1,5 +1,5 @@
 // Basic Layout component
-import { BasicLayout } from 'components/common';
+import { BasicLayout, PageHead } from 'components/common';
 // Page Component
 import {
   Header,
@@ -19,6 +19,7 @@ export async function getStaticProps() {
 const HomePage: React.FC = () => {
   return (
     <BasicLayout>
+      <PageHead title="Software Engineer" />
       <Header />
       <PersonalityGrid />
       <Services />

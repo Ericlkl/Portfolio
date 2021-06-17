@@ -1,7 +1,7 @@
 // Library
 import { ProjectManager } from 'models/project';
 // Public Components
-import { BasicLayout, Jumbotron } from '../../components/common';
+import { BasicLayout, Jumbotron, PageHead } from '../../components/common';
 
 // Page Specific Components
 import ProjectCard  from 'components/pages/project';
@@ -53,6 +53,7 @@ export async function getStaticProps(props) {
 const ProjectPage: React.FC<ProjectPageProps> = ({ project }) => {
   return (
     <BasicLayout>
+      <PageHead title={`Project - ${project.name}`}/>
       <Jumbotron
         title="Projects"
         subtitle="All Projects are made with heart"

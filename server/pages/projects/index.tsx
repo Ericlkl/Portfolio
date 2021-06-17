@@ -2,7 +2,7 @@
 import { ProjectManager } from 'models/project';
 import { DevelopmentToolManager } from 'models/devTool';
 // Public Components
-import { BasicLayout, Jumbotron } from '../../components/common';
+import { BasicLayout, Jumbotron, PageHead } from '../../components/common';
 
 // Page Specific Components
 import { DevToolsBar, ProjectGrid } from '../../components/pages/projects';
@@ -30,6 +30,7 @@ const ProjectsPage: React.FC<ProjectsPageProps> = ({ projects, devTools }) => {
   return (
     <DevToolsProvider>
       <BasicLayout>
+      <PageHead title="Project Showcases "/>
         <Jumbotron
           title="Projects"
           subtitle="All Projects are made with heart"

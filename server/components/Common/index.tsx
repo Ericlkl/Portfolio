@@ -8,6 +8,7 @@ import CancelBtn from './CancelBtn';
 import DownloadBtn from './DownloadBtn';
 import Spinner from './Spinner';
 import DevToolIcon from './DevToolIcon';
+import PageHead from './PageHead';
 
 export {
   BasicLayout,
@@ -19,5 +20,6 @@ export {
   CancelBtn,
   DownloadBtn, 
   DevToolIcon, 
-  Spinner
+  Spinner,
+  PageHead
 };
