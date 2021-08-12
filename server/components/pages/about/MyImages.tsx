@@ -1,5 +1,5 @@
 // config data
-import { myImages } from 'config/pages';
+import { myImages } from 'constants/pages';
 // interfaces
 import { FrameProps } from 'interfaces/components/pages/about';
 

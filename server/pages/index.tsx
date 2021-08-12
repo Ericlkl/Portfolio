@@ -10,24 +10,29 @@ import {
 } from 'components/pages/home';
 
 // config data
-import { headerInfo, personalities, services, featureProjectInfo } from 'config/pages/home'; 
+import {
+  headerInfo,
+  personalities,
+  services,
+  featureProjectInfo,
+} from 'constants/pages/home';
 
 export async function getStaticProps() {
   return {
     props: {
       headerInfo,
-      services
+      services,
     },
     revalidate: 60 * 60 * 12,
   };
 }
 
-const HomePage: React.FC<any> = ({ headerInfo,  services}) => {
+const HomePage: React.FC<any> = ({ headerInfo, services }) => {
   return (
     <BasicLayout>
       <PageHead title="Software Engineer" />
-      <Header headerInfo={headerInfo}/>
-      <PersonalityGrid personalities={personalities}/>
+      <Header headerInfo={headerInfo} />
+      <PersonalityGrid personalities={personalities} />
       <Services services={services} />
       <FeatureProject projectInfo={featureProjectInfo} />
       <Contact />

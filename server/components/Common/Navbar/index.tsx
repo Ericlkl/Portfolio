@@ -14,7 +14,7 @@ import styles from 'styles/common/navbar.module.scss';
 import { NavbarProps } from 'interfaces/components/common/navbar.interface';
 
 // data
-import { navbarInfo } from 'config/components/navbar';
+import { navbarInfo } from 'constants/components/navbar';
 
 const Navbar: React.FC<NavbarProps> = ({ logoColor }) => {
   const [active, setActive] = useState(false);

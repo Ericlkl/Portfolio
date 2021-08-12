@@ -1,7 +1,7 @@
 import React from 'react';
 import StackedBar from 'components/common/chart/StackedBar';
 import ProgrammingLogo from 'components/common/DevToolIcon';
-import { skillChartKeys, skillChartData, skillBoxData } from 'config/pages';
+import { skillChartKeys, skillChartData, skillBoxData } from 'constants/pages';
 
 // Styles
 import styles from 'styles/pages/about/mySkills.module.scss';

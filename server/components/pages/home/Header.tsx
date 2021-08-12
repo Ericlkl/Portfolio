@@ -7,16 +7,14 @@ import Particle from '../../common/Particle';
 import styles from 'styles/pages/home/header.module.scss';
 
 // Interfaces
-import { HeaderProps } from 'interfaces/components/pages/home'
+import { HeaderProps } from 'interfaces/components/pages/home';
 
 const Header: React.FC<HeaderProps> = ({ headerInfo }) => {
-  
-  const JobTitles = headerInfo.jobTitles.map(
-    (title) => 
+  const JobTitles = headerInfo.jobTitles.map((title) => (
     <h2 key={title} className={styles.header_content_info_highlight_title}>
       {title}
     </h2>
-  );
+  ));
 
   return (
     <header className={styles.header}>
@@ -32,12 +30,10 @@ const Header: React.FC<HeaderProps> = ({ headerInfo }) => {
               {headerInfo.name}
             </h2>
 
-            <TextLoop>
-              {JobTitles}
-            </TextLoop>
+            <TextLoop>{JobTitles}</TextLoop>
           </div>
           <h3 className={styles.header_content_info_desc}>
-            { headerInfo.highlight }
+            {headerInfo.highlight}
           </h3>
           {/* <SocialMedia /> */}
         </div>

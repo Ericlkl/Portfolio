@@ -42,7 +42,7 @@
     "paths": {
       "@common/*": ["./common/*"],
       "@components/*": ["./components/*"],
-      "@config/*": ["./config/*"],
+      "@constants/*": ["constants/*"],
       "@context/*": ["./context/*"],
       "@models/*": ["./models/*"],
       "@pages/*": ["./pages/*"],
