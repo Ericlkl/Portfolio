@@ -1,7 +1,7 @@
 import Profile from './Profile';
-import MySkills from './MySkills';
+import Skills from './Skills';
 import Personality from './Personality';
 import Hero from './Hero';
-import MyImages from './MyImages';
+import Gallery from './Gallery';
 
-export { MyImages, Profile, MySkills, Personality, Hero };
+export { Gallery, Profile, Skills, Personality, Hero };

@@ -1,4 +1,5 @@
-import { Fab  } from '@material-ui/core';
+import Router from 'next/router';
+import { Fab } from '@material-ui/core';
 import styles from 'styles/pages/home/feature_project.module.scss';
 
 // Interfaces
@@ -16,7 +17,7 @@ const ProjectDescription: React.FC<FeatureProjectProps> = ({ projectInfo }) => {
   ));
 
   const onViewBtnClick = () => {
-    console.log('Clicked');
+    Router.push(`/projects/5`);
   };
 
   return (

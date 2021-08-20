@@ -4,7 +4,6 @@ import { BasicLayout, PageHead } from 'components/common';
 import {
   Header,
   Services,
-  Contact,
   PersonalityGrid,
   FeatureProject,
 } from 'components/pages/home';
@@ -35,7 +34,6 @@ const HomePage: React.FC<any> = ({ headerInfo, services }) => {
       <PersonalityGrid personalities={personalities} />
       <Services services={services} />
       <FeatureProject projectInfo={featureProjectInfo} />
-      <Contact />
     </BasicLayout>
   );
 };

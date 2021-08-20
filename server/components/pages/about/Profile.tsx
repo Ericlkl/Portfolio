@@ -33,13 +33,12 @@ const Profile: React.FC = () => {
               👋
             </span>{' '}
             I'm Eric Lee, an experienced, enthusiastic full-stack developer from
-            Australia. Specializing in software development, mobile application
-            development, web design, full-stack development (coded this site
-            with React + Material UI) and cloud computing.
+            Hong Kong. Specializing in software development, full-stack web application development 
+            (coded this site with React + Material UI) and cloud computing.
           </p>
           <p className={styles.profile_content_intro_p}>
             I have 3 Yrs+ experience efficiently coding websites and application
-            using HTML, CSS3, JavaScript Es6+, NodeJS, TypeScript and React. I
+            using HTML, CSS3, JavaScript ES6+, NodeJS, TypeScript and React. I
             love building easy to use, useful, fascinating websites and
             applications.
           </p>

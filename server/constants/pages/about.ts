@@ -1,10 +1,8 @@
-import { FrameProps } from 'interfaces/components/pages/about';
-
 export const headerInfo = {
 	mainImage: {
 		url: 'https://i.imgur.com/njGf0mh.jpg?3',
 	},
-	hightlight: `I'm a software engineer based in Hong Kong.`,
+	highLight: `I'm a software engineer based in Hong Kong.`,
 	description: `I enjoy developing simple and beautiful application to solve complex problems. When I'm not coding, watching movies or reading books, you'll find me swimming or enjoying sunshine in Gold Coast.`,
 	otherImages: [
 		{
@@ -184,6 +182,10 @@ export const achievements = [
 			{
 				organization: '/img/logo/csiro.png',
 				name: 'Medicial Search Engine Developer',
+			},
+			{
+				organization: '/img/logo/tencent.png',
+				name: 'Front End Engineer',
 			},
 		],
 	},

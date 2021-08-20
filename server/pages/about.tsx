@@ -2,10 +2,13 @@
 import { BasicLayout, PageHead } from 'components/common';
 import {
   Hero,
-  MySkills,
+  Skills,
   Profile,
-  MyImages,
+  Gallery
 } from 'components/pages/about';
+
+// constant 
+import { headerInfo, skillBoxData } from 'constants/pages/about'
 
 export async function getStaticProps() {
   return {
@@ -19,15 +22,15 @@ const AboutPage: React.FC = () => {
     <BasicLayout>
       <PageHead title="About Me" />
       <Hero
-        img="https://i.imgur.com/njGf0mh.jpg?3"
-        desc="I enjoy developing simple and beautiful application to solve complex problems. When I'm not coding, watching movies or reading books, you'll find me swimming or enjoying sunshine in Gold Coast."
+        img={headerInfo.mainImage.url}
+        desc={headerInfo.description}
         title="About Me"
-        subtitle="I'm a software engineer based in Hong Kong."
+        subtitle={headerInfo.highLight}
       >
-        <MyImages />
+        <Gallery images={headerInfo.otherImages} />
       </Hero>
       <Profile />
-      <MySkills />
+      <Skills skills={skillBoxData}/>
     </BasicLayout>
   );
 };

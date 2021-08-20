@@ -1,6 +1,10 @@
-export interface FrameProps {
+export interface Image {
 	url: string;
 	description: string;
+}
+
+export interface GalleryProps {
+	images: Image[]
 }
 
 export interface HeroProps {
@@ -10,6 +14,9 @@ export interface HeroProps {
 	desc?: string;
 }
 
+export interface SkillsProps {
+	skills: SkillBoxProps[]
+}
 export interface SkillBoxProps {
 	fieldName: string;
 	skills: string[];
