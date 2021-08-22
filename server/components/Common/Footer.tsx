@@ -27,9 +27,9 @@ const Footer: React.FC = () => {
 
           <div className={styles.footer_content_methods}>
             <div className={styles.footer_content_methods_method}>
-              <a href="mailto:ericlkl@gmail.com">
+              <a href="mailto:kalong.lee.hk@outlook.com">
                 <i aria-hidden="true" className="far fa-envelope" />
-                Ericlkl.au@gmail.com
+                &nbsp;kalong.lee.hk@outlook.com
               </a>
             </div>
             <div className={styles.footer_content_methods_method}>

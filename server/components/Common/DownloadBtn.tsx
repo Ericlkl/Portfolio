@@ -5,7 +5,7 @@ import AppleIcon from '@material-ui/icons/Apple';
 import LanguageIcon from '@material-ui/icons/Language';
 
 // Interfaces
-import { DownloadBtnProps } from 'interfaces/components/common/downloadBtn.interface'
+import { DownloadBtnProps } from 'interfaces/components/common/downloadBtn.interface';
 
 const DownloadBtn: React.FC<DownloadBtnProps> = ({ link, platform, text }) => {
   const displayIcon = () => {
@@ -22,7 +22,7 @@ const DownloadBtn: React.FC<DownloadBtnProps> = ({ link, platform, text }) => {
   };
 
   return (
-    <a className={`downloadBtn ${platform}`} href={link}>
+    <a className={`downloadBtn ${platform}`} href={link} target="_blank">
       {displayIcon()}
       <p>{text}</p>
     </a>

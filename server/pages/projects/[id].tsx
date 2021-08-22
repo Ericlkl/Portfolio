@@ -4,13 +4,13 @@ import { ProjectManager } from 'models/project';
 import { BasicLayout, Jumbotron, PageHead } from '../../components/common';
 
 // Page Specific Components
-import ProjectCard  from 'components/pages/project';
+import ProjectCard from 'components/pages/project';
 
 // Model
 import { NextRoute } from 'models/next';
 
 // interface
-import { Project as IProject } from 'interfaces/models/project'
+import { Project as IProject } from 'interfaces/models/project';
 import { ProjectPageProps } from 'interfaces/controllers/project';
 
 export async function getStaticPaths() {
@@ -53,7 +53,7 @@ export async function getStaticProps(props) {
 const ProjectPage: React.FC<ProjectPageProps> = ({ project }) => {
   return (
     <BasicLayout>
-      <PageHead title={`Project - ${project.name}`}/>
+      <PageHead title={`Project - ${project.name}`} />
       <Jumbotron
         title="Projects"
         subtitle="All Projects are made with heart"
