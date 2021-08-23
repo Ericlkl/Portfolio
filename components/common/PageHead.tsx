@@ -1,7 +1,7 @@
 import Head from 'next/head';
 
 // Configs data
-import { defaultPageHeadConfig } from 'constants/components/pagehead';
+import { defaultPageHeadConfig } from 'constants/components/pageHead';
 // Interfaces
 import { PageHeadProps } from 'interfaces/components/common/pageHead.interface';
 

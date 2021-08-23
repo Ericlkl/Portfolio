@@ -9,10 +9,10 @@ export function quickSort<T>(array: T[], compareFn: CompareFunction<T>): T[] {
   if (array.length < 2) {
     return array;
   }
-  const pivot = array[0];
-  const smallerArr = [];
-  const equalsArr = [pivot];
-  const largerArr = [];
+  const pivot: T = array[0];
+  const smallerArr: T[] = [];
+  const equalsArr: T[] = [pivot];
+  const largerArr: T[] = [];
   for (let i = 1; i < array.length; i++) {
     const currentElm = array[i];
     const result = compareFn(pivot, currentElm);
