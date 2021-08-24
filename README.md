@@ -5,17 +5,14 @@ A Portfolio Website about Who I am and What services do I provide. The website a
 ## Key Technology Include
 ```
 ReactJS
-React-id-swiper (Projects Screenshots)
+React-slick (Projects Screenshots)
 React-particles-js (Snow Effect)
-React Context (State Management)
 Material UI (Component Only)
-Nivo Chart (Skill Chart)
 Scss
 NodeJS
 Redis
 MongoDB
-TypeScript
-ExpressJS
+NextJS
 ```
 
 ## Client Side Package Include
@@ -67,6 +64,7 @@ npm run project-install
 ```
 > run the program
 ```
+npm run build
 npm run start
 ```
 
@@ -85,7 +83,7 @@ Web browser
 Currently the project is deployed on heroku. 
 
 ```
-URI : https://www.ericleedev.com/
+URI : https://www.kalonglee.com/
 ```
 
 
